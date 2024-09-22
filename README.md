@@ -1,4 +1,5 @@
 ## Lenguaje Java
+# Lenguaje Java ![Logo de Java](https://www.flaticon.es/icono-gratis/java_226777)
 
 Este repositorio contiene ejemplos y ejercicios prácticos de **Java** desarrollados durante mi proceso de aprendizaje. 
 Está organizado por temas para facilitar la práctica de diferentes conceptos clave del lenguaje.
