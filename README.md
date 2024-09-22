@@ -1,4 +1,5 @@
-## Lenguaje Java
+# Lenguaje Java
+<img src="icon.ico" width="60"/>   
 
 Este repositorio contiene ejemplos y ejercicios prácticos de **Java** desarrollados durante mi proceso de aprendizaje. 
 Está organizado por temas para facilitar la práctica de diferentes conceptos clave del lenguaje.
@@ -18,5 +19,6 @@ Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", vari
 
 **Archivos incluidos:**
 - `HolaMundo.java`: Primer programa que imprime "¡Hola, Mundo!".
-- `Variables.java`: Ejemplos de variables y tipos de datos.
+- `TiposDeDatos.java`: Ejemplos de tipo de datos.
+- `Variables.java`: Ejemplos de variables.
 - `Operadores.java`: Uso de operadores aritméticos, relacionales y lógicos.
