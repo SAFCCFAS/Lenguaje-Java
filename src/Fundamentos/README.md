@@ -22,6 +22,8 @@ constantes o variables definidas para un programa dado deben describirse con uno
 
 #### Clasificación de los Tipos de Datos
    Los tipos de datos en Java se dividen en dos categorías:
+   1. **Tipos de Datos Primitivos**: Son tipos básicos integrados en el lenguaje. Se usan para almacenar valores simples, como números, caracteres o booleanos.
+   2. **Tipos de Datos No Primitivos** (o Tipos de Referencia): Estos se refieren a objetos y pueden ser clases, interfaces o arreglos.
    
 |      **Tipo de Dato**       | **Tamaño(bits)**  |                            **Rango**                            |
 |:---------------------------:|:-----------------:|:---------------------------------------------------------------:|

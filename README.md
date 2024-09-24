@@ -1,4 +1,4 @@
-# Lenguaje Java  <img src="icon.ico" width="60"/>
+# Lenguaje Java  <img src="java.ico" width="60"/>
 ___
 
 Este repositorio contiene ejemplos y ejercicios prácticos de **Java** desarrollados durante mi proceso de aprendizaje. 
