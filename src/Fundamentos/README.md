@@ -230,8 +230,8 @@ no puedes asignar un valor String a una variable int.
 
 **Resumen**
 
-* Comillas dobles (""): Para cadenas de texto (String).
-* Comillas simples (''): Para caracteres individuales (char).
+* Comillas dobles (`""`): Para cadenas de texto (String).
+* Comillas simples (`''`): Para caracteres individuales (char).
 * Números: Se representan sin comillas, ya que son valores numéricos (enteros o decimales).
 
 ## Referencias 
