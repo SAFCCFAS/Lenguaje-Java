@@ -5,11 +5,15 @@ variables, estructuras de control y otros conceptos esenciales.
 
 ### Contenido
 
-**HolaMundo.java**:
+* [HolaMundo](#holamundojava)
+* [Tipo de Datos en Java](#tipos-de-datos-en-java)
+* [Variables](#variables)
+
+#### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
    - **Objetivo:** Introducir la estructura básica de un programa Java.
 
-**TiposDeDatos.java**:
+#### **TiposDeDatos.java**:
    - Ejemplos de los principales tipos de datos primitivos en Java.
    - **Objetivo**: Mostrar cómo se declaran y utilizan diferentes tipos de datos en Java, como 
    `int`, `double`, `char`, `boolean` y `String`.
@@ -103,6 +107,13 @@ al momento de nombrar una variable:
 7. **Sin Caracteres Especiales**: Los nombres de las variables no deben contener caracteres especiales (como `@`, `#`, 
    `-`, etc.) ni caracteres fuera del idioma inglés. Esto asegura que el código sea más legible y compatible con los 
    estándares del lenguaje.
+
+### **Importancia de las Reglas para Nombrar Variables**
+
+Seguir estas reglas no es solo una cuestión de estilo, sino que garantiza que tu código sea comprensible tanto para ti 
+como para otros programadores que lo lean. Además, algunas de estas reglas son requeridas por el lenguaje Java y no 
+seguirlas generará errores de compilación. Elegir nombres claros y descriptivos para tus variables también facilita el 
+mantenimiento del código y reduce errores lógicos, especialmente en proyectos más grandes.
 
 ### **Asignación de variables**
 
@@ -233,6 +244,8 @@ no puedes asignar un valor String a una variable int.
 * Comillas dobles (`""`): Para cadenas de texto (String).
 * Comillas simples (`''`): Para caracteres individuales (char).
 * Números: Se representan sin comillas, ya que son valores numéricos (enteros o decimales).
+
+
 
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
