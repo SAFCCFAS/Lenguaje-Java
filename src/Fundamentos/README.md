@@ -22,8 +22,10 @@ constantes o variables definidas para un programa dado deben describirse con uno
 
 #### Clasificación de los Tipos de Datos
    Los tipos de datos en Java se dividen en dos categorías:
-   1. **Tipos de Datos Primitivos**: Son tipos básicos integrados en el lenguaje. Se usan para almacenar valores simples, como números, caracteres o booleanos.
-   2. **Tipos de Datos No Primitivos** (o Tipos de Referencia): Estos se refieren a objetos y pueden ser clases, interfaces o arreglos.
+   1. **Tipos de Datos Primitivos**: Son tipos básicos integrados en el lenguaje. Se usan para almacenar valores 
+      simples, como números, caracteres o booleanos.
+   2. **Tipos de Datos No Primitivos** (o Tipos de Referencia): Estos se refieren a objetos y pueden ser clases, 
+      interfaces o arreglos.
    
 |      **Tipo de Dato**       | **Tamaño(bits)**  |                            **Rango**                            |
 |:---------------------------:|:-----------------:|:---------------------------------------------------------------:|
@@ -48,10 +50,194 @@ constantes o variables definidas para un programa dado deben describirse con uno
 |       **Interfaces**        | Depende de la JVM |          No tiene rango, define métodos a implementar.          |                   
 |  **Enumeraciones** (enum)   | Depende de la JVM | Conjunto de constantes predefinidas que no se pueden modificar. |
 
+## Variables
 
+**Variables.java**:
+   - Un programa que muestra cómo declarar y utilizar variables en Java.
+   - **Objetivo**: Ilustrar cómo se pueden almacenar y manipular diferentes tipos de datos en memoria.
 
+Una **variable** en Java es el nombre que se le da a un espacio en memoria donde se va a almacenar un dato específico, 
+como un número, texto o valor lógico. La variable actúa como una etiqueta que te permite referirte a ese dato y 
+manipularlo dentro del programa.
+
+Las variables se declaran de la siguiente manera:
+
+      `tipo` *nombreVariable;*
+
+**Usos Especiales**
+
+Si bien el ejemplo anterior muestra una declaración simple, las variables en Java se pueden definir de varias maneras. 
+Por ejemplo:
+
+   - Declaración simple: `int` num;
+   - Declaración múltiple: `int` n1, n2, n3;
+
+El tipo de declaración que elijas dependerá de tus preferencias o de la conveniencia para el código que estés 
+desarrollando. La declaración múltiple puede ser útil cuando necesitas varias variables del mismo tipo, simplificando 
+el código.
+
+**Reglas para Nombrar Variables**
+
+Al declarar variables en Java, es fundamental seguir ciertas reglas y convenciones para garantizar que el código sea 
+claro, legible y fácil de mantener. A continuación, aquí te indican algunas reglas importantes que debes tener en cuenta 
+al momento de nombrar una variable:
+
+1. **Nombres Descriptivos**: Utiliza nombres que describan el     propósito de la variable. Por ejemplo, `edad` 
+   es más claro que `a`.
+
+2. **Iniciar con una Letra**: Los nombres de las variables deben comenzar con una letra (a-z, A-Z) o un guion bajo (_). 
+   No pueden comenzar con un número.
+
+3. **Sin Espacios**: No se permiten espacios en los nombres de las variables. Si necesitas separar palabras, puedes usar 
+   el estilo camelCase (por ejemplo, `numeroDeEstudiantes`) o guiones bajos (por ejemplo, `numero_de_estudiantes`).
+
+4. **Palabras Reservadas**: No puedes usar palabras reservadas de Java (como `class`, `public`, `static`, etc.) como 
+   nombres de variables.
+
+5. **Sensibilidad a Mayúsculas**: Los nombres de las variables son sensibles a las mayúsculas. Por ejemplo, `numero` y 
+   `Numero` se consideran dos variables diferentes.
+
+6. **Convenciones de Nomenclatura**: Aunque no es obligatorio, es recomendable seguir las convenciones de nomenclatura 
+   de Java, como usar camelCase para variables y PascalCase para clases.
+
+7. **Sin Caracteres Especiales**: Los nombres de las variables no deben contener caracteres especiales (como `@`, `#`, 
+   `-`, etc.) ni caracteres fuera del idioma inglés. Esto asegura que el código sea más legible y compatible con los 
+   estándares del lenguaje.
+
+### **Asignación de variables**
+
+La asignación es el proceso mediante el cual se le da un valor a una variable. En Java, esto se hace utilizando el 
+operador de asignación `=`, que se usa para igualar la variable al valor deseado. Este proceso es fundamental porque 
+permite que las variables almacenen datos que se pueden utilizar y manipular en el programa.
+
+**Sintaxis de Asignación**
+
+Después de declarar una variable, puedes asignarle un valor de la siguiente manera:
+   *nombreVariable = valor;*
+
+Ejemplo: si has declarado una variable entera llamada edad, puedes asignarle un valor de esta forma:
+
+      `int edad;` // Declaración
+      `edad = 25;` // Asignación
+
+También puedes combinar la declaración y la asignación en una sola línea:
+
+      `int edad = 25;` // Declaración y Asignación
+
+**Reglas para la Asignación**
+
+1. **Tipo Compatible**: el valor asignado debe ser del mismo tipo que la variable. Por ejemplo, 
+no puedes asignar un valor String a una variable int.
+            
+         `int` numero = 10;  // Correcto: '10' es un literal entero.
+         `String` texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
+         // int numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
+
+   * **Importancia**: Esta regla ayuda a prevenir errores lógicos en el código, asegurando que las operaciones realizadas 
+     con las variables sean válidas según su tipo.
+
+2. **Valores Literales**: puedes asignar valores literales directamente, como números, caracteres o cadenas.
+
+         char letra = 'A';  // Asignación de un carácter literal.
+         boolean esVerdadero = true;  // Asignación de un valor booleano literal.
+   * **Importancia**: Los literales son útiles para inicializar variables con valores conocidos en el momento de la 
+     declaración.
+
+3. **Valores por Defecto**: cuando declaras variables de tipo primitivo en el ámbito de una clase, Java les asigna 
+   automáticamente un valor por defecto si no se les da uno explícitamente. Esto varía según el tipo de dato.
+    Ejemplo:
+
+       int contador; // Valor por defecto: 0
+       boolean estado; // Valor por defecto: false
+       char letra; // Valor por defecto: '\u0000' (carácter nulo)
+
+   * **Importancia**: Los valores por defecto son útiles para evitar errores al usar variables no inicializadas. 
+      Sin embargo, es buena práctica inicializar siempre las variables antes de usarlas.
+
+4. **Expresiones**: puedes asignar el resultado de expresiones a una variable. Una expresión puede incluir operadores 
+   aritméticos, lógicos o de comparación. 
+   Ejemplo:
+   
+          int resultado = 5 + 10;  // Asignación del resultado de la suma.
+          double promedio = (nota1 + nota2 + nota3) / 3;  // Asignación usando una expresión aritmética.
+
+   * **Importancia**: Permite realizar cálculos y lógica en una sola línea de código, facilitando la manipulación de 
+   datos.
+
+5. **Asignación Múltiple**: puedes declarar y asignar valores a múltiples variables del mismo tipo en una sola línea, lo que 
+   puede hacer que el código sea más limpio y conciso.
+    Ejemplo:
+
+       int a, b, c; // Declaración de múltiples variables.
+       a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
+
+   * **Importancia**: Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con
+   el mismo valor, ahorrando espacio y mejorando la legibilidad.
+
+6. **Asincronía y Cambios**: el valor de una variable puede cambiar durante la ejecución del programa. Puedes reasignar 
+    un nuevo valor a la misma variable en cualquier momento, lo que permite la manipulación dinámica de datos.
+    Ejemplo:
+
+       int edad = 25; // Inicialmente asignado.
+       edad = 30; // Reasignación del valor de la variable.
+
+   * **Importancia**: Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las 
+   variables en función de la lógica del programa y las interacciones del usuario.
+     
+7. **Uso de Operadores de Asignación Compuestos**: Java ofrece operadores de asignación compuestos que combinan una 
+    operación aritmética con la asignación. Esto puede hacer que el código sea más conciso y legible.
+    Ejemplo:
+
+        int total = 10; // Inicialización.
+        total += 5; // Equivalente a total = total + 5; total ahora es 15.
+
+   * **Importancia**: Los operadores de asignación compuestos son útiles para simplificar expresiones en las que 
+   necesitas modificar el valor de una variable en función de su valor actual.
+
+**Uso de Comillas en Java**
+
+-  **Comillas dobles** (`""`): En Java, las comillas dobles se utilizan para definir cadenas de texto (strings). 
+   Un string es una secuencia de caracteres que puede incluir letras, números, espacios y otros símbolos.
+   Ejemplo:
+
+       String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
+
+    * **Importancia**: El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un 
+      objeto de tipo String. Sin las comillas dobles, el compilador no interpretaría correctamente la secuencia de 
+      caracteres como una cadena de texto.
+
+- **Comillas simples** (`''`): Las comillas simples se utilizan para definir un solo carácter (char). Un char es un tipo 
+  de dato que representa un único carácter, como una letra, un número o un símbolo.
+  Ejemplo:
+      
+      char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
+  
+  * **Importancia**: Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. 
+      Si se usan comillas dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de 
+      texto, lo que generará un error de tipo.
+
+- **Números**: Los números en Java, ya sean enteros (int, long, etc.) o decimales (float, double), se representan 
+  directamente como valores numéricos sin comillas. Esto se debe a que son tipos de datos primitivos y no necesitan ser 
+  encapsulados para ser utilizados en cálculos o asignaciones.
+  Ejemplo:
+
+        int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
+        double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
+
+  * **Importancia**: Al no usar comillas para los números, el compilador puede reconocer y operar con ellos 
+      directamente. Si se colocaran entre comillas, serían interpretados como cadenas de texto, lo que impediría 
+      realizar operaciones matemáticas.
+
+**Resumen**
+
+* Comillas dobles (""): Para cadenas de texto (String).
+* Comillas simples (''): Para caracteres individuales (char).
+* Números: Se representan sin comillas, ya que son valores numéricos (enteros o decimales).
 
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
 * [Documentación de Oracle: Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
 * [Geeksforgeeks: Java Data Types](https://www.geeksforgeeks.org/data-types-in-java/)
+* [Documentación de Oracle: Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+* [JavaPoint: Java Variables](https://www.javatpoint.com/java-variables)
+* [Java Language Specification (JLS): Chapter 3. Lexical Structure](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10)
