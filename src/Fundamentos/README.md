@@ -24,7 +24,8 @@ Java es un lenguaje de programación **estáticamente** y **fuertemente tipado**
 dato (como entero, carácter, decimal, etc.) está predefinido como parte del lenguaje de programación, y todas las 
 constantes o variables definidas para un programa dado deben describirse con uno de los tipos de datos de Java.
 
-#### Clasificación de los Tipos de Datos
+**Clasificación de los Tipos de Datos**
+
    Los tipos de datos en Java se dividen en dos categorías:
    1. **Tipos de Datos Primitivos**: Son tipos básicos integrados en el lenguaje. Se usan para almacenar valores 
       simples, como números, caracteres o booleanos.
@@ -108,14 +109,14 @@ al momento de nombrar una variable:
    `-`, etc.) ni caracteres fuera del idioma inglés. Esto asegura que el código sea más legible y compatible con los 
    estándares del lenguaje.
 
-### **Importancia de las Reglas para Nombrar Variables**
+**Importancia de las Reglas para Nombrar Variables**
 
 Seguir estas reglas no es solo una cuestión de estilo, sino que garantiza que tu código sea comprensible tanto para ti 
 como para otros programadores que lo lean. Además, algunas de estas reglas son requeridas por el lenguaje Java y no 
 seguirlas generará errores de compilación. Elegir nombres claros y descriptivos para tus variables también facilita el 
 mantenimiento del código y reduce errores lógicos, especialmente en proyectos más grandes.
 
-### **Asignación de variables**
+**Asignación de variables**
 
 La asignación es el proceso mediante el cual se le da un valor a una variable. En Java, esto se hace utilizando el 
 operador de asignación `=`, que se usa para igualar la variable al valor deseado. Este proceso es fundamental porque 
@@ -245,6 +246,60 @@ no puedes asignar un valor String a una variable int.
 * Comillas simples (`''`): Para caracteres individuales (char).
 * Números: Se representan sin comillas, ya que son valores numéricos (enteros o decimales).
 
+**Tipos de Variables en Java**
+
+En Java, existen tres tipos principales de variables que se utilizan para almacenar datos:
+
+* **Variables de Instancia (Non-Static Fields)**: Estas son variables declaradas dentro de una clase, pero fuera de 
+    cualquier método, constructor o bloque. No llevan la palabra clave static.
+
+    **Características**:
+        Su valor es específico para cada instancia (objeto) de la clase, lo que significa que cada objeto puede tener un
+        estado diferente.
+        Se crean cuando se instancia un objeto de la clase y se destruyen cuando el objeto se destruye.
+        La inicialización no es obligatoria; el valor por defecto depende del tipo de datos 
+        (por ejemplo, null para String, 0 para int).
+
+
+* **Variables de Clase (Static Fields)**: Se declaran de manera similar a las variables de instancia, pero llevan la 
+    palabra clave static.
+    
+    **Características**:
+        Hay una única copia de esta variable compartida entre todas las instancias de la clase, lo que significa que su 
+        valor es el mismo para todos los objetos.
+        Se crean cuando la clase se carga en memoria y se destruyen al final de la ejecución del programa.
+        La inicialización no es obligatoria; también tiene valores por defecto según el tipo de datos.
+
+
+* **Variables Locales**: Son variables que se declaran dentro de un método, constructor o bloque. No tienen una palabra 
+    clave especial; su ámbito se define por su ubicación.
+
+    **Características**:
+        Son accesibles solo dentro del método donde se declaran y no desde otras partes de la clase.
+        Se crean en el momento de la declaración y se destruyen cuando se sale del bloque de código.
+        La inicialización es obligatoria antes de usarlas.
+
+**Parámetros**
+
+Además de estos tipos, los parámetros también son considerados variables, pero se utilizan para pasar datos a métodos y 
+constructores. Al igual que las variables locales, su ámbito es limitado al método donde se declaran.
+
+**Diferencias Clave**:
+* Alcance:
+  * Local: dentro de un método. 
+  * Instancia: dentro de la clase. 
+  * Estática: dentro de la clase.
+
+* Duración:
+  * Local: vida corta, solo en la ejecución del método. 
+  * Instancia: vida del objeto.
+  * Estática: vida del programa.
+
+* Acceso:
+  * Local: solo en el método.
+  * Instancia: requiere un objeto.
+  * Estática: puede ser accedida directamente desde la clase.
+
 
 
 ## Referencias 
@@ -254,3 +309,4 @@ no puedes asignar un valor String a una variable int.
 * [Documentación de Oracle: Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
 * [JavaPoint: Java Variables](https://www.javatpoint.com/java-variables)
 * [Java Language Specification (JLS): Chapter 3. Lexical Structure](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10)
+* [The Java™ Tutorials: Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
