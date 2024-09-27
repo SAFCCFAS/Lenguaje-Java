@@ -129,21 +129,24 @@ Después de declarar una variable, puedes asignarle un valor de la siguiente man
 
 Ejemplo: si has declarado una variable entera llamada edad, puedes asignarle un valor de esta forma:
 
-      `int edad;` // Declaración
-      `edad = 25;` // Asignación
+`int edad;` // Declaración
+
+`edad = 25;` // Asignación
 
 También puedes combinar la declaración y la asignación en una sola línea:
 
-      `int edad = 25;` // Declaración y Asignación
+`int edad = 25;` // Declaración y Asignación
 
 **Reglas para la Asignación**
 
 1. **Tipo Compatible**: el valor asignado debe ser del mismo tipo que la variable. Por ejemplo, 
 no puedes asignar un valor String a una variable int.
             
-         `int` numero = 10;  // Correcto: '10' es un literal entero.
-         `String` texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
-         // int numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
+`int` numero = 10;  // Correcto: '10' es un literal entero.
+
+`String` texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
+
+`int` numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
 
    * **Importancia**: Esta regla ayuda a prevenir errores lógicos en el código, asegurando que las operaciones realizadas 
      con las variables sean válidas según su tipo.
