@@ -311,6 +311,18 @@ En Java, los separadores (o puntuadores) son símbolos especiales utilizados par
 código. Estos símbolos, formados por caracteres ASCII, ayudan a definir la sintaxis básica del lenguaje, separando 
 bloques, parámetros y elementos en las expresiones.
 
+| Separador |                         Uso común                         |
+|:---------:|:---------------------------------------------------------:|
+|    ( )    |  Definir listas de parámetros en métodos y expresiones.   |
+|    { }    |    Delimitar bloques de código, como clases y métodos.    |
+|    [ ]    |          Definir y acceder a arreglos (arrays).           |
+|     ;     |               Terminar sentencias de código               |
+|     ,     |  Separar elementos en listas de parámetros o variables.   |
+|     .     |         Acceder a métodos y atributos de objetos.         |
+|    ...    |      Indicar parámetros varargs (varios parámetros).      |
+|     @     |                   Usado en anotaciones.                   |
+|    ::     | Referencia a métodos o constructores (method references). |
+
 ## Operadores
 
 
