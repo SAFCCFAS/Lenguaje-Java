@@ -8,6 +8,8 @@ variables, estructuras de control y otros conceptos esenciales.
 * [HolaMundo](#holamundojava)
 * [Tipo de Datos en Java](#tipos-de-datos-en-java)
 * [Variables](#variables)
+* [Separadores](#Separadores)
+* [Operadores](#Operadores)
 
 #### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
@@ -303,6 +305,15 @@ constructores. Al igual que las variables locales, su ámbito es limitado al mé
   * Instancia: requiere un objeto.
   * Estática: puede ser accedida directamente desde la clase.
 
+## Separadores
+
+En Java, los separadores (o puntuadores) son símbolos especiales utilizados para delimitar estructuras y organizar el código. Estos símbolos, formados por caracteres ASCII, ayudan a definir la sintaxis básica del lenguaje, separando bloques, parámetros y elementos en las expresiones.
+
+## Operadores
+
+
+
+
 
 
 ## Referencias 
@@ -313,3 +324,6 @@ constructores. Al igual que las variables locales, su ámbito es limitado al mé
 * [JavaPoint: Java Variables](https://www.javatpoint.com/java-variables)
 * [Java Language Specification (JLS): Chapter 3. Lexical Structure](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10)
 * [The Java™ Tutorials: Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
+[Java Language Specification (JLS): Chapter 3. Separators](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.11)
+* [Java Language Specification (JLS): Chapter 3. Operators](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.12)
+* [The Java™ Tutorials: Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
