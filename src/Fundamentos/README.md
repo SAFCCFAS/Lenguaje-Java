@@ -325,9 +325,30 @@ bloques, parámetros y elementos en las expresiones.
 
 ## Operadores
 
+Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más operandos 
+(valores, variables, expresiones). Estos operadores permiten realizar cálculos matemáticos, operaciones lógicas y de 
+asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, formados por caracteres ASCII.
 
+* **Clasificación de Operadores en Java**
+  * **Operadores Aritméticos**: Permiten realizar operaciones matemáticas básicas. 
+  * **Operadores Lógicos y Relacionales**: Ayudan a comparar valores y controlar el flujo del programa mediante decisiones 
+    lógicas. 
+  * **Operadores de Asignación**: Usados para asignar valores a variables. 
+  * **Operadores Unarios**: Operan sobre un solo operando. 
+  * **Operadores Bit a Bit**: Trabajan a nivel de bits sobre valores enteros. 
+  * **Operadores de Shift (Desplazamiento)**: Desplazan bits a la izquierda o derecha.
 
-
+|         Categoría          |             Operador             |                               Descripción                                |               Ejemplo                |
+|:--------------------------:|:--------------------------------:|:------------------------------------------------------------------------:|:------------------------------------:|
+|       **Asignación**       |               `=`                |                     Asigna un valor a una variable.                      |             `int x = 5;`             |
+|      **Aritméticos**       |         `+, -, *, /, %`          | Suma, resta, multiplicación, división, y módulo (resto de la división).  |          `int sum = a + b;`          |
+| **Incremento/Decremento**  |            `++`, `--`            |          Incrementa o decrementa en 1 el valor de una variable.          | `x++;` (postfijo) o `--y;` (prefijo) |
+|      **Relacionales**      | `==`, `!=`, `>`, `<`, `>=`, `<=` |                          Comparan dos valores.                           |            `if (a == b)`             |    
+|        **Lógicos**         |         `&&`, `\|\|`,`!`         |                          AND, OR y NOT lógicos.                          |            `if (x && y)`             |
+|      **Condicional**       |              `? :`               |                Operador ternario para decisiones cortas.                 |    `resultado = (a > b) ? x : y;`    |
+|       **Bit a Bit**        |        `&`, `\|`,`^`, `~`        |         Operadores lógicos a nivel de bits (AND, OR, XOR, NOT).          |           `int z = a & b;`           |        
+| **Shift (Desplazamiento)** |        `<<`, `>>`, `>>>`         |                 Desplazan bits a la izquierda o derecha.                 |          `int z = x << 2;`           |        
+|  **Asignación Compuesta**  |    `+=`,`-=`,`*=`, `/=`, `%=`    |              Combina operadores aritméticos con asignación.              |              `a += 5;`               |
 
 
 ## Referencias 
