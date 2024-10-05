@@ -307,7 +307,9 @@ constructores. Al igual que las variables locales, su ámbito es limitado al mé
 
 ## Separadores
 
-En Java, los separadores (o puntuadores) son símbolos especiales utilizados para delimitar estructuras y organizar el código. Estos símbolos, formados por caracteres ASCII, ayudan a definir la sintaxis básica del lenguaje, separando bloques, parámetros y elementos en las expresiones.
+En Java, los separadores (o puntuadores) son símbolos especiales utilizados para delimitar estructuras y organizar el 
+código. Estos símbolos, formados por caracteres ASCII, ayudan a definir la sintaxis básica del lenguaje, separando 
+bloques, parámetros y elementos en las expresiones.
 
 ## Operadores
 
