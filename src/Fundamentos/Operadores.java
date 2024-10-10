@@ -3,7 +3,7 @@ package Fundamentos;
 public class Operadores {
     public static void main(String[] args) {
         int n1 = 12, n2 = 3;
-        //Declaración multiple y asignación
+        //Declaración y asignación multiples
         int Suma = n1 + n2, Resta = n1 - n2, Multiplicacion = n1 * n2, Modulo = n1 % n2;
         float Division = n1 / n2; // También es válido el uso de la variable double
 
