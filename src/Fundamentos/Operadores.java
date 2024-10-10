@@ -31,6 +31,5 @@ public class Operadores {
         System.out.println("El primer número es menor que el segundo: " + esMenor + ".");
         System.out.println("el primer número es igual al segundo: " + esIgual + ".");
 
-
     }
 }
