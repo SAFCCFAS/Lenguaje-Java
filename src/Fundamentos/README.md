@@ -1,4 +1,4 @@
-# Fundamentos de Java
+# ☕ Fundamentos de Java
 Este `README.md` complementa los comentarios en el código y proporciona una visión general de los ejercicios y ejemplos 
 básicos que cubren los fundamentos del lenguaje Java. Incluye información sobre la sintaxis básica, tipos de datos, 
 variables, estructuras de control y otros conceptos esenciales.
@@ -10,6 +10,7 @@ variables, estructuras de control y otros conceptos esenciales.
 * [Variables](#variables)
 * [Separadores](#Separadores)
 * [Operadores](#Operadores)
+* [Secuencias de escape](#Secuencias-de-escape)
 
 #### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
@@ -325,6 +326,11 @@ bloques, parámetros y elementos en las expresiones.
 
 ## Operadores
 
+* **Operadores.java:**
+  * Ejemplos prácticos del uso de operadores en Java. 
+  * Objetivo: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos, 
+      condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
+
 Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más operandos 
 (valores, variables, expresiones). Estos operadores permiten realizar cálculos matemáticos, operaciones lógicas y de 
 asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, formados por caracteres ASCII.
@@ -350,6 +356,35 @@ asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, 
 | **Shift (Desplazamiento)** |        `<<`, `>>`, `>>>`         |                 Desplazan bits a la izquierda o derecha.                 |          `int z = x << 2;`           |        
 |  **Asignación Compuesta**  |    `+=`,`-=`,`*=`, `/=`, `%=`    |              Combina operadores aritméticos con asignación.              |              `a += 5;`               |
 
+### Secuencias De Escape
+* **SecuenciasDeEscape.java:**
+  * Ejemplos prácticos del uso de secuencias de escape en Java. 
+  * Objetivo: Demostrar el uso de las principales secuencias de escape disponibles en Java, como `\n` para saltos de 
+      línea, `\t` para tabulación, `\"` y `\'` para incluir comillas dentro de cadenas, así como `\\` para incluir una 
+      barra invertida. El código ilustra cómo utilizar estas secuencias para mejorar la presentación de texto en la 
+      consola, haciendo más legible la salida y permitiendo la inclusión de caracteres especiales.
+
+Las secuencias de escape son combinaciones de caracteres que permiten representar caracteres especiales que no se pueden 
+introducir directamente en una cadena de texto. En Java, se utilizan principalmente en literales de caracteres, 
+literales de cadenas y bloques de texto. Estas secuencias comienzan con una barra invertida (`\`) seguida de uno o más 
+caracteres que indican el carácter que se desea representar.
+
+| Secuencia de Escape  |                        **Descripción**                        |
+|:--------------------:|:-------------------------------------------------------------:|
+|         `\\`         |                Representa una barra invertida                 |
+|         `\'`         |                 Representa una comilla simple                 |
+|         `\"`         |                 Representa una comilla doble                  |
+|         `\n`         |                 Salto de línea (nueva línea)                  |
+|         `\t`         |                  Tabulación horizontal (tab)                  |
+|         `\r`         |              Retorno de carro (carriage return)               |
+|         `\f`         |                  Form feed (salto de página)                  |
+|         `\b`         |                     Retroceso (backspace)                     |
+|         `\s`         |                       Espacio en blanco                       |
+|         `\0`         |                  Representa un carácter nulo                  |
+|       `\uXXXX`       | Representa un carácter Unicode (XXXX es el valor hexadecimal) |
+|       `\Octal`       |        Representa un carácter mediante un valor octal         |
+
+
 
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
@@ -359,6 +394,7 @@ asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, 
 * [JavaPoint: Java Variables](https://www.javatpoint.com/java-variables)
 * [Java Language Specification (JLS): Chapter 3. Lexical Structure](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10)
 * [The Java™ Tutorials: Variables](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/variables.html)
-[Java Language Specification (JLS): Chapter 3. Separators](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.11)
+* [Java Language Specification (JLS): Chapter 3. Separators](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.11)
 * [Java Language Specification (JLS): Chapter 3. Operators](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.12)
 * [The Java™ Tutorials: Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
+* [Java Language Specification (JLS): Chapter 3. Escape Sequences](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10.7)
