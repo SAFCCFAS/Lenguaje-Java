@@ -131,84 +131,84 @@ Después de declarar una variable, puedes asignarle un valor de la siguiente man
    *nombreVariable = valor;*
 
 Ejemplo: si has declarado una variable entera llamada edad, puedes asignarle un valor de esta forma:
-
-`int edad;` // Declaración
-
-`edad = 25;` // Asignación
-
+```Java
+int edad; // Declaración
+edad = 25; // Asignación
+```
 También puedes combinar la declaración y la asignación en una sola línea:
-
-`int edad = 25;` // Declaración y Asignación
-
+```java
+int edad = 25; // Declaración y Asignación
+```
 **Reglas para la Asignación**
 
 1. **Tipo Compatible**: el valor asignado debe ser del mismo tipo que la variable. Por ejemplo, 
 no puedes asignar un valor String a una variable int.
-            
-`int` numero = 10;  // Correcto: '10' es un literal entero.
+    ```Java        
+    int numero = 10;  // Correcto: '10' es un literal entero.
 
-`String` texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
+    String texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
 
-`int` numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
-
+    int numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
+    ```
    * **Importancia**: Esta regla ayuda a prevenir errores lógicos en el código, asegurando que las operaciones realizadas 
      con las variables sean válidas según su tipo.
 
 2. **Valores Literales**: puedes asignar valores literales directamente, como números, caracteres o cadenas.
-
-         char letra = 'A';  // Asignación de un carácter literal.
-         boolean esVerdadero = true;  // Asignación de un valor booleano literal.
+    ```Java
+    char letra = 'A';  // Asignación de un carácter literal.
+    boolean esVerdadero = true;  // Asignación de un valor booleano literal.
+    ```
    * **Importancia**: Los literales son útiles para inicializar variables con valores conocidos en el momento de la 
      declaración.
 
 3. **Valores por Defecto**: cuando declaras variables de tipo primitivo en el ámbito de una clase, Java les asigna 
    automáticamente un valor por defecto si no se les da uno explícitamente. Esto varía según el tipo de dato.
     Ejemplo:
-
+    ```Java
        int contador; // Valor por defecto: 0
        boolean estado; // Valor por defecto: false
        char letra; // Valor por defecto: '\u0000' (carácter nulo)
-
+    ```
    * **Importancia**: Los valores por defecto son útiles para evitar errores al usar variables no inicializadas. 
       Sin embargo, es buena práctica inicializar siempre las variables antes de usarlas.
 
 4. **Expresiones**: puedes asignar el resultado de expresiones a una variable. Una expresión puede incluir operadores 
    aritméticos, lógicos o de comparación. 
    Ejemplo:
-   
+   ```Java
           int resultado = 5 + 10;  // Asignación del resultado de la suma.
           double promedio = (nota1 + nota2 + nota3) / 3;  // Asignación usando una expresión aritmética.
-
+    ```
    * **Importancia**: Permite realizar cálculos y lógica en una sola línea de código, facilitando la manipulación de 
    datos.
 
 5. **Asignación Múltiple**: puedes declarar y asignar valores a múltiples variables del mismo tipo en una sola línea, lo que 
    puede hacer que el código sea más limpio y conciso.
     Ejemplo:
-
+    ```Java
        int a, b, c; // Declaración de múltiples variables.
        a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
-
+    ```
    * **Importancia**: Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con
    el mismo valor, ahorrando espacio y mejorando la legibilidad.
 
 6. **Asincronía y Cambios**: el valor de una variable puede cambiar durante la ejecución del programa. Puedes reasignar 
     un nuevo valor a la misma variable en cualquier momento, lo que permite la manipulación dinámica de datos.
     Ejemplo:
-
+    ```Java
        int edad = 25; // Inicialmente asignado.
        edad = 30; // Reasignación del valor de la variable.
-
+    ```
    * **Importancia**: Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las 
    variables en función de la lógica del programa y las interacciones del usuario.
      
 7. **Uso de Operadores de Asignación Compuestos**: Java ofrece operadores de asignación compuestos que combinan una 
     operación aritmética con la asignación. Esto puede hacer que el código sea más conciso y legible.
     Ejemplo:
-
+    ```Java
         int total = 10; // Inicialización.
         total += 5; // Equivalente a total = total + 5; total ahora es 15.
-
+    ```
    * **Importancia**: Los operadores de asignación compuestos son útiles para simplificar expresiones en las que 
    necesitas modificar el valor de una variable en función de su valor actual.
 
@@ -217,9 +217,10 @@ no puedes asignar un valor String a una variable int.
 -  **Comillas dobles** (`""`): En Java, las comillas dobles se utilizan para definir cadenas de texto (strings). 
    Un string es una secuencia de caracteres que puede incluir letras, números, espacios y otros símbolos.
    Ejemplo:
-
+    ```Java
        String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
-
+   ```
+   
     * **Importancia**: El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un 
       objeto de tipo String. Sin las comillas dobles, el compilador no interpretaría correctamente la secuencia de 
       caracteres como una cadena de texto.
@@ -227,8 +228,8 @@ no puedes asignar un valor String a una variable int.
 - **Comillas simples** (`''`): Las comillas simples se utilizan para definir un solo carácter (char). Un char es un tipo 
   de dato que representa un único carácter, como una letra, un número o un símbolo.
   Ejemplo:
-      
-      char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
+      ```Java
+      char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.```
   
   * **Importancia**: Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. 
       Si se usan comillas dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de 
@@ -238,13 +239,13 @@ no puedes asignar un valor String a una variable int.
   directamente como valores numéricos sin comillas. Esto se debe a que son tipos de datos primitivos y no necesitan ser 
   encapsulados para ser utilizados en cálculos o asignaciones.
   Ejemplo:
-
-        int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
-        double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
-
-  * **Importancia**: Al no usar comillas para los números, el compilador puede reconocer y operar con ellos 
-      directamente. Si se colocaran entre comillas, serían interpretados como cadenas de texto, lo que impediría 
-      realizar operaciones matemáticas.
+    ```Java
+          int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
+          double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
+    ```
+    * **Importancia**: Al no usar comillas para los números, el compilador puede reconocer y operar con ellos 
+        directamente. Si se colocaran entre comillas, serían interpretados como cadenas de texto, lo que impediría 
+        realizar operaciones matemáticas.
 
 **Resumen**
 
@@ -384,6 +385,58 @@ caracteres que indican el carácter que se desea representar.
 |       `\uXXXX`       | Representa un carácter Unicode (XXXX es el valor hexadecimal) |
 |       `\Octal`       |        Representa un carácter mediante un valor octal         |
 
+* **Literal null**
+El literal `null` en Java se utiliza para indicar que una variable de tipo objeto no apunta a ningún valor o 
+referencia. Es el valor predeterminado para variables no inicializadas de tipo objeto (como String, Integer, etc.).
+  * **Uso**: Se utiliza para indicar que un objeto no está asignado.
+  * **Ejemplo**: `String texto = null;`
+
+### Conversiones y Contextos
+
+* **ConversionesYContextos.java**:
+  * Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
+  * Objetivo: Explicar el concepto de conversión de tipos (casting), tanto implícita como explícita, y cómo el contexto 
+  de una operación puede influir en el tipo resultante.
+
+La **conversión de tipos** en Java es fundamental para manipular datos de diferentes tipos de manera eficiente y sin 
+errores. Java realiza conversiones automáticas (implícitas) cuando los tipos son compatibles, como en expresiones que 
+combinan diferentes tipos numéricos. Sin embargo, cuando los tipos no son compatibles, se requiere una conversión 
+explícita, que debe realizar el programador.
+
+Java también implementa la promoción de tipo dentro de las expresiones. Esto significa que tipos más pequeños, como char
+, byte y short, se promueven a int, y si hay un long, float o double en la expresión, el tipo final se ajusta al más 
+grande. Esto garantiza la coherencia en las operaciones, pero es importante tener en cuenta que la variable original no 
+se ve afectada fuera de la expresión.
+
+La conversión de tipos de datos en Java es un proceso fundamental que permite transformar el tipo de una variable u 
+objeto en otro diferente. Existen diferentes reglas y promociones que se aplican a los tipos de datos al realizar 
+operaciones en expresiones. A continuación, te presento una tabla que resume las promociones válidas para los diferentes
+tipos de datos en Java:
+
+|  Tipo   |                      Promociones Válidas                       |
+|:-------:|:--------------------------------------------------------------:|
+| double  |                            Ninguna                             |
+|  float  |                             double                             |
+|  long   |                         float o double                         |
+|   int   |                      long, float o double                      |
+|  char   |                   int, long, float o double                    |
+|  short  |            int, long, float o double (pero no char)            |
+|  byte   |        short, int, long, float o double (pero no char)         |
+| boolean | Ninguna (los valores boolean no se consideran números en Java) |
+
+### Conversión de `String` a Otros Tipos en Java
+
+Al trabajar con cadenas de texto, a menudo es necesario convertir un `String` en otros tipos de datos, como `int` o 
+`double`. Para hacer esto, Java proporciona métodos de análisis en las clases envolventes.
+
+#### Ejemplo de uso del método `parse`
+
+```java
+String numeroString = "123";
+int numeroInt = Integer.parseInt(numeroString); // Convierte String a int
+String decimalString = "3.14";
+double numeroDouble = Double.parseDouble(decimalString); // Convierte String a double
+```
 
 
 ## Referencias 
@@ -398,3 +451,8 @@ caracteres que indican el carácter que se desea representar.
 * [Java Language Specification (JLS): Chapter 3. Operators](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.12)
 * [The Java™ Tutorials: Operators](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/operators.html)
 * [Java Language Specification (JLS): Chapter 3. Escape Sequences](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10.7)
+* [Java Language Specification (JLS): Chapter 3. The Null Literal](https://docs.oracle.com/javase/specs/jls/se17/html/jls-3.html#jls-3.10.8)
+* [Java Language Specification (JLS): Chapter 5. Conversions and Contexts](https://docs.oracle.com/javase/specs/jls/se17/html/jls-5.html)
+* [Conversión de Tipos de Datos en Java: Cómo Transformar Datos de un Tipo a Otro](https://codersfree.com/posts/conversion-de-tipos-en-java)
+* [Conversión de tipos de datos en java (tipado). Ejemplos. Método valueOf. Error inconvertible types (CU00670B)](https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=636:conversion-de-tipos-de-datos-en-java-tipado-ejemplos-metodo-valueof-error-inconvertible-types-cu00670b&catid=68&Itemid=188)
+* [Conversión de tipos de dato en Java](https://maadcode.dev/articulos/conversion-de-tipos-de-dato-en-java)
