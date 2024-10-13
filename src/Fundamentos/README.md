@@ -444,11 +444,19 @@ double numeroDouble = Double.parseDouble(decimalString); // Convierte String a d
 La conversión a `char` se puede realizar desde diferentes tipos de datos, como `int` y `String`.
 
 * **Ejemplo de conversión de `int` a `char`**
+De int a char: Puedes convertir un valor int a char, donde el int representa el valor Unicode del carácter que deseas 
+obtener. Esta conversión puede implicar una promoción, ya que el valor int se transformará en su correspondiente carácter.
 ```java
 int numero = 65; // Código Unicode para 'A'
 char letra = (char) numero; // Convierte int a char
 ```
-
+* **Ejemplo de conversión de `String` a `char`**
+De String a char: Si deseas obtener un carácter específico de un String, puedes acceder a él mediante su índice. 
+Recuerda que un String puede contener múltiples caracteres, y puedes usar el método charAt para obtener uno en particular.
+```Java
+String texto = "Hola";
+char primeraLetra = texto.charAt(0); // Obtiene 'H'
+```
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
 * [Documentación de Oracle: Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
