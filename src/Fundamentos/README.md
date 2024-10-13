@@ -228,8 +228,9 @@ no puedes asignar un valor String a una variable int.
 - **Comillas simples** (`''`): Las comillas simples se utilizan para definir un solo carácter (char). Un char es un tipo 
   de dato que representa un único carácter, como una letra, un número o un símbolo.
   Ejemplo:
-      ```Java
-      char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.```
+    ```Java
+    char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
+    ```
   
   * **Importancia**: Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. 
       Si se usan comillas dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de 
