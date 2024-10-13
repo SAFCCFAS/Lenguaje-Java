@@ -11,6 +11,7 @@ variables, estructuras de control y otros conceptos esenciales.
 * [Separadores](#Separadores)
 * [Operadores](#Operadores)
 * [Secuencias de escape](#Secuencias-de-escape)
+* [Conversiones y Contextos](#conversiones-y-contextos)
 
 #### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
