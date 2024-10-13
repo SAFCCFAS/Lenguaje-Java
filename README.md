@@ -24,3 +24,5 @@ Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", vari
 - `Operadores.java`: Uso de operadores aritméticos, relacionales y lógicos.
 - `SecuenciasDeEscape.java`: Uso de las distintas secuencias de escape
 - `ConversionesYContextos.java`: Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
+- `EstructurasDeControl.java`: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
+  ejecución del programa a través de decisiones y repeticiones.

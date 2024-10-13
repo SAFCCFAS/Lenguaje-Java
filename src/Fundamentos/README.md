@@ -459,6 +459,8 @@ String texto = "Hola";
 char primeraLetra = texto.charAt(0); // Obtiene 'H'
 ```
 ### Estructuras De Control
+* **EstructurasDeControl.java**: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de 
+ejecución del programa a través de decisiones y repeticiones.
 
 Las estructuras de control permiten modificar el flujo de ejecución de un programa en función de condiciones y 
 repetición de acciones. En Java, las principales estructuras de control se dividen en:
