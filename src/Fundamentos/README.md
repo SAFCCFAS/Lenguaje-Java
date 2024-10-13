@@ -438,7 +438,15 @@ int numeroInt = Integer.parseInt(numeroString); // Convierte String a int
 String decimalString = "3.14";
 double numeroDouble = Double.parseDouble(decimalString); // Convierte String a double
 ```
+### Conversión a `char` en Java
 
+La conversión a `char` se puede realizar desde diferentes tipos de datos, como `int` y `String`.
+
+* **Ejemplo de conversión de `int` a `char`**
+```java
+int numero = 65; // Código Unicode para 'A'
+char letra = (char) numero; // Convierte int a char
+```
 
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
