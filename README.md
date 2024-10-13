@@ -22,3 +22,5 @@ Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", vari
 - `TiposDeDatos.java`: Ejemplos de tipo de datos.
 - `Variables.java`: Ejemplos de variables.
 - `Operadores.java`: Uso de operadores aritméticos, relacionales y lógicos.
+- `SecuenciasDeEscape.java`: Uso de las distintas secuencias de escape
+- `ConversionesYContextos.java`: Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.

@@ -6,12 +6,13 @@ variables, estructuras de control y otros conceptos esenciales.
 ### Contenido
 
 * [HolaMundo](#holamundojava)
-* [Tipo de Datos en Java](#tipos-de-datos-en-java)
+* [Tipo De Datos en Java](#tipos-de-datos-en-java)
 * [Variables](#variables)
 * [Separadores](#Separadores)
 * [Operadores](#Operadores)
-* [Secuencias de escape](#Secuencias-de-escape)
-* [Conversiones y Contextos](#conversiones-y-contextos)
+* [Secuencias De Escape](#Secuencias-de-escape)
+* [Conversiones Y Contextos](#conversiones-y-contextos)
+* [Estructuras De Control](#estructuras-de-control)
 
 #### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
@@ -309,7 +310,7 @@ constructores. Al igual que las variables locales, su ámbito es limitado al mé
   * Instancia: requiere un objeto.
   * Estática: puede ser accedida directamente desde la clase.
 
-## Separadores
+### Separadores
 
 En Java, los separadores (o puntuadores) son símbolos especiales utilizados para delimitar estructuras y organizar el 
 código. Estos símbolos, formados por caracteres ASCII, ayudan a definir la sintaxis básica del lenguaje, separando 
@@ -426,12 +427,12 @@ tipos de datos en Java:
 |  byte   |        short, int, long, float o double (pero no char)         |
 | boolean | Ninguna (los valores boolean no se consideran números en Java) |
 
-### Conversión de `String` a Otros Tipos en Java
+**Conversión de `String` a Otros Tipos en Java**
 
 Al trabajar con cadenas de texto, a menudo es necesario convertir un `String` en otros tipos de datos, como `int` o 
 `double`. Para hacer esto, Java proporciona métodos de análisis en las clases envolventes.
 
-#### Ejemplo de uso del método `parse`
+**Ejemplo de uso del método `parse`**
 
 ```java
 String numeroString = "123";
@@ -439,7 +440,7 @@ int numeroInt = Integer.parseInt(numeroString); // Convierte String a int
 String decimalString = "3.14";
 double numeroDouble = Double.parseDouble(decimalString); // Convierte String a double
 ```
-### Conversión a `char` en Java
+**Conversión a `char` en Java**
 
 La conversión a `char` se puede realizar desde diferentes tipos de datos, como `int` y `String`.
 
@@ -457,6 +458,69 @@ Recuerda que un String puede contener múltiples caracteres, y puedes usar el m�
 String texto = "Hola";
 char primeraLetra = texto.charAt(0); // Obtiene 'H'
 ```
+### Estructuras De Control
+
+Las estructuras de control permiten modificar el flujo de ejecución de un programa en función de condiciones y 
+repetición de acciones. En Java, las principales estructuras de control se dividen en:
+
+1. **Condicionales**: Permiten ejecutar un bloque de código solo si se cumple una condición.
+* `if`: Evalúa una condición y ejecuta un bloque de código si la condición es verdadera. 
+* `else`: Se ejecuta si la condición en el `if` es falsa. 
+* `else if`: Permite evaluar múltiples condiciones.
+* `switch`: Evalúa una variable frente a múltiples posibles valores, ejecutando el bloque que corresponda.
+
+2. **Bucles**: Permiten ejecutar un bloque de código repetidamente mientras se cumpla una condición.
+* `for`: Repite un bloque de código un número determinado de veces.
+* `while`: Repite un bloque de código mientras una condición sea verdadera.
+* `do-while`: Similar al `while`, pero se asegura de que el bloque se ejecute al menos una vez antes de verificar la 
+condición.
+
+#### **Condicionales**
+
+Las estructuras condicionales son esenciales para que el programa tome decisiones. Dependiendo de si una condición es 
+verdadera o falsa, el flujo de ejecución cambia.
+
+**Ejemplo de condicionales**:
+
+* `if-else`: Útil cuando tienes una condición principal y una alternativa para cuando no se cumple.
+* `switch`: Ideal para evaluar una misma variable frente a varios casos posibles.
+
+#### **Bucles**
+
+Los bucles permiten repetir instrucciones múltiples veces, lo que es útil para trabajar con conjuntos de datos o 
+realizar tareas repetitivas.
+
+**Tipos de bucles:**
+
+* `for`: Se utiliza cuando se conoce de antemano el número de repeticiones.
+* `while`: Se utiliza cuando se quiere repetir una tarea mientras una condición sea verdadera.
+* `do-while`: Similar a `while`, pero el bloque de código se ejecuta al menos una vez antes de verificar la condición.
+
+**Control de Bucles**
+
+Existen también declaraciones especiales para controlar los bucles:
+
+* `break`: Interrumpe el bucle antes de que termine su ejecución normal. 
+* `continue`: Salta la iteración actual y pasa a la siguiente del bucle.
+
+#### **Resumen de Estructuras de Control**
+
+Para una visión más detallada de las estructuras de control en Java, incluyendo ejemplos de uso y pseudocódigo 
+correspondiente, puedes consultar la tabla a continuación:
+
+|   Estructura   |                         Uso (Pseudocódigo)                         |
+|:--------------:|:------------------------------------------------------------------:|
+|      `if`      |                 `if (condición) { instrucciones }`                 |
+|   `else if`    |              `else if (condición) { instrucciones }`               |
+|     `else`     |                      `else { instrucciones }`                      |
+|    `switch`    |         `switch (expresión) { case valor: instrucciones }`         |
+|     `for`      | `for (inicialización; condición; actualización) { instrucciones }` |
+|    `while`     |               `while (condición) { instrucciones }`                |
+|   `do-while`   |              `do { instrucciones } while (condición)`              |
+|    `break`     |                              `break;`                              |
+|   `continue`   |                            `continue;`                             |
+
+
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
 * [Documentación de Oracle: Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
@@ -474,3 +538,5 @@ char primeraLetra = texto.charAt(0); // Obtiene 'H'
 * [Conversión de Tipos de Datos en Java: Cómo Transformar Datos de un Tipo a Otro](https://codersfree.com/posts/conversion-de-tipos-en-java)
 * [Conversión de tipos de datos en java (tipado). Ejemplos. Método valueOf. Error inconvertible types (CU00670B)](https://www.aprenderaprogramar.com/index.php?option=com_content&view=article&id=636:conversion-de-tipos-de-datos-en-java-tipado-ejemplos-metodo-valueof-error-inconvertible-types-cu00670b&catid=68&Itemid=188)
 * [Conversión de tipos de dato en Java](https://maadcode.dev/articulos/conversion-de-tipos-de-dato-en-java)
+* [The Java™ Tutorials: Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
+* [Java Control Statements | Control Flow in Java](https://www.javatpoint.com/control-flow-in-java)
