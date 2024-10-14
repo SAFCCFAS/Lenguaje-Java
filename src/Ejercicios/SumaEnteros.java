@@ -8,11 +8,10 @@ public class SumaEnteros {
         int n1, n2, suma;
         System.out.println("Ingrese primer número a sumar");
         n1 = leer.nextInt();
-        leer.nextLine();
         System.out.println("Ingrese segundo número a sumar");
         n2 = leer.nextInt();
-        leer.nextLine();
         suma = n1 + n2;
-        System.out.println("EL resultado de la suma es: " + suma);
+        System.out.println("EL resultado de la suma de " +n1+" y "+n2+" es: " + suma);
+        leer.close();
     }
 }

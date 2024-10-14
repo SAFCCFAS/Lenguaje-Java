@@ -5,7 +5,7 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 
 ## Archivos incluidos:
 
-- **`SumarEnteros.java`**: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
+- `SumarEnteros.java`: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
 
 ## Instrucciones
 
