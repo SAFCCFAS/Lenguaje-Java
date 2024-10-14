@@ -10,12 +10,12 @@ La estructura está organizada en carpetas temáticas que agrupan los ejemplos s
 
 ## Estructura del repositorio
 
-- 📚 **Fundamentos/**: Ejercicios básicos.
+- 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
 
 ## Descripción de carpetas y ejemplos
 
 #### 1. **Fundamentos**
-Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", variables, tipos de datos y operadores.
+Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", variables, tipos de datos ,operadores y entre otros.
 
 **Archivos incluidos:**
 - `HolaMundo.java`: Primer programa que imprime "¡Hola, Mundo!".
