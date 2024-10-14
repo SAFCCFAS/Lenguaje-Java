@@ -1,8 +1,8 @@
 # Lenguaje Java  <img src="java.ico" width="60"/>
 ___
-Este repositorio es el resultado de mi viaje de aprendizaje en **Java**, un lenguaje de programación poderoso y versátil 
-utilizado en una amplia gama de aplicaciones, desde el desarrollo web hasta la creación de aplicaciones móviles y 
-software empresarial.
+Este repositorio es el resultado de mi viaje de aprendizaje en **Java** de forma independiente, un lenguaje de 
+programación poderoso y versátil utilizado en una amplia gama de aplicaciones, desde el desarrollo web hasta la creación 
+de aplicaciones móviles y software empresarial.
 
 Decidí aprender Java debido a su popularidad en la industria y su sólida comunidad de soporte. Actualmente, me encuentro 
 en las etapas iniciales de mi aprendizaje, explorando conceptos básicos y fundamentales. A lo largo de este proceso, he 
