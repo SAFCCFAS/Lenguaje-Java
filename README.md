@@ -51,7 +51,6 @@ java HolaMundo
 ### Estructura del repositorio
 
 La estructura está organizada en carpetas temáticas que agrupan los ejemplos según el concepto de Java que cubren.
-- 📂 **src/**
 - 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
 - 📚 **Ejercicios/**: Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
@@ -73,4 +72,6 @@ otros.
 - `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
 
 2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
-- `SumarEnteros.java`: programa básico donde se solicita números a sumar al usuario.
+
+**Archivos incluidos:**
+- `SumarEnteros.java`: Programa básico donde se solicita números a sumar al usuario.
