@@ -48,17 +48,19 @@ javac Fundamentos/HolaMundo.java
 ```bash
 java HolaMundo
 ```
-## Estructura del repositorio
+### Estructura del repositorio
 
 La estructura está organizada en carpetas temáticas que agrupan los ejemplos según el concepto de Java que cubren.
 
 - 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
+- 📚 **Ejercicios/**: Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
-## Descripción de carpetas y ejemplos
+**Descripción de carpetas y ejemplos**
 
-#### 1. **Fundamentos**
+1. **Fundamentos**
 Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", variables, tipos de datos ,operadores y entre 
 otros.
+2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
 **Archivos incluidos:**
 - `HolaMundo.java`: Primer programa que imprime "¡Hola, Mundo!".
