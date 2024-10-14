@@ -73,3 +73,4 @@ otros.
 - `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
 
 2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
+- `SumarEnteros.java`: programa básico donde se solicita números a sumar al usuario.
