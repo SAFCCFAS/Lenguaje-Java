@@ -60,7 +60,6 @@ La estructura está organizada en carpetas temáticas que agrupan los ejemplos s
 1. **Fundamentos**
 Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", variables, tipos de datos ,operadores y entre 
 otros.
-2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
 **Archivos incluidos:**
 - `HolaMundo.java`: Primer programa que imprime "¡Hola, Mundo!".
@@ -72,3 +71,5 @@ otros.
 - `EstructurasDeControl.java`: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
   ejecución del programa a través de decisiones y repeticiones.
 - `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
+
+2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
