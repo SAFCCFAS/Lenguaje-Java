@@ -51,7 +51,7 @@ java HolaMundo
 ### Estructura del repositorio
 
 La estructura está organizada en carpetas temáticas que agrupan los ejemplos según el concepto de Java que cubren.
-
+- 📂 **src/**
 - 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
 - 📚 **Ejercicios/**: Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
