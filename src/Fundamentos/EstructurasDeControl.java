@@ -4,12 +4,12 @@ public class EstructurasDeControl {
     public static void main(String[] args) {
         // Estructura if-else
         int x = 10;
-        if (x > 0) {
-            System.out.println("x es positivo");
-        } else if (x < 0) {
-            System.out.println("x es negativo");
-        } else {
+        if (x == 0) {
             System.out.println("x es cero");
+        } else if (x % 2 == 0) {
+            System.out.println("x es par");
+        } else {
+            System.out.println("x es impar");
         }
 
         // Estructura switch
