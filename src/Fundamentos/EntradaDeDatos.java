@@ -8,7 +8,10 @@ public class EntradaDeDatos {
 
         System.out.println("Favor ingresa tu nombre:");
         String nombre = entrada.nextLine();
-        System.out.println("Gracias, bienvenido(a): " + nombre + "!");
+        System.out.println("Ingresa tu edad:");
+        int edad = entrada.nextInt();
+        entrada.nextLine();
+        System.out.println("Gracias, bienvenido(a): " + nombre + " tienes " +edad+ " años!");
         entrada.close();
     }
 }
