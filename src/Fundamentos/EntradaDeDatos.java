@@ -11,7 +11,7 @@ public class EntradaDeDatos {
         System.out.println("Ingresa tu edad:");
         int edad = entrada.nextInt();
         entrada.nextLine();
-        System.out.println("Gracias, bienvenido(a): " + nombre + " tienes " +edad+ " años!");
+        System.out.println("Gracias, bienvenido(a): " + nombre + " tienes " + edad + " años!");
         entrada.close();
     }
 }
