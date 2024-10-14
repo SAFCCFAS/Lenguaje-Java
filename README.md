@@ -1,21 +1,64 @@
 # Lenguaje Java  <img src="java.ico" width="60"/>
 ___
+Este repositorio es el resultado de mi viaje de aprendizaje en **Java**, un lenguaje de programación poderoso y versátil 
+utilizado en una amplia gama de aplicaciones, desde el desarrollo web hasta la creación de aplicaciones móviles y 
+software empresarial.
 
-Este repositorio contiene ejemplos y ejercicios prácticos de **Java** desarrollados durante mi proceso de aprendizaje. 
+Decidí aprender Java debido a su popularidad en la industria y su sólida comunidad de soporte. Actualmente, me encuentro 
+en las etapas iniciales de mi aprendizaje, explorando conceptos básicos y fundamentales. A lo largo de este proceso, he 
+trabajado en diversos ejemplos y ejercicios prácticos que abarcan desde los conceptos más sencillos hasta aquellos que 
+son esenciales para comprender el lenguaje.
+
+Mi objetivo con este repositorio es crear un recurso que no solo me ayude a repasar lo aprendido, sino que también pueda 
+ser útil para otros que estén interesados en comenzar su propia aventura con Java. Espero que estos ejemplos sean de 
+ayuda y que sirvan como punto de partida para quienes buscan aprender y practicar sus habilidades en este lenguaje.
+ 
 Está organizado por temas para facilitar la práctica de diferentes conceptos clave del lenguaje.
 
+## Instrucciones de Uso
+
+Para compilar y ejecutar los ejemplos de Java en este repositorio, sigue estos pasos:
+
+### Requisitos Previos
+
+- Asegúrate de tener instalado Java en tu máquina. Puedes verificar esto ejecutando el siguiente comando en la terminal:
+  ```bash
+  java -version
+  ```
+Si no tienes Java instalado, puedes descargarlo e instalarlo desde la página oficial de Oracle o desde OpenJDK.
+
+- [Página oficial de Oracle](https://www.oracle.com/java/technologies/javase-downloads.html)
+- [OpenJDK](https://openjdk.java.net/)
+
+### Compilación y Ejecución
+
+1. **Clona el repositorio** en tu máquina local utilizando Git:
+```bash
+git clone https://github.com/SAFCCFAS/Lenguaje-Java.git
+```
+2. **Navega a la carpeta del proyecto**:
+```bash
+cd Lenguaje-Java
+```
+3. **Compila el archivo Java** que deseas ejecutar. Por ejemplo, para compilar `HolaMundo.java`
+```bash
+javac Fundamentos/HolaMundo.java
+```
+4. **Ejecuta el programa compilado**:
+```bash
+java HolaMundo
+```
 ## Estructura del repositorio
 
 La estructura está organizada en carpetas temáticas que agrupan los ejemplos según el concepto de Java que cubren.
-
-## Estructura del repositorio
 
 - 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
 
 ## Descripción de carpetas y ejemplos
 
 #### 1. **Fundamentos**
-Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", variables, tipos de datos ,operadores y entre otros.
+Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", variables, tipos de datos ,operadores y entre 
+otros.
 
 **Archivos incluidos:**
 - `HolaMundo.java`: Primer programa que imprime "¡Hola, Mundo!".
