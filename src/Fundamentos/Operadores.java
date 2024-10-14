@@ -6,8 +6,8 @@ public class Operadores {
         int n1 = 12, n2 = 3;
 
         //operadores aritméticos
-        int Suma = n1 + n2, Resta = n1 - n2, Multiplicacion = n1 * n2, Modulo = n1 % n2;
-        float Division = n1 / n2; // También es válido el uso de la variable double
+        int suma = n1 + n2, resta = n1 - n2, multiplicacion = n1 * n2, modulo = n1 % n2;
+        float division = n1 / n2; // También es válido el uso de la variable double
 
         // Operadores de incremento y decremento
         int incremento = ++n1; // Pre-incremento: incrementa antes de usar el valor; se usa sufijo en estructuras de control
@@ -47,11 +47,11 @@ public class Operadores {
 
         // Resultado de los operadores
         System.out.println("Los número es operar son: " + n1 + " y " + n2 + ".");
-        System.out.println("El resultado de Suma es: " + Suma + ".");
-        System.out.println("El resultado de Resta es: " + Resta + ".");
-        System.out.println("El resultado de Multiplicación es: " + Multiplicacion + ".");
-        System.out.println("El resultado de División es: " + Division + ".");
-        System.out.println("El resultado de Modulo es: " + Modulo + ".");
+        System.out.println("El resultado de Suma es: " + suma + ".");
+        System.out.println("El resultado de Resta es: " + resta + ".");
+        System.out.println("El resultado de Multiplicación es: " + multiplicacion + ".");
+        System.out.println("El resultado de División es: " + division + ".");
+        System.out.println("El resultado de Modulo es: " + modulo + ".");
         System.out.println("Incremento del primer número: " + incremento + ".");
         System.out.println("Decremento del segundo número: " + decremento + ".");
         System.out.println("El primer número es mayor que el segundo: " + esMayor + ".");
