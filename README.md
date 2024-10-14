@@ -26,3 +26,4 @@ Aquí se encuentran los programas más básicos de Java, como "Hola Mundo", vari
 - `ConversionesYContextos.java`: Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
 - `EstructurasDeControl.java`: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
   ejecución del programa a través de decisiones y repeticiones.
+- `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.

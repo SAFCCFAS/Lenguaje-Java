@@ -13,17 +13,17 @@ variables, estructuras de control y otros conceptos esenciales.
 * [Secuencias De Escape](#Secuencias-de-escape)
 * [Conversiones Y Contextos](#conversiones-y-contextos)
 * [Estructuras De Control](#estructuras-de-control)
+* [Entrada De Datos](#entrada-de-datos)
 
 #### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
    - **Objetivo:** Introducir la estructura básica de un programa Java.
 
-#### **TiposDeDatos.java**:
-   - Ejemplos de los principales tipos de datos primitivos en Java.
-   - **Objetivo**: Mostrar cómo se declaran y utilizan diferentes tipos de datos en Java, como 
-   `int`, `double`, `char`, `boolean` y `String`.
-
 ### Tipos de Datos en Java
+**TiposDeDatos.java**:
+- Ejemplos de los principales tipos de datos primitivos en Java.
+- **Objetivo**: Mostrar cómo se declaran y utilizan diferentes tipos de datos en Java, como
+  `int`, `double`, `char`, `boolean` y `String`.
 
 Java es un lenguaje de programación **estáticamente** y **fuertemente tipado**. Esto significa que cada tipo de 
 dato (como entero, carácter, decimal, etc.) está predefinido como parte del lenguaje de programación, y todas las 
@@ -330,10 +330,10 @@ bloques, parámetros y elementos en las expresiones.
 
 ## Operadores
 
-* **Operadores.java:**
-  * Ejemplos prácticos del uso de operadores en Java. 
-  * Objetivo: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos, 
-      condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
+**Operadores.java:**
+* Ejemplos prácticos del uso de operadores en Java. 
+* Objetivo: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos, 
+    condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
 
 Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más operandos 
 (valores, variables, expresiones). Estos operadores permiten realizar cálculos matemáticos, operaciones lógicas y de 
@@ -360,13 +360,13 @@ asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, 
 | **Shift (Desplazamiento)** |        `<<`, `>>`, `>>>`         |                 Desplazan bits a la izquierda o derecha.                 |          `int z = x << 2;`           |        
 |  **Asignación Compuesta**  |    `+=`,`-=`,`*=`, `/=`, `%=`    |              Combina operadores aritméticos con asignación.              |              `a += 5;`               |
 
-### Secuencias De Escape
-* **SecuenciasDeEscape.java:**
-  * Ejemplos prácticos del uso de secuencias de escape en Java. 
-  * Objetivo: Demostrar el uso de las principales secuencias de escape disponibles en Java, como `\n` para saltos de 
-      línea, `\t` para tabulación, `\"` y `\'` para incluir comillas dentro de cadenas, así como `\\` para incluir una 
-      barra invertida. El código ilustra cómo utilizar estas secuencias para mejorar la presentación de texto en la 
-      consola, haciendo más legible la salida y permitiendo la inclusión de caracteres especiales.
+## Secuencias De Escape
+**SecuenciasDeEscape.java:**
+* Ejemplos prácticos del uso de secuencias de escape en Java. 
+* Objetivo: Demostrar el uso de las principales secuencias de escape disponibles en Java, como `\n` para saltos de 
+    línea, `\t` para tabulación, `\"` y `\'` para incluir comillas dentro de cadenas, así como `\\` para incluir una 
+    barra invertida. El código ilustra cómo utilizar estas secuencias para mejorar la presentación de texto en la 
+    consola, haciendo más legible la salida y permitiendo la inclusión de caracteres especiales.
 
 Las secuencias de escape son combinaciones de caracteres que permiten representar caracteres especiales que no se pueden 
 introducir directamente en una cadena de texto. En Java, se utilizan principalmente en literales de caracteres, 
@@ -394,12 +394,11 @@ referencia. Es el valor predeterminado para variables no inicializadas de tipo o
   * **Uso**: Se utiliza para indicar que un objeto no está asignado.
   * **Ejemplo**: `String texto = null;`
 
-### Conversiones y Contextos
-
-* **ConversionesYContextos.java**:
-  * Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
-  * Objetivo: Explicar el concepto de conversión de tipos (casting), tanto implícita como explícita, y cómo el contexto 
-  de una operación puede influir en el tipo resultante.
+## Conversiones y Contextos
+**ConversionesYContextos.java**:
+* Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
+* Objetivo: Explicar el concepto de conversión de tipos (casting), tanto implícita como explícita, y cómo el contexto 
+de una operación puede influir en el tipo resultante.
 
 La **conversión de tipos** en Java es fundamental para manipular datos de diferentes tipos de manera eficiente y sin 
 errores. Java realiza conversiones automáticas (implícitas) cuando los tipos son compatibles, como en expresiones que 
@@ -458,8 +457,8 @@ Recuerda que un String puede contener múltiples caracteres, y puedes usar el m�
 String texto = "Hola";
 char primeraLetra = texto.charAt(0); // Obtiene 'H'
 ```
-### Estructuras De Control
-* **EstructurasDeControl.java**: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de 
+## Estructuras De Control
+**EstructurasDeControl.java**: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de 
 ejecución del programa a través de decisiones y repeticiones.
 
 Las estructuras de control permiten modificar el flujo de ejecución de un programa en función de condiciones y 
@@ -477,7 +476,7 @@ repetición de acciones. En Java, las principales estructuras de control se divi
 * `do-while`: Similar al `while`, pero se asegura de que el bloque se ejecute al menos una vez antes de verificar la 
 condición.
 
-#### **Condicionales**
+**Condicionales**
 
 Las estructuras condicionales son esenciales para que el programa tome decisiones. Dependiendo de si una condición es 
 verdadera o falsa, el flujo de ejecución cambia.
@@ -487,7 +486,7 @@ verdadera o falsa, el flujo de ejecución cambia.
 * `if-else`: Útil cuando tienes una condición principal y una alternativa para cuando no se cumple.
 * `switch`: Ideal para evaluar una misma variable frente a varios casos posibles.
 
-#### **Bucles**
+**Bucles**
 
 Los bucles permiten repetir instrucciones múltiples veces, lo que es útil para trabajar con conjuntos de datos o 
 realizar tareas repetitivas.
@@ -505,7 +504,7 @@ Existen también declaraciones especiales para controlar los bucles:
 * `break`: Interrumpe el bucle antes de que termine su ejecución normal. 
 * `continue`: Salta la iteración actual y pasa a la siguiente del bucle.
 
-#### **Resumen de Estructuras de Control**
+**Resumen de Estructuras de Control**
 
 Para una visión más detallada de las estructuras de control en Java, incluyendo ejemplos de uso y pseudocódigo 
 correspondiente, puedes consultar la tabla a continuación:
@@ -522,6 +521,74 @@ correspondiente, puedes consultar la tabla a continuación:
 |    `break`     |                              `break;`                              |
 |   `continue`   |                            `continue;`                             |
 
+## **Entrada De Datos**
+
+**EntradaDeDatos.java**: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
+
+En Java, la entrada de datos permite que los programas interactúen con los usuarios, obteniendo información desde el 
+teclado u otras fuentes de entrada. Para lograrlo, se utiliza la clase `Scanner` del paquete `java.util`. Esta clase 
+proporciona métodos convenientes para leer diferentes tipos de datos como enteros, cadenas, números decimales, etc.
+
+## Uso de la clase `Scanner`
+
+Para utilizar el `Scanner`, primero debes importarlo:
+
+```java
+import java.util.Scanner;
+```
+Luego, puedes crear una instancia de Scanner asociada al teclado (entrada estándar) de esta forma:
+
+```java
+Scanner input = new Scanner(System.in);
+```
+**Leer diferentes tipos de datos**
+
+El Scanner tiene varios métodos para leer distintos tipos de datos:
+
+- **Enteros**:
+```java
+int numero = input.nextInt();
+```
+- **Decimales (punto flotante)**:
+```java
+double decimal = input.nextDouble();
+```
+- **Cadenas de caracteres**:
+  * Para leer una **palabra**:
+  ```java
+  String palabra = input.next();
+  ```
+  * Para leer una **línea completa**:
+  ```java
+  String linea = input.nextLine();
+  ```
+**Limpieza del buffer**
+
+Un detalle importante cuando se mezclan lecturas de diferentes tipos de datos es la necesidad de limpiar el buffer del 
+`Scanner`. Esto es crucial cuando lees un número y luego una cadena con `nextLine()`, ya que el método `nextInt()`, 
+`nextDouble()`, etc., no consume el salto de línea (`\n`), lo que puede interferir con la siguiente lectura de texto.
+
+Para solucionar esto, después de leer un número y antes de leer una cadena con `nextLine()`, es necesario limpiar el 
+buffer llamando a `nextLine()`:
+```java
+int numero = input.nextInt();
+input.nextLine();  // Limpia el buffer
+String texto = input.nextLine();  // Ahora puedes leer la línea completa
+```
+**Cerrar el Scanner**
+
+Una vez que terminas de usar el `Scanner`, es una buena práctica cerrar el recurso para liberar los recursos del 
+sistema. Esto se hace llamando al método `close()`:
+
+```java
+input.close();
+```
+**Resumen**
+
+1. **Clase `Scanner`**: Se usa para obtener entrada de diferentes tipos de datos desde el teclado.
+2. **Limpieza del buffer**: Después de leer un número y antes de leer una cadena, se debe limpiar el buffer llamando a 
+     `nextLine()`.
+3. **Cerrar el `Scanner`**: Se debe cerrar el `Scanner` con `close()` para liberar recursos del sistema.
 
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
@@ -542,3 +609,4 @@ correspondiente, puedes consultar la tabla a continuación:
 * [Conversión de tipos de dato en Java](https://maadcode.dev/articulos/conversion-de-tipos-de-dato-en-java)
 * [The Java™ Tutorials: Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
 * [Java Control Statements | Control Flow in Java](https://www.javatpoint.com/control-flow-in-java)
+* [Documentación de la API de Java SE 8: Class Scanner](https://docs.oracle.com/javase/8/docs/api/)
