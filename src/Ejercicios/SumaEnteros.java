@@ -11,7 +11,7 @@ public class SumaEnteros {
         System.out.println("Ingrese segundo número a sumar");
         n2 = leer.nextInt();
         suma = n1 + n2;
-        System.out.println("EL resultado de la suma de " +n1+" y "+n2+" es: " + suma);
+        System.out.println("EL resultado de la suma de " + n1 + " y " + n2 + " es: " + suma);
         leer.close();
     }
 }
