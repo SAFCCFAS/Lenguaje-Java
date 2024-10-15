@@ -2,11 +2,10 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class CalculadoraBasica {
+public class CalculadoraBasica_v2 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
-        int n1, n2, operacion, suma, resta, multiplicacion, resultado;
-        double division;
+        int n1, n2, operacion;
         String nombreOperacion = null;
         System.out.println("Ingrese un número:");
         n1 = leer.nextInt();
@@ -18,29 +17,22 @@ public class CalculadoraBasica {
         switch (operacion) {
             case 1:
                 nombreOperacion = "Suma";
-                suma = n1 + n2;
-                resultado = suma;
-                System.out.println("El resultado de la " + nombreOperacion + " es: " + resultado);
+                System.out.println("El resultado de la " + nombreOperacion + " es: " + (n1 + n2));
                 break;
             case 2:
                 nombreOperacion = "Resta";
-                resta = n1 - n2;
-                resultado = resta;
-                System.out.println("El resultado de la " + nombreOperacion + " es: " + resultado);
+                System.out.println("El resultado de la " + nombreOperacion + " es: " + (n1 - n2));
                 break;
             case 3:
                 nombreOperacion = "Multiplicación";
-                multiplicacion = n1 * n2;
-                resultado = multiplicacion;
-                System.out.println("El resultado de la " + nombreOperacion + " es: " + resultado);
+                System.out.println("El resultado de la " + nombreOperacion + " es: " + (n1 * n2));
                 break;
             case 4:
                 nombreOperacion = "División";
                 if (n1 == 0 || n2 == 0) {
                     System.out.println("Error: No es posible dividir entre cero.");
                 } else {
-                    division = (double) n1 / n2; //casting a double
-                    System.out.println("El resultado de la " + nombreOperacion + " es: " + division);
+                    System.out.println("El resultado de la " + nombreOperacion + " es: " + ((double) n1 / n2));
                 }
                 break;
             default:
