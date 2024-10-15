@@ -608,9 +608,9 @@ su idioma nativo.
 de Java, desde lo básico hasta conceptos más avanzados.
 
 ### Nota
->[!NOTE]
-> 
-Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te animo a que los explores y practiques los conceptos que vayas aprendiendo para obtener una comprensión más sólida de Java.
+
+Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te animo a que los explores y 
+practiques los conceptos que vayas aprendiendo para obtener una comprensión más sólida de Java.
 
 
 ## Referencias 
