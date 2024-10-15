@@ -590,6 +590,29 @@ input.close();
      `nextLine()`.
 3. **Cerrar el `Scanner`**: Se debe cerrar el `Scanner` con `close()` para liberar recursos del sistema.
 
+## Recursos Adicionales
+
+Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar tu aprendizaje de Java:
+
+- **[Curso de Java para Principiantes](https://www.youtube.com/watch?v=8cm1x4bC5wE)**: Un curso completo que cubre los 
+fundamentos de Java desde cero, ideal para quienes están comenzando.
+
+- **[Java Programming and Software Engineering Fundamentals](https://www.youtube.com/playlist?list=PLu0WxIzDvnq_8e88Xk8f56a7bD3F3qO0u)**: 
+Una serie de videos que cubren los conceptos básicos y avanzados de Java, además de la programación orientada a objetos.
+
+- **[Canal de Programación de Píldoras Informáticas](https://www.youtube.com/user/pildorasinformaticas)**: Un canal en 
+español que ofrece tutoriales sobre Java y otros lenguajes de programación, perfecto para quienes prefieren aprender en 
+su idioma nativo.
+
+- **[Java Brains](https://www.youtube.com/user/koushks)**: Un canal con muchos tutoriales que cubren diversos aspectos 
+de Java, desde lo básico hasta conceptos más avanzados.
+
+### Nota
+>[!NOTE]
+> 
+Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te animo a que los explores y practiques los conceptos que vayas aprendiendo para obtener una comprensión más sólida de Java.
+
+
 ## Referencias 
 * [Documentación de Oracle: Getting Started - Hello World](https://docs.oracle.com/javase/tutorial/getStarted/cupojava/index.html)
 * [Documentación de Oracle: Primitive Data Types](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/datatypes.html)
