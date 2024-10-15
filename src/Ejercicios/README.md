@@ -6,6 +6,8 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 ## Archivos incluidos:
 
 - `SumarEnteros.java`: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
+- `CalculadoraBasica.java`: Programa que pide al usuario dos números y una operación 
+(suma, resta, multiplicación o división) y muestre el resultado.
 
 ## Instrucciones
 

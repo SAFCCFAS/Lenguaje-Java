@@ -75,3 +75,5 @@ otros.
 
 **Archivos incluidos:**
 - `SumarEnteros.java`: Programa básico donde se solicita números a sumar al usuario.
+- `CalculadoraBasica.java`: Programa que pide al usuario dos números y una operación
+    (suma, resta, multiplicación o división) y muestre el resultado.
