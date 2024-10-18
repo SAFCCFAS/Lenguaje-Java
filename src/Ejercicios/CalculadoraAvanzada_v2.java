@@ -6,7 +6,7 @@ public class CalculadoraAvanzada_v2 {
     static Scanner leer = new Scanner(System.in);
 
     public static void main(String[] args) {
-        double n1, n2, suma, resta, multiplicacion, division, modulo, potencia, raiz;
+        double n1, n2;
 
         int operacion;
         String nombreoperacion = null;
@@ -56,51 +56,43 @@ public class CalculadoraAvanzada_v2 {
             }
         } while (control != false);
         System.out.println("Usted a elegido: " + nombreoperacion);
-        for (int i = 0; i < 1; i++) {
-            if (operacion >= 1 && operacion <= 5) {
-                System.out.println("Ingrese un número");
-                n1 = leer.nextDouble();
-                System.out.println("Ingrese un número");
-                n2 = leer.nextDouble();
-                switch (operacion) {
-                    case 1:
-                        suma = n1 + n2;
-                        System.out.println("EL resultado de la " + nombreoperacion + " es " + suma);
-                        break;
-                    case 2:
-                        resta = n1 - n2;
-                        System.out.println("EL resultado de la " + nombreoperacion + " es " + resta);
-                        break;
-                    case 3:
-                        multiplicacion = n1 * n2;
-                        System.out.println("EL resultado de la " + nombreoperacion + " es " + multiplicacion);
-                        break;
-                    case 4:
-                        if (n2 != 0) {
-                            division = n1 / n2;
-                            System.out.println("El resultado de la " + nombreoperacion + " es " + division);
-                        } else {
-                            System.err.println("Error: No se puede dividir entre cero.");
-                        }
-                        break;
-                    case 5:
-                        modulo = n1 % n2;
-                        System.out.println("El resultado de la " + nombreoperacion + " es " + modulo);
-                        break;
-                }
-            } else if (operacion == 6) {
-                System.out.println("Ingrese número base");
-                n1 = leer.nextDouble();
-                System.out.println("Ingrese número exponente");
-                n2 = leer.nextDouble();
-                potencia = Math.pow(n1, n2);
-                System.out.println("El resultado de la " + nombreoperacion + " es " + potencia);
-            } else if (operacion == 7) {
-                System.out.println("Ingrese un número a encontrar " + nombreoperacion);
-                n1 = leer.nextDouble();
-                raiz = Math.sqrt(n1);
-                System.out.println("El resultado de la " + nombreoperacion + " es " + raiz);
+
+        if (operacion >= 1 && operacion <= 5) {
+            System.out.println("Ingrese un número");
+            n1 = leer.nextDouble();
+            System.out.println("Ingrese un número");
+            n2 = leer.nextDouble();
+            switch (operacion) {
+                case 1:
+                    System.out.println("EL resultado de la " + nombreoperacion + " es " + (n1 + n2));
+                    break;
+                case 2:
+                    System.out.println("EL resultado de la " + nombreoperacion + " es " + (n1 - n2));
+                    break;
+                case 3:
+                    System.out.println("EL resultado de la " + nombreoperacion + " es " + (n1 * n2));
+                    break;
+                case 4:
+                    if (n2 != 0) {
+                        System.out.println("El resultado de la " + nombreoperacion + " es " + (n1 / n2));
+                    } else {
+                        System.err.println("Error: No se puede dividir entre cero.");
+                    }
+                    break;
+                case 5:
+                    System.out.println("El resultado de la " + nombreoperacion + " es " + (n1 % n2));
+                    break;
             }
+        } else if (operacion == 6) {
+            System.out.println("Ingrese número base");
+            n1 = leer.nextDouble();
+            System.out.println("Ingrese número exponente");
+            n2 = leer.nextDouble();
+            System.out.println("El resultado de la " + nombreoperacion + " es " + Math.pow(n1, n2));
+        } else if (operacion == 7) {
+            System.out.println("Ingrese un número a encontrar " + nombreoperacion);
+            n1 = leer.nextDouble();
+            System.out.println("El resultado de la " + nombreoperacion + " es " + Math.sqrt(n1));
         }
     }
 }

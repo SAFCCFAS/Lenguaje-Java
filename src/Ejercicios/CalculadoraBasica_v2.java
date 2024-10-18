@@ -29,7 +29,7 @@ public class CalculadoraBasica_v2 {
                 break;
             case 4:
                 nombreOperacion = "División";
-                if (n1 == 0 || n2 == 0) {
+                if (n2 == 0) {
                     System.out.println("Error: No es posible dividir entre cero.");
                 } else {
                     System.out.println("El resultado de la " + nombreOperacion + " es: " + ((double) n1 / n2));
