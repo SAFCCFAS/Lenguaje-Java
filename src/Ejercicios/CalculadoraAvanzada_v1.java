@@ -47,7 +47,8 @@ public class CalculadoraAvanzada_v1 {
                     System.exit(0);
                     break;
                 default:
-                    System.err.println("Error: opción o ingreso no válido intente nuevamente." + "\nOpciones válidas 1 al 8");
+                    System.err.println("Error: opción o ingreso no válido intente nuevamente." +
+                            "\nOpciones válidas 1 al 8");
                     break;
             }
         } while (control != false);
