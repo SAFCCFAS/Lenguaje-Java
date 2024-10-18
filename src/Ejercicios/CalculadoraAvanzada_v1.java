@@ -8,34 +8,51 @@ public class CalculadoraAvanzada_v1 {
     public static void main(String[] args) {
         double n1, n2, suma, resta, multiplicacion, division, modulo, potencia, raiz; // declaración de variables
         int operacion, resultado;
-        String nombreoperacion= null;
-        boolean control=true;
+        String nombreoperacion = null;
+        boolean control = true;
         do {
             System.out.println("Bienvenido(a)!, ¿Que operación desea realizar?" +
-                    "\n1.Suma.\n2.Resta.\n3.Multiplicación.\n4.División.\n5.Modulo.\n6.Potencia.\n7.Raiz Cuadrada." +
+                    "\n1.Suma.\n2.Resta.\n3.Multiplicación.\n4.División.\n5.Modulo.\n6.Potencia.\n7.Raíz Cuadrada." +
                     "\n8.Salir.");
             operacion = leer.nextInt(); // inicialización de las variables
-            if (operacion >= 1 && operacion <= 4) {
-                switch (operacion) {
-                    case 1:
-                        nombreoperacion = "Suma";
-                        break;
-                    case 2:
-                        nombreoperacion = "Resta";
-                        break;
-                    case 3:
-                        nombreoperacion = "Multiplicación";
-                        break;
-                    case 4:
-                        nombreoperacion = "División";
-                        break;
-                    default:
-                        System.out.println("Error: opción o ingreso, válido intente nuevamente.");
-                }
-                System.out.println("Usted a elegido: " + nombreoperacion);
+            leer.nextLine();
 
-                control=false;
+            switch (operacion) {
+                case 1:
+                    nombreoperacion = "Suma";
+                    control = false;
+                    break;
+                case 2:
+                    nombreoperacion = "Resta";
+                    control = false;
+                    break;
+                case 3:
+                    nombreoperacion = "Multiplicación";
+                    control = false;
+                    break;
+                case 4:
+                    nombreoperacion = "División";
+                    control = false;
+                    break;
+                case 5:
+                    nombreoperacion = "Modulo";
+                    control = false;
+                    case 6:
+                    nombreoperacion = "Potencia";
+                    control = false;
+                    break;
+                    case 7:
+                    nombreoperacion = "Raíz Cuadrada";
+                    control = false;
+                    break;
+                    case 8:
+                    System.exit(0);
+                    break;
+                default:
+                    System.out.println("Error: opción o ingreso, válido intente nuevamente.");
+                    break;
             }
-        }while (control);
+        } while (control != false);
+        System.out.println("Usted a elegido: " + nombreoperacion);
     }
 }
