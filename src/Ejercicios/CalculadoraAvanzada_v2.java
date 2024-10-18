@@ -2,11 +2,12 @@ package Ejercicios;
 
 import java.util.Scanner;
 
-public class CalculadoraAvanzada_v1 {
+public class CalculadoraAvanzada_v2 {
     static Scanner leer = new Scanner(System.in); // variable estatica
 
     public static void main(String[] args) {
-        double n1, n2, suma, resta, multiplicacion, division, modulo, potencia, raiz; // declaración de variables
+        double n1, n2, suma, resta, multiplicacion, division, modulo, potencia, raiz; // declaración de
+                                                                                      // variables
         int operacion;
         String nombreoperacion = null;
         boolean control = true;
@@ -55,16 +56,16 @@ public class CalculadoraAvanzada_v1 {
             }
         } while (control != false);
         System.out.println("Usted a elegido: " + nombreoperacion); // mostrar el nombre según el ingreso realizado
-        for (int i = 0; i < 1; i++) {
+        for (int i = 0; i < 1; i++) { // realizar operación
             if (operacion >= 1 && operacion <= 5) {
                 System.out.println("Ingrese un número");
                 n1 = leer.nextDouble();
                 System.out.println("Ingrese un número");
                 n2 = leer.nextDouble();
-                switch (operacion) { // realizar operación
+                switch (operacion) {
                     case 1:
                         suma = n1 + n2;
-                        System.out.println("EL resultado de la " + nombreoperacion + " es " + suma); //mostrar resultado
+                        System.out.println("EL resultado de la " + nombreoperacion + " es " + suma);
                         break;
                     case 2:
                         resta = n1 - n2;
