@@ -36,7 +36,7 @@ public class CalculadoraBasica_v1 {
                 break;
             case 4:
                 nombreOperacion = "División";
-                if (n1 == 0 || n2 == 0) {
+                if (n2 == 0) {
                     System.out.println("Error: No es posible dividir entre cero.");
                 } else {
                     division = (double) n1 / n2; //casting a double
