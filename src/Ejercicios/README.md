@@ -5,13 +5,14 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 
 ## Archivos incluidos:
 
+1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
+2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
+
 - `SumarEnteros.java`: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
-- `CalculadoraBasica_v1.java`: Programa que pide al usuario dos números y una operación 
-(suma, resta, multiplicación o división) y muestre el resultado, esta versión posee código extenso para personas que 
-recién se adentran al lenguaje.
-- `CalculadoraBasica_v2.java`: Programa que pide al usuario dos números y una operación
-(suma, resta, multiplicación o división) y muestre el resultado, esta versión posee código simplificado para personas que
-tienen conocimientos en el lenguaje 
+- `CalculadoraBasica_v1.java` / `CalculadoraBasica_v2.java`: Calculadora con operaciones básicas 
+(suma, resta, multiplicación, división).
+- `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como 
+exponenciación y raíz cuadrada.
 
 ## Instrucciones
 
