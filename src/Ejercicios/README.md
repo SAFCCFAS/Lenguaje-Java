@@ -13,6 +13,9 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 (suma, resta, multiplicación, división).
 - `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como 
 exponenciación y raíz cuadrada.
+- `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C),
+  Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la temperatura y selecciona la unidad de
+  conversión.
 
 ## Instrucciones
 

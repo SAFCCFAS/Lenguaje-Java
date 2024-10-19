@@ -74,12 +74,15 @@ otros.
 2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
 **Archivos incluidos:**
+
 - `SumarEnteros.java`: Programa básico donde se solicita números a sumar al usuario.
+- `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C), 
+Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la temperatura y selecciona la unidad de 
+conversión.
 
 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
 
-- `SumarEnteros.java`: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
 - `CalculadoraBasica_v1.java` / `CalculadoraBasica_v2.java`: Calculadora con operaciones básicas
   (suma, resta, multiplicación, división).
 - `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como
