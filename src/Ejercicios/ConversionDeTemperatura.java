@@ -7,9 +7,9 @@ public class ConversionDeTemperatura {
 
     public static void main(String[] args) {
         int und, conv;
-        double temp;
+        double temp, cambioUnidad;
         boolean control = true;
-        String nombreUnidad = null, simb = null;
+        String nombreUnidad = null, simbUnd = null, newUnd = null;
 
         do {
             System.out.println("Bienvenido(a), favor indique la unidad de temperatura a convertir. \n1. Celsius (°C)." +
@@ -18,17 +18,17 @@ public class ConversionDeTemperatura {
             switch (und) {
                 case 1 -> {
                     nombreUnidad = "Celsius (°C)";
-                    simb = "°C";
+                    simbUnd = "°C";
                     control = false;
                 }
                 case 2 -> {
                     nombreUnidad = "Fahrenheit (°F)";
-                    simb = "°F";
+                    simbUnd = "°F";
                     control = false;
                 }
                 case 3 -> {
                     nombreUnidad = "Kelvin (K)";
-                    simb = "K";
+                    simbUnd = "K";
                     control = false;
                 }
                 case 4 -> {
@@ -44,16 +44,61 @@ public class ConversionDeTemperatura {
         if (und >= 1 && und <= 3) {
             System.out.println("Ingrese temperatura en " + nombreUnidad);
             temp = leer.nextDouble();
-            System.out.println("Usted a ingresado: " + temp + simb + "\nIndique unidad a convertir");
+            System.out.println("Usted a ingresado: " + temp + simbUnd + "\nIndique unidad a convertir");
             if (und == 1) {
                 System.out.println("1. Fahrenheit (°F) ó 2. Kelvin (K).");
                 conv = leer.nextInt();
+                switch (conv) {
+                    case 1 -> {
+                        nombreUnidad = "Fahrenheit (°F)";
+                        newUnd = "°F";
+                        cambioUnidad = temp * 9 / 5 + 32;
+                        System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                    }
+                    case 2 -> {
+                        nombreUnidad = "Kelvin (K)";
+                        newUnd = "K";
+                        cambioUnidad = temp + 273.15;
+                        System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                    }
+                    default -> System.err.println("Error: Ingreso u opción no válida, opciones válidas 1 y 2");
+                }
             } else if (und == 2) {
                 System.out.println("1. Celsius (°C) ó 2. Kelvin (K).");
                 conv = leer.nextInt();
+                switch (conv) {
+                    case 1 -> {
+                        nombreUnidad = "Celsius (°C)";
+                        newUnd = "°C";
+                        cambioUnidad = (temp - 32) * 5 / 9;
+                        System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                    }
+                    case 2 -> {
+                        nombreUnidad = "Kelvin (K)";
+                        newUnd = "K";
+                        cambioUnidad = (temp - 32) * 5 / 9 + 273.15;
+                        System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                    }
+                    default -> System.err.println("Error: Ingreso u opción no válida, opciones válidas 1 y 2");
+                }
             } else if (und == 3) {
                 System.out.println("1. Celsius (°C) ó 2. Fahrenheit (°F)");
                 conv = leer.nextInt();
+                switch (conv) {
+                    case 1 -> {
+                        nombreUnidad = "FCelsius (°C)";
+                        newUnd = "°C";
+                        cambioUnidad = temp - 273.15;
+                        System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                    }
+                    case 2 -> {
+                        nombreUnidad = "Fahrenheit (°F)";
+                        newUnd = "°F";
+                        cambioUnidad = (temp - 273.15) * 9 / 5 + 32;
+                        System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                    }
+                    default -> System.err.println("Error: Ingreso u opción no válida, opciones válidas 1 y 2");
+                }
             }
         }
     }
