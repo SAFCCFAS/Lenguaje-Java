@@ -16,7 +16,7 @@ exponenciación y raíz cuadrada.
 - `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C),
   Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la temperatura y selecciona la unidad de
   conversión.
-- - `AdivinaNumero.java`: Programa que genera un número aleatorio entre 1 y 100, y solicita al usuario que lo adivine.
+- `AdivinaNumero.java`: Programa que genera un número aleatorio entre 1 y 100, y solicita al usuario que lo adivine.
     El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
 
 ## Instrucciones
