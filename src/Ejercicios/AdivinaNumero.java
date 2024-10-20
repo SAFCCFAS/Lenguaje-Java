@@ -19,5 +19,6 @@ public class AdivinaNumero {
             }
         } while (num != random);
         System.out.println("Felicidades, lo has conseguido en " + intentos + " intentos.");
+        recibir.close();
     }
 }

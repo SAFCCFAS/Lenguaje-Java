@@ -94,5 +94,6 @@ public class CalculadoraAvanzada_v2 {
             n1 = leer.nextDouble();
             System.out.println("El resultado de la " + nombreoperacion + " es " + Math.sqrt(n1));
         }
+        leer.close();
     }
 }

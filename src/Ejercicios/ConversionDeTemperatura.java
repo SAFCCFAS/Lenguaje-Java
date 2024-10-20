@@ -101,5 +101,6 @@ public class ConversionDeTemperatura {
                 }
             }
         }
+        leer.close();
     }
 }

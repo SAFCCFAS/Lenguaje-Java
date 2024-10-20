@@ -99,5 +99,6 @@ public class CalculadoraAvanzada_v1 {
             raiz = Math.sqrt(n1);
             System.out.println("El resultado de la " + nombreoperacion + " es " + raiz);
         }
+        leer.close();
     }
 }

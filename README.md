@@ -81,6 +81,8 @@ Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la
 conversión.
 - `AdivinaNumero.java`: Programa que genera un número aleatorio entre 1 y 100, y solicita al usuario que lo adivine. 
 El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
+- `ContadorDeDigitos.java`: Programa que pide un número entero positivo al usuario y cuenta la cantidad de dígitos que
+  tiene.
 
 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
