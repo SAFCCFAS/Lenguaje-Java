@@ -20,6 +20,8 @@ exponenciación y raíz cuadrada.
     El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
 - `ContadorDeDigitos.java`: Programa que pide un número entero positivo al usuario y cuenta la cantidad de dígitos que 
 tiene.
+- `Calculadora Geométrica`: Aplicación de consola que calcula el área y/o perimetro de figuras geométricas planas, 
+incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, polígonos regulares y elipses.
 
 ## Instrucciones
 
