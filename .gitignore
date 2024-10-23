@@ -1,5 +1,6 @@
+# Default ignored
 .idea
-./out/production/
+/out
 .gitignore
 *.iml
 *.class
