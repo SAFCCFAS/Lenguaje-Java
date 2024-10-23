@@ -1,6 +1,6 @@
 # Default ignored
 .idea
-/out
+.out
 .gitignore
 *.iml
 *.class
