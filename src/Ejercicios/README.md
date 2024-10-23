@@ -5,13 +5,23 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 
 ## Archivos incluidos:
 
+1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
+2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
+
 - `SumarEnteros.java`: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
-- `CalculadoraBasica_v1.java`: Programa que pide al usuario dos números y una operación 
-(suma, resta, multiplicación o división) y muestre el resultado, esta versión posee código extenso para personas que 
-recién se adentran al lenguaje.
-- `CalculadoraBasica_v2.java`: Programa que pide al usuario dos números y una operación
-(suma, resta, multiplicación o división) y muestre el resultado, esta versión posee código simplificado para personas que
-tienen conocimientos en el lenguaje 
+- `CalculadoraBasica_v1.java` / `CalculadoraBasica_v2.java`: Calculadora con operaciones básicas 
+(suma, resta, multiplicación, división).
+- `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como 
+exponenciación y raíz cuadrada.
+- `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C),
+  Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la temperatura y selecciona la unidad de
+  conversión.
+- `AdivinaNumero.java`: Programa que genera un número aleatorio entre 1 y 100, y solicita al usuario que lo adivine.
+    El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
+- `ContadorDeDigitos.java`: Programa que pide un número entero positivo al usuario y cuenta la cantidad de dígitos que 
+tiene.
+- `Calculadora Geométrica`: Aplicación de consola que calcula el área y/o perimetro de figuras geométricas planas, 
+incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, polígonos regulares y elipses.
 
 ## Instrucciones
 

@@ -333,7 +333,8 @@ bloques, parámetros y elementos en las expresiones.
 **Operadores.java:**
 * Ejemplos prácticos del uso de operadores en Java. 
 * Objetivo: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos, 
-    condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
+condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. 
+El código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
 
 Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más operandos 
 (valores, variables, expresiones). Estos operadores permiten realizar cálculos matemáticos, operaciones lógicas y de 
