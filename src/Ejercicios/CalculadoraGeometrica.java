@@ -8,7 +8,7 @@ public class CalculadoraGeometrica {
     public static void main(String[] args) {
         String figura = "";
         int opc, fig, conv;
-        double result, valor, valor1, valor2, valor3, valor4;
+        double result, valor, valor1, valor2, valor3;
         boolean subControl;
 
         do {
