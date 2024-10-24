@@ -6,22 +6,35 @@ public class CalculadoraGeometrica {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String figura = "";
-        int opc, fig, conv;
-        double result, valor, valor1, valor2, valor3, valor4;
-        boolean subControl;
+        String figura, simbMed,cambioMed;
+        int opc, fig, opc1, conv;
+        double result, valor, valor1, valor2, valor3;
+        boolean subControl, controlUnd;
 
-        do {
-            System.out.println("Bienvenido(a) favor indicar que desea realizar:\n1. Calcular área." +
-                    "\n2. Calcular perímetro.\n3. Conversión de unidades.\n4. Salir.");
+        do { // repetir el menú hasta que se ingrese la opción correcta
+            // se usa """ para escribir en bloque de texto
+            System.out.println("""
+                    Bienvenido(a) favor indicar que desea realizar:
+                    1. Calcular área.
+                    2. Calcular perímetro.
+                    3. Conversión de unidades.
+                    4. Salir.""");
             opc = sc.nextInt();
             subControl = true;
-            do {
+            do { //repetir el submenú hasta que se ingrese la opción correcta
                 switch (opc) {
                     case 1 -> {
-                        System.out.println("Elija la figura a calcular área:\n1. Cuadrado.\n2. Rectángulo." +
-                                "\n3. Triángulo.\n4. Círculo.\n5. Trapecio.\n6. Rombo.\n7. Polígono regular." +
-                                "\n8. Octágono.\n9. Regresa menú anterior");
+                        System.out.println("""
+                                Elija la figura a calcular área:
+                                1. Cuadrado.
+                                2. Rectángulo.
+                                3. Triángulo.
+                                4. Círculo.
+                                5. Trapecio.
+                                6. Rombo.
+                                7. Polígono regular.
+                                8. Octágono.
+                                9. Regresa menú anterior""");
                         fig = sc.nextInt();
                         if (fig == 1) {
                             figura = "Cuadrado";
@@ -92,15 +105,23 @@ public class CalculadoraGeometrica {
                             System.out.println("El área del " + figura + " es: " + result);
                             System.exit(0);
                         } else if (fig == 9) {
-                            subControl = false;
+                            subControl = false; //regresar al menú anterior
                         } else {
-
+                            System.err.println("Error: Opción o ingreso no válido, opciones validas 1 a 9.");
                         }
                     }
                     case 2 -> {
-                        System.out.println("Elija la figura a calcular perímetro:\n1. Cuadrado.\n2. Rectángulo." +
-                                "\n3. Triángulo.\n4. Círculo.\n5. Trapecio.\n6. Rombo.\n7. Polígono regular." +
-                                "\n8. Octágono.\n9. Regresa menú anterior.");
+                        System.out.println("""
+                                Elija la figura a calcular perímetro:
+                                1. Cuadrado.
+                                2. Rectángulo.
+                                3. Triángulo.
+                                4. Círculo.
+                                5. Trapecio.
+                                6. Rombo.
+                                7. Polígono regular.
+                                8. Octágono.
+                                9. Regresa menú anterior.""");
                         fig = sc.nextInt();
                         if (fig == 1) {
                             figura = "Cuadrado";
@@ -166,17 +187,80 @@ public class CalculadoraGeometrica {
                             System.out.println("El perímetro del " + figura + " es: " + result);
                         } else if (fig == 9) {
                             subControl = false;
+                        } else {
+                            System.err.println("Error: Opción o ingreso no válido, opciones validas 1 a 9.");
                         }
                     }
                     case 3 -> {
-                        System.out.println("Elija al conversión de unidad a realizar:\n1. Longitud (m, cm, mm, km)." +
-                                "\n2. Área (m², cm², km²).\n3. Ángulos (Grados a Radianes, Radianes a Grados)." +
-                                "\n4. Regresar al menú principal.");
-                        conv = sc.nextInt();
-                        if (conv == 1) {
-
-                        } else if (conv == 4) {
-                            subControl = false;
+                        System.out.println("""
+                                Elija al conversión de unidad a realizar:
+                                1. Longitud (m, cm, mm, km).
+                                2. Área (m², cm², km²).
+                                3. Ángulos (Grados a Radianes, Radianes a Grados).
+                                4. Regresar al menú principal.""");
+                        opc1 = sc.nextInt();
+                        controlUnd = true;
+                        switch (opc1) {
+                            case 1 -> {
+                                do { //repetir el submenú hasta que se ingrese la opción correcta
+                                    System.out.println("""
+                                            Favor indique la unidad a convertir:
+                                            1. Kilómetro (km).
+                                            2. Metro (m).
+                                            3. Centímetro (cm).
+                                            4. Milímetro (mm).
+                                            5. Regresar al menú anterior.""");
+                                    conv = sc.nextInt();
+                                    if (conv == 1) {
+                                        simbMed = "km";
+                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
+                                        valor = sc.nextDouble();
+                                        System.out.println("""
+                                                Favor, indique la unidad a que convertir:
+                                                1. Metro (m).
+                                                2. Centímetro (cm).
+                                                3. Milímetro (mm).""");
+                                        conv = sc.nextInt();
+                                        if (conv == 1){
+                                            cambioMed = "m";
+                                            result = valor * 1000;
+                                            System.out.println(+valor+" "+simbMed+" a "+cambioMed + " es: "+result);
+                                            System.exit(0);
+                                        }
+                                    } else if (conv == 5) {
+                                        controlUnd = false; //regresar al menú anterior
+                                    }
+                                } while (controlUnd);
+                            }
+                            case 2 -> {
+                                do {
+                                    System.out.println("""
+                                            Favor indique la unidad a convertir:
+                                            1. Kilómetro cuadrado (km²).
+                                            2. Metro cuadrado (m²).
+                                            3. Centímetro cuadro (cm²).
+                                            4. Regresar al menú anterior.""");
+                                    conv = sc.nextInt();
+                                    if (conv == 4) {
+                                        controlUnd = false;
+                                    }
+                                } while (controlUnd);
+                            }
+                            case 3 -> {
+                                do {
+                                    System.out.println("""
+                                            Favor indique la unidad a convertir:
+                                            1. Grados.
+                                            2. Radianes.
+                                            3. Regresar al menú anterior.""");
+                                    conv = sc.nextInt();
+                                    if (conv == 3) {
+                                        controlUnd = false;
+                                    }
+                                } while (controlUnd);
+                            }
+                            case 4 -> subControl = false;
+                            default -> System.err.println("Error: Opción o ingreso no válido, opciones validas 1 a 4.");
                         }
                     }
                     case 4 -> {
