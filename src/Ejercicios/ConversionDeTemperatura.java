@@ -10,7 +10,6 @@ public class ConversionDeTemperatura {
         double temp, cambioUnidad;
         boolean control = true;
         String nombreUnidad = null, simbUnd = null, newUnd = null;
-
         do {
             System.out.println("Bienvenido(a), favor indique la unidad de temperatura a convertir. \n1. Celsius (°C)." +
                     "\n2. Fahrenheit (°F). \n3. Kelvin (K). \n4. Salir.");
@@ -43,17 +42,18 @@ public class ConversionDeTemperatura {
         } while (control);
         if (und >= 1 && und <= 3) {
             System.out.println("Ingrese temperatura en " + nombreUnidad);
-            temp = leer.nextDouble();
+            temp = leer.nextDouble(); // dado que las temperaturas no son siempre cifras cerradas se optó por double
             System.out.println("Usted a ingresado: " + temp + simbUnd + "\nIndique unidad a convertir");
             if (und == 1) {
                 System.out.println("1. Fahrenheit (°F) ó 2. Kelvin (K).");
                 conv = leer.nextInt();
-                switch (conv) {
+                switch (conv) { // realizar las conversiones según el caso
                     case 1 -> {
                         nombreUnidad = "Fahrenheit (°F)";
                         newUnd = "°F";
                         cambioUnidad = temp * 9 / 5 + 32;
                         System.out.println(temp + " " + simbUnd + " a " + nombreUnidad + " es " + cambioUnidad + " " + newUnd);
+                        // mostrar el resultado de la conversión
                     }
                     case 2 -> {
                         nombreUnidad = "Kelvin (K)";
@@ -101,5 +101,6 @@ public class ConversionDeTemperatura {
                 }
             }
         }
+        leer.close();
     }
 }

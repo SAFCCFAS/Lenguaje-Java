@@ -1,5 +1,7 @@
+# Default ignored
+.idx
 .idea
-./out/production/
+.out
 .gitignore
 *.iml
 *.class
