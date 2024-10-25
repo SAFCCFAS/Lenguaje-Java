@@ -224,7 +224,7 @@ public class CalculadoraGeometrica {
                                         if (conv == 1){
                                             cambioMed = "m";
                                             result = valor * 1000;
-                                            System.out.println(+valor+" "+simbMed+" a "+cambioMed + " es: "+result);
+                                            System.out.println(valor +" "+simbMed+" a "+cambioMed + " es: "+result);
                                             System.exit(0);
                                         }
                                     } else if (conv == 5) {
