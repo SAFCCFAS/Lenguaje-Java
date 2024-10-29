@@ -13,7 +13,8 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 (suma, resta, multiplicación, división).
 - `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como 
 exponenciación y raíz cuadrada.
-- `Calculadora Geométrica_v1.java` / `Calculadora Geométrica_v1.java`: Aplicación de consola que calcula el área y/o perimetro de figuras geométricas planas,
+- `Calculadora Geométrica_v1.java` / `Calculadora Geométrica_v1.java`: Aplicación de consola que calcula el área y/o 
+perimetro de figuras geométricas planas,
   incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, polígonos regulares y octágono.
 - `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C),
   Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la temperatura y selecciona la unidad de
@@ -22,6 +23,8 @@ exponenciación y raíz cuadrada.
     El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
 - `ContadorDeDigitos.java`: Programa que pide un número entero positivo al usuario y cuenta la cantidad de dígitos que 
 tiene.
+- `ConversionDeTiempo.java`: Programa que pide una unidad de tiempo y un valor al usuario y devuelve las equivalencias
+en otras unidades de tiempo.
 
 ## Instrucciones
 
