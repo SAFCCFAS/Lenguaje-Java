@@ -12,10 +12,7 @@ public class ConversionDeTiempo {
         boolean control;
 
         do {
-            System.out.println(
-                    "¡Hola! Este programa te ayuda a convertir unidades de tiempo. Selecciona la unidad original y el valor para empezar."
-                            +
-                            "\nFavor elija la unida de tiempo a usar:\n1. Segundo(s).\n2. Minuto(s).\n3. Hora(s).\n4. Día(s).\n5. Año(s).\n6. Salir");
+            System.out.println("¡Hola! Este programa te ayuda a convertir unidades de tiempo. Selecciona la unidad original y el valor para empezar."+ "\nFavor elija la unida de tiempo a usar:\n1. Segundo(s).\n2. Minuto(s).\n3. Hora(s).\n4. Día(s).\n5. Año(s).\n6. Salir");
             opc = sc.nextInt();
 
             if (opc == 6) {
