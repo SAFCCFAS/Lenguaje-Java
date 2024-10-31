@@ -23,8 +23,8 @@ perimetro de figuras geométricas planas,
     El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
 - `ContadorDeDigitos.java`: Programa que pide un número entero positivo al usuario y cuenta la cantidad de dígitos que 
 tiene.
-- `ConversionDeTiempo.java`: Programa que pide una unidad de tiempo y un valor al usuario y devuelve las equivalencias
-en otras unidades de tiempo.
+- `ConversionDeTiempo_v1.java`/`ConversionDeTiempo_v2.java`: Programa que pide una unidad de tiempo y un valor al 
+usuario y devuelve las equivalencias en otras unidades de tiempo.
 
 ## Instrucciones
 

@@ -85,8 +85,6 @@ El programa debe indicar si el número ingresado es alto o bajo que el número s
   tiene.
 - `Calculadora Geométrica`: Aplicación de consola que calcula el área y/o perimetro de figuras geométricas planas,
   incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, polígonos regulares y octágono.
-- `ConversionDeTiempo.java`: Programa que pide una unidad de tiempo y un valor al usuario y devuelve las equivalencias
-  en otras unidades de tiempo.
 
 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
@@ -95,3 +93,5 @@ El programa debe indicar si el número ingresado es alto o bajo que el número s
   (suma, resta, multiplicación, división).
 - `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como
   exponenciación y raíz cuadrada.
+- `ConversionDeTiempo_v1.java`/`ConversionDeTiempo_v2.java`: Programa que pide una unidad de tiempo y un valor al
+  usuario y devuelve las equivalencias en otras unidades de tiempo.
