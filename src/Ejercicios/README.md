@@ -27,6 +27,8 @@ tiene.
 usuario y devuelve las equivalencias en otras unidades de tiempo.
 - `FizzBuzz.java`: Programa que imprime números del 1 al 100, reemplazando múltiplos de 3 con "Fizz", múltiplos de 5 con
   "Buzz" y múltiplos de ambos con "FizzBuzz".
+- `BuscarMaxMin.java`: Programa que solicita al usuario ingresar una cantidad definida de números enteros y determina el
+valor mínimo y máximo de los números ingresados.
 
 ## Instrucciones
 
