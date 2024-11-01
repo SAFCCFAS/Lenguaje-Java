@@ -25,6 +25,8 @@ perimetro de figuras geométricas planas,
 tiene.
 - `ConversionDeTiempo_v1.java`/`ConversionDeTiempo_v2.java`: Programa que pide una unidad de tiempo y un valor al 
 usuario y devuelve las equivalencias en otras unidades de tiempo.
+- `FizzBuzz.java`: Programa que imprime números del 1 al 100, reemplazando múltiplos de 3 con "Fizz", múltiplos de 5 con
+  "Buzz" y múltiplos de ambos con "FizzBuzz".
 
 ## Instrucciones
 
