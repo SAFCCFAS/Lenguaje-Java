@@ -89,6 +89,8 @@ El programa debe indicar si el número ingresado es alto o bajo que el número s
 "Buzz" y múltiplos de ambos con "FizzBuzz".
 - `BuscarMaxMin.java`: Programa que solicita al usuario ingresar una cantidad definida de números enteros y determina el
   valor mínimo y máximo de los números ingresados.
+- `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario. Solicita 
+un número y muestra el resultado del factorial.
 
 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
