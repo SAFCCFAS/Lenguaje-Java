@@ -29,6 +29,8 @@ usuario y devuelve las equivalencias en otras unidades de tiempo.
   "Buzz" y múltiplos de ambos con "FizzBuzz".
 - `BuscarMaxMin.java`: Programa que solicita al usuario ingresar una cantidad definida de números enteros y determina el
 valor mínimo y máximo de los números ingresados.
+- `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario. Solicita 
+un número y muestra el resultado del factorial.
 
 ## Instrucciones
 
