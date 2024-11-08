@@ -92,6 +92,7 @@ El programa debe indicar si el número ingresado es alto o bajo que el número s
 - `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario. Solicita 
 un número y muestra el resultado del factorial.
 - `Promedio.java`: Programa que solicita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
+- `TransformarCadena.java`: Programa que solicita al usuario una palabra o frase para pasar mayúscula y minúscula.
 
 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
