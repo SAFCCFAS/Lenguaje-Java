@@ -32,7 +32,7 @@ valor mínimo y máximo de los números ingresados.
 - `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario. Solicita 
 un número y muestra el resultado del factorial.
 - `Promedio.java`: Programa que solicita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
-
+- `TransformarCadena.java`: Programa que solicita al usuario una palabra o frase para pasar mayúscula y minúscula.
 ## Instrucciones
 
 1. **Requisitos Previos**: Asegúrate de haber revisado los ejemplos en la carpeta Fundamentos antes de intentar este 
