@@ -12,7 +12,7 @@ public class TransformarCadena {
 
         mayus = texto.toUpperCase();
         minus = texto.toLowerCase();
-        System.out.println("El texto ingreso en a mayúscula es: " + mayus);
-        System.out.println("El texto ingreso en a minúscula es: " + minus);
+        System.out.println("El texto ingreso en mayúscula es: " + mayus);
+        System.out.println("El texto ingreso en minúscula es: " + minus);
     }
 }
