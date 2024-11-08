@@ -31,6 +31,7 @@ usuario y devuelve las equivalencias en otras unidades de tiempo.
 valor mínimo y máximo de los números ingresados.
 - `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario. Solicita 
 un número y muestra el resultado del factorial.
+- `Promedio.java`: Programa que solicita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
 
 ## Instrucciones
 
