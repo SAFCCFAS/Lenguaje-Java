@@ -33,6 +33,8 @@ valor mínimo y máximo de los números ingresados.
 un número y muestra el resultado del factorial.
 - `Promedio.java`: Programa que solicita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
 - `TransformarCadena.java`: Programa que solicita al usuario una palabra o frase para pasar mayúscula y minúscula.
+- `ContarCaracteres.java`: Programa que solicita al usuario una palabra o frase para contar la cantidad de caracteres que posee.
+
 ## Instrucciones
 
 1. **Requisitos Previos**: Asegúrate de haber revisado los ejemplos en la carpeta Fundamentos antes de intentar este 
