@@ -14,6 +14,7 @@ variables, estructuras de control y otros conceptos esenciales.
 * [Conversiones Y Contextos](#conversiones-y-contextos)
 * [Estructuras De Control](#estructuras-de-control)
 * [Entrada De Datos](#entrada-de-datos)
+* [Arreglos](#arreglos-en-java)
 
 #### **HolaMundo.java**:
    - Un programa simple que imprime `¡Hola, Mundo!` en la consola.
@@ -591,6 +592,132 @@ input.close();
      `nextLine()`.
 3. **Cerrar el `Scanner`**: Se debe cerrar el `Scanner` con `close()` para liberar recursos del sistema.
 
+### Arreglos en Java
+
+Los arreglos en Java son objetos que almacenan una colección de elementos del mismo tipo. Una vez creado un arreglo,
+su tamaño se fija y no se puede modificar en tiempo de ejecución. Para acceder a los elementos de un arreglo, se utiliza
+un índice entero no negativo. El primer elemento del arreglo tiene el índice 0, el segundo el índice 1, y así 
+sucesivamente.
+
+**Declaración y creación de arreglos**
+
+Para declarar un arreglo en Java, se especifica el tipo de datos de los elementos que contendrá, seguido del nombre del 
+arreglo y corchetes vacíos. Por ejemplo, para declarar un arreglo de enteros llamado "numeros", se usaría la siguiente 
+sintaxis:
+
+```java
+int[] numeros; // tipo[] nombreArreglo;
+```
+
+Para crear el arreglo y asignarle un tamaño, se utiliza el operador "new" seguido del tipo de datos y el tamaño del 
+arreglo entre corchetes. Por ejemplo, para crear un arreglo de 10 enteros, se utilizaría la siguiente sintaxis:
+
+```java
+numeros = new int[10]; // nombreArreglo = new tipo[tamaño]
+```
+
+También es posible declarar y crear un arreglo en una sola línea:
+
+```java
+int[] numeros = new int[6]; // tipo[] nombreArreglo = new tipo[tamaño]
+```
+
+Es importante destacar que en la declaración de un arreglo, no se puede especificar el número de elementos dentro de los 
+corchetes. Hacerlo resultará en un error de sintaxis.
+```java
+int[5] numeros; // Error de sintaxis
+```
+
+**Inicialización de arreglos**
+
+Los arreglos se pueden inicializar con valores al momento de su creación. Hay dos maneras de hacerlo:
+
+* **Inicialización con valores predeterminados:** Si no se especifican valores iniciales, los elementos del arreglo se 
+inicializan con valores predeterminados según su tipo de datos. Por ejemplo, los elementos de un arreglo de enteros se 
+inicializan con 0, los de tipo double con 0.0, y los de tipo boolean con false.
+
+```java
+int[] numeros = new int[5]; // numeros = [0, 0, 0, 0, 0]
+```
+
+* **Inicialización con un inicializador de arreglos:** Se puede proporcionar una lista de valores entre llaves para 
+inicializar los elementos del arreglo. Por ejemplo:
+* 
+```java
+int[] numeros = {1, 2, 3, 4, 5};
+```
+**Accediendo a los elementos de un arreglo**
+
+Para acceder a un elemento específico de un arreglo, se utiliza el nombre del arreglo seguido del índice del elemento 
+entre corchetes. Por ejemplo, para acceder al tercer elemento del arreglo "numeros", se utilizaría la siguiente sintaxis:
+
+```java
+int tercerNumero = numeros[2];
+```
+
+**moverse a través de un arreglo**
+
+Para recorrer todos los elementos de un arreglo, se puede utilizar un ciclo "for" o un ciclo "for mejorado".
+
+**Ciclo "for"**:
+```java
+for (int i = 0; i < numeros.length; i++) {
+  System.out.println(numeros[i]);
+}
+```
+**Ciclo "for mejorado"**:
+```java
+for (int numero : numeros) {
+  System.out.println(numero);
+}
+```
+
+**Pasando arreglos a métodos**
+
+Los arreglos se pueden pasar como argumentos a métodos. El método recibirá una copia de la referencia al arreglo, 
+lo que significa que cualquier modificación que realice el método al arreglo afectará al arreglo original.
+
+**Arreglos multidimensionales**
+
+Java también admite arreglos multidimensionales, que son arreglos de arreglos. Por ejemplo, un arreglo bidimensional se 
+puede utilizar para representar una matriz.
+
+Para declarar un arreglo bidimensional, se utilizan dos pares de corchetes. Por ejemplo:
+
+```java
+int[][] matriz = new int[3][4];
+```
+
+Esto crea una matriz de 3 filas y 4 columnas.
+
+### Clase Arrays
+
+La clase `Arrays` proporciona métodos `static` para manipular arreglos. Algunos de los métodos más comunes son:
+
+* `sort()`: Ordena los elementos de un arreglo en orden ascendente.
+* `binarySearch()`: Busca un elemento específico en un arreglo ordenado.
+* `equals()`: Compara si dos arreglos son iguales.
+* `fill()`: Llena un arreglo con un valor específico.
+* `asList()`: Devuelve una vista del arreglo como un objeto `List`.
+
+**Clase ArrayList**
+
+La clase `ArrayList` es una estructura de datos similar a un arreglo, pero con la capacidad de ajustar su tamaño 
+dinámicamente en tiempo de ejecución.
+
+Para crear un `ArrayList` de objetos `String`, se utilizaría la siguiente sintaxis:
+
+```java
+ArrayList<String> lista = new ArrayList<String>();
+```
+
+### Resumen
+
+Los arreglos son una parte fundamental de la programación en Java. Permiten almacenar y manipular colecciones de datos 
+del mismo tipo de manera eficiente. La clase `Arrays` proporciona métodos de utilidad para trabajar con arreglos, y 
+la clase `ArrayList` ofrece una alternativa dinámica a los arreglos con un tamaño fijo.
+
+
 ## Recursos Adicionales
 
 Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar tu aprendizaje de Java:
@@ -634,3 +761,6 @@ practiques los conceptos que vayas aprendiendo para obtener una comprensión má
 * [The Java™ Tutorials: Control Flow Statements](https://docs.oracle.com/javase/tutorial/java/nutsandbolts/flow.html)
 * [Java Control Statements | Control Flow in Java](https://www.javatpoint.com/control-flow-in-java)
 * [Documentación de la API de Java SE 8: Class Scanner](https://docs.oracle.com/javase/8/docs/api/)
+* [Java Language Specification (JLS): Chapter 10. Arrays](https://docs.oracle.com/javase/specs/jls/se17/html/jls-10.html)
+* [Geeksforgeeks: Arrays in Java](https://www.geeksforgeeks.org/arrays-in-java/)
+* [JavaPoint: Java Arrays](https://www.javatpoint.com/array-in-java)
