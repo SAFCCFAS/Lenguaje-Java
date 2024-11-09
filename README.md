@@ -70,6 +70,7 @@ otros.
 - `EstructurasDeControl.java`: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
   ejecución del programa a través de decisiones y repeticiones.
 - `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
+- `Arreglos.java`: programas con ejemplos de los diferentes arreglos y sus usos.
 
 2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
