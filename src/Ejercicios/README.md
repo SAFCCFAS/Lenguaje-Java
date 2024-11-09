@@ -36,6 +36,9 @@ Solicita un número y muestra el resultado del factorial.
 - `ContarCaracteres.java`: Programa que solicita al usuario una palabra o frase para contar la cantidad de caracteres
 que posee.
 - `ParidadNUmerica.java`: Programa que solicita al usuario un número entero positivo para determinar si es par o impar.
+- `DiaSemana.java`: Programa que solicita al usuario un número del 1 al 7 para mostrar el día de la semana
+  correspondiente.
+- `ClasificarEdad.java`: Programa que solicita al usuario su edad para indicar en que clasificación se encuentra.
 
 ## Instrucciones
 
