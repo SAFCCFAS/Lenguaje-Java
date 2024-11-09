@@ -169,5 +169,6 @@ public class ConversionDeTiempo_v2 {
                 default -> System.err.println("Opción o ingreso no válido intente nuevamente");
             }
         } while (!(conv >= 1 && conv <= 4));
+        sc.close();
     }
 }

@@ -54,7 +54,7 @@ public class CalculadoraAvanzada_v2 {
                             "\nOpciones válidas 1 al 8");
                     break;
             }
-        } while (control != false);
+        } while (control);
         System.out.println("Usted a elegido: " + nombreoperacion);
 
         if (operacion >= 1 && operacion <= 5) {
@@ -89,7 +89,7 @@ public class CalculadoraAvanzada_v2 {
             System.out.println("Ingrese número exponente");
             n2 = leer.nextDouble();
             System.out.println("El resultado de la " + nombreoperacion + " es " + Math.pow(n1, n2));
-        } else if (operacion == 7) {
+        } else {
             System.out.println("Ingrese un número a encontrar " + nombreoperacion);
             n1 = leer.nextDouble();
             System.out.println("El resultado de la " + nombreoperacion + " es " + Math.sqrt(n1));

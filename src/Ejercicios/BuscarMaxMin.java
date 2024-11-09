@@ -33,5 +33,6 @@ public class BuscarMaxMin {
 		// Muestra los resultados
 		System.out.println("El número mínimo es: " + min);
 		System.out.println("El número máximo es: " + max);
+		sc.close();
 	}
 }

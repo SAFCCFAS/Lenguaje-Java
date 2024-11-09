@@ -18,5 +18,6 @@ public class FactorialNumero {
             }
             System.out.println("El factorial de " + n + " es: " + factorial);
         }
+        sc.close();
     }
 }

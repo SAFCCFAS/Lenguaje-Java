@@ -29,11 +29,13 @@ usuario y devuelve las equivalencias en otras unidades de tiempo.
   "Buzz" y múltiplos de ambos con "FizzBuzz".
 - `BuscarMaxMin.java`: Programa que solicita al usuario ingresar una cantidad definida de números enteros y determina el
 valor mínimo y máximo de los números ingresados.
-- `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario. Solicita 
-un número y muestra el resultado del factorial.
+- `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario.
+Solicita un número y muestra el resultado del factorial.
 - `Promedio.java`: Programa que solicita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
 - `TransformarCadena.java`: Programa que solicita al usuario una palabra o frase para pasar mayúscula y minúscula.
-- `ContarCaracteres.java`: Programa que solicita al usuario una palabra o frase para contar la cantidad de caracteres que posee.
+- `ContarCaracteres.java`: Programa que solicita al usuario una palabra o frase para contar la cantidad de caracteres
+que posee.
+- `ParidadNUmerica.java`: Programa que solicita al usuario un número entero positivo para determinar si es par o impar.
 
 ## Instrucciones
 
