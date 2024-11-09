@@ -39,6 +39,8 @@ que posee.
 - `DiaSemana.java`: Programa que solicita al usuario un número del 1 al 7 para mostrar el día de la semana
   correspondiente.
 - `ClasificarEdad.java`: Programa que solicita al usuario su edad para indicar en que clasificación se encuentra.
+- `TablaDeMultiplicar.java`: Programa que solicita al usuario un número entero positivo para mostrar su correspondiente
+tabla de multiplicar.
 
 ## Instrucciones
 
