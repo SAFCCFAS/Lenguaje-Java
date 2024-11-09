@@ -594,7 +594,7 @@ input.close();
 
 ### Arreglos en Java
 
-- `Arreglos.java`: programas con ejemplos de los diferentes arreglos y sus usos.
+- `Arreglos.java`: programa con ejemplos de los diferentes arreglos y sus usos.
 
 Los arreglos en Java son objetos que almacenan una colección de elementos del mismo tipo. Una vez creado un arreglo,
 su tamaño se fija y no se puede modificar en tiempo de ejecución. Para acceder a los elementos de un arreglo, se utiliza

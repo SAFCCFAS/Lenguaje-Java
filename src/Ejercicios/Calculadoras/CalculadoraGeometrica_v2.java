@@ -1,14 +1,14 @@
-package Ejercicios;
+package Ejercicios.Calculadoras;
 
 import java.util.Scanner;
 
-public class CalculadoraGeometrica_v1 {
+public class CalculadoraGeometrica_v2 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         String figura, simbMed, cambioMed;
         int opc, fig, opc1, conv;
-        double result, valor, valor1, valor2, valor3;
+        double valor, valor1, valor2, valor3;
         boolean subControl, controlUnd;
 
         do { // repetir el menú hasta que se ingrese la opción correcta
@@ -26,8 +26,7 @@ public class CalculadoraGeometrica_v1 {
                             figura = "Cuadrado";
                             System.out.println("Favor, ingrese lado del " + figura + ":");
                             valor = sc.nextDouble();
-                            result = Math.pow(valor, 2);
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + Math.pow(valor, 2));
                             System.exit(0);
                         } else if (fig == 2) {
                             figura = "Rectángulo";
@@ -35,32 +34,28 @@ public class CalculadoraGeometrica_v1 {
                             valor = sc.nextDouble();
                             System.out.println("Favor, ingrese ancho del " + figura + ":");
                             valor1 = sc.nextDouble();
-                            result = valor * valor1;
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + valor * valor1);
                             System.exit(0);
                         } else if (fig == 3 || fig == 6) {
-                            if (fig == 3){
+                            if (fig == 3) {
                                 figura = "Triángulo";
                                 System.out.println("Favor, ingrese base del " + figura + ":");
                                 valor = sc.nextDouble();
                                 System.out.println("Favor, ingrese altura del " + figura + ":");
-                            }else {
+                            } else {
                                 figura = "Rombo";
                                 System.out.println("Favor, ingrese diagonal 1 del " + figura + ":");
                                 valor = sc.nextDouble();
                                 System.out.println("Favor, ingrese diagonal 2 del " + figura + ":");
-
                             }
                             valor1 = sc.nextDouble();
-                            result = (valor * valor1) / 2;
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + (valor * valor1) / 2);
                             System.exit(0);
                         } else if (fig == 4) {
                             figura = "Círculo";
                             System.out.println("Favor, ingrese radio del " + figura + ":");
                             valor = sc.nextDouble();
-                            result = Math.PI * Math.pow(valor, 2);
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + Math.PI * Math.pow(valor, 2));
                             System.exit(0);
                         } else if (fig == 5) {
                             figura = "Trapecio";
@@ -70,8 +65,7 @@ public class CalculadoraGeometrica_v1 {
                             valor1 = sc.nextDouble();
                             System.out.println("Favor, ingrese altura del " + figura + ":");
                             valor2 = sc.nextDouble();
-                            result = (valor + valor1) / 2 * valor2;
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + (valor + valor1) / 2 * valor2);
                             System.exit(0);
                         } else if (fig == 7) {
                             figura = "Polígono regular";
@@ -79,15 +73,13 @@ public class CalculadoraGeometrica_v1 {
                             valor = sc.nextDouble();
                             System.out.println("Favor, ingrese largo de cada lado " + figura + ":");
                             valor1 = sc.nextDouble();
-                            result = (valor * Math.pow(valor1, 2)) / (4 * Math.tan(Math.PI / valor));
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + (valor * Math.pow(valor1, 2)) / (4 * Math.tan(Math.PI / valor)));
                             System.exit(0);
                         } else if (fig == 8) {
                             figura = "Octágono";
                             System.out.println("Favor, ingrese la longitud de un lado del " + figura + ":");
                             valor = sc.nextDouble();
-                            result = (2 + 4 / Math.sqrt(2)) * Math.pow(valor, 2);
-                            System.out.println("El área del " + figura + " es: " + result);
+                            System.out.println("El área del " + figura + " es: " + (2 + 4 / Math.sqrt(2)) * Math.pow(valor, 2));
                             System.exit(0);
                         } else if (fig == 9) {
                             subControl = false; //regresar al menú anterior
@@ -103,16 +95,16 @@ public class CalculadoraGeometrica_v1 {
                             figura = "Cuadrado";
                             System.out.println("Ingrese longitud del lado del " + figura);
                             valor = sc.nextDouble();
-                            result = 4 * valor;
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + 4 * valor);
+                            System.exit(0);
                         } else if (fig == 2) {
                             figura = "Rectángulo";
                             System.out.println("Ingrese largo del " + figura);
                             valor = sc.nextDouble();
                             System.out.println("Ingrese ancho del " + figura);
                             valor1 = sc.nextDouble();
-                            result = 2 * (valor + valor1);
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + 2 * (valor + valor1));
+                            System.exit(0);
                         } else if (fig == 3) {
                             figura = "Triángulo";
                             System.out.println("Ingrese lado A del " + figura);
@@ -121,14 +113,14 @@ public class CalculadoraGeometrica_v1 {
                             valor1 = sc.nextDouble();
                             System.out.println("Ingrese lado C del " + figura);
                             valor2 = sc.nextDouble();
-                            result = valor + valor1 + valor2;
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + (valor + valor1 + valor2));
+                            System.exit(0);
                         } else if (fig == 4) {
                             figura = "Círculo";
                             System.out.println("Ingrese radio del " + figura);
                             valor = sc.nextDouble();
-                            result = 2 * Math.PI * valor;
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + 2 * Math.PI * valor);
+                            System.exit(0);
                         } else if (fig == 5) {
                             figura = "Trapecio";
                             System.out.println("Ingrese longitud de la base menor" + figura);
@@ -139,22 +131,22 @@ public class CalculadoraGeometrica_v1 {
                             valor2 = sc.nextDouble();
                             System.out.println("Ingrese longitud del lado derecho" + figura);
                             valor3 = sc.nextDouble();
-                            result = valor + valor1 + valor2 + valor3;
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + (valor + valor1 + valor2 + valor3));
+                            System.exit(0);
                         } else if (fig == 7) {
                             figura = "Polígono regular";
                             System.out.println("Ingrese longitud del lado del " + figura);
                             valor = sc.nextDouble();
                             System.out.println("Ingrese número de lados " + figura);
                             valor1 = sc.nextDouble();
-                            result = valor * valor1;
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + valor * valor1);
+                            System.exit(0);
                         } else if (fig == 8) {
                             figura = "Octágono";
                             System.out.println("Ingrese longitud del lado del " + figura);
                             valor = sc.nextDouble();
-                            result = 8 * valor;
-                            System.out.println("El perímetro del " + figura + " es: " + result);
+                            System.out.println("El perímetro del " + figura + " es: " + 8 * valor);
+                            System.exit(0);
                         } else if (fig == 9) {
                             subControl = false;
                         } else {
@@ -181,18 +173,15 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "m";
-                                            result = valor * 1000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 1000);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "cm";
-                                            result = valor * 100000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 100000);
                                             System.exit(0);
                                         } else if (conv == 3) {
                                             cambioMed = "mm";
-                                            result = valor * 1000000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 1000000);
                                             System.exit(0);
                                         }
                                     } else if (conv == 2) {
@@ -204,18 +193,15 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km";
-                                            result = valor / 1000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 1000);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "cm";
-                                            result = valor * 100;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 100);
                                             System.exit(0);
                                         } else if (conv == 3) {
                                             cambioMed = "mm";
-                                            result = valor * 1000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 1000);
                                             System.exit(0);
                                         }
                                     } else if (conv == 3) {
@@ -227,18 +213,15 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km";
-                                            result = valor / 100000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 100000);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "m";
-                                            result = valor / 100;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 100);
                                             System.exit(0);
                                         } else if (conv == 3) {
                                             cambioMed = "mm";
-                                            result = valor * 10;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 10);
                                             System.exit(0);
                                         } else {
                                             System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
@@ -251,18 +234,15 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km";
-                                            result = valor / 1000000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 1000000);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "m";
-                                            result = valor / 1000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 1000);
                                             System.exit(0);
                                         } else if (conv == 3) {
                                             cambioMed = "cm";
-                                            result = valor / 10;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 10);
                                             System.exit(0);
                                         } else {
                                             System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
@@ -288,13 +268,11 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "m²";
-                                            result = valor * 1000000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 1000000);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "cm²";
-                                            result = valor * 10_000_000_000L;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 10_000_000_000L);
                                             System.exit(0);
                                         }
                                     } else if (conv == 2) {
@@ -306,13 +284,11 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km²";
-                                            result = valor / 1000000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 1000000);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "cm²";
-                                            result = valor * 10000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 10000);
                                             System.exit(0);
                                         }
                                     } else if (conv == 3) {
@@ -324,13 +300,11 @@ public class CalculadoraGeometrica_v1 {
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km²";
-                                            result = valor / 10_000_000_000L;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 10_000_000_000L);
                                             System.exit(0);
                                         } else if (conv == 2) {
                                             cambioMed = "cm²";
-                                            result = valor / 10000;
-                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor / 10000);
                                             System.exit(0);
                                         }
                                     } else if (conv == 4) {
@@ -347,16 +321,14 @@ public class CalculadoraGeometrica_v1 {
                                         System.out.println("Favor, ingrese el valor en " + simbMed);
                                         valor = sc.nextDouble();
                                         cambioMed = "Radianes";
-                                        result = valor * Math.PI / 180;
-                                        System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                        System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * Math.PI / 180);
                                         System.exit(0);
                                     } else if (conv == 2) {
                                         simbMed = "Radianes";
                                         System.out.println("Favor, ingrese el valor en " + simbMed);
                                         valor = sc.nextDouble();
                                         cambioMed = "Grados";
-                                        result = valor * 180 / Math.PI;
-                                        System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
+                                        System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 180 / Math.PI);
                                         System.exit(0);
                                     } else if (conv == 3) {
                                         controlUnd = false;

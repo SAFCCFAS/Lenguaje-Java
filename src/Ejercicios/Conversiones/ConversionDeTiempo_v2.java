@@ -1,4 +1,4 @@
-package Ejercicios;
+package Ejercicios.Conversiones;
 
 import java.util.Scanner;
 

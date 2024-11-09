@@ -52,7 +52,17 @@ java HolaMundo
 
 La estructura está organizada en carpetas temáticas que agrupan los ejemplos según el concepto de Java que cubren.
 - 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
-- 📚 **Ejercicios/**: Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
+- 📚 **Ejercicios/**: Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos ordenados en 
+carpetas correspondiente al tema:
+  - **Cadenas**/:Carpeta dedicada a la manipulación de cadenas en Java, con ejemplos de operaciones como concatenación, 
+  subcadenas, longitud, etc.
+  - **Calculadoras**/: Contiene programas con diferentes tipos de calculadoras, desde las más básicas hasta las más 
+  complejas, que incluyen operaciones como exponentiación y raíz cuadrada.
+  - **Conversiones**/: Carpeta dedicada a la conversión de tipos de datos en Java. Ejemplos incluyen conversiones entre 
+  `int`, `double`, `String` y otros tipos.
+  - **Primitivos**/: Ejemplos de tipos primitivos en Java, como  `int `, `long`, `float`, `double` y `boolean`.
+  - **EstructurasDeControl**/: Contiene ejemplos de estructuras de control como condicionales (`if`, `switch`) y bucles 
+  (`for`, `while`).
 
 **Descripción de carpetas y ejemplos**
 
@@ -70,7 +80,7 @@ otros.
 - `EstructurasDeControl.java`: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
   ejecución del programa a través de decisiones y repeticiones.
 - `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
-- `Arreglos.java`: programas con ejemplos de los diferentes arreglos y sus usos.
+- `Arreglos.java`: programa con ejemplos de los diferentes arreglos y sus usos.
 
 2. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos.
 
@@ -102,9 +112,10 @@ correspondiente.
 - `ClasificarEdad.java`: Programa que solicita al usuario su edad para indicar en que clasificación se encuentra.
 - `TablaDeMultiplicar.java`: Programa que solicita al usuario un número entero positivo para mostrar su correspondiente
   tabla de multiplicar.
-
-1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
-2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
+> [!INFO]
+> 
+> 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
+> 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
 
 - `CalculadoraBasica_v1.java` / `CalculadoraBasica_v2.java`: Calculadora con operaciones básicas
   (suma, resta, multiplicación, división).
