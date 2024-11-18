@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class ContarCaracteres {
 	static Scanner sc = new Scanner(System.in);
-
+//test
 	public static void main(String[] args) {
 		String texto;
 		int longitud;
