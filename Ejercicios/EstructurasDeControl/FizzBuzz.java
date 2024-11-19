@@ -1,7 +1,5 @@
 package Ejercicios.EstructurasDeControl;
 
-import java.util.Scanner;
-
 public class FizzBuzz {
     public static void main(String[] args) {
         for (int i = 0; i < 100; i++) {
@@ -11,10 +9,9 @@ public class FizzBuzz {
                 System.out.println("Fizz");
             } else if (i % 5 == 0) {
                 System.out.println("Buzzen");
-            }else{
+            } else {
                 System.out.println(i);
             }
         }
-    }
     }
 }
