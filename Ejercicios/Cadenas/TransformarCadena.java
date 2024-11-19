@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class TransformarCadena {
     static Scanner sc = new Scanner(System.in);
-//test git
+
     public static void main(String[] args) {
         String texto, mayus, minus;
         System.out.println("Bienvenido(a), favor ingresa una palabra o frase a continuación:");
