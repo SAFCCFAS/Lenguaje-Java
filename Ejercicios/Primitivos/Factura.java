@@ -5,9 +5,10 @@ import java.util.Scanner;
 public class Factura {
     static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        int codProd;
+        int codProd, cantidadProd;
         String nombreProd;
         double precio;
-        System.out.println("Bienvenido");
+
+        System.out.println("Bienvenido(a), favor ingrese el código del producto:");
     }
 }
