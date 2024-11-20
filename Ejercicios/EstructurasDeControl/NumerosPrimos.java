@@ -26,5 +26,6 @@ public class NumerosPrimos {
                 System.out.println("Número ingresado no es primo.");
             }
         }
+
     }
 }
