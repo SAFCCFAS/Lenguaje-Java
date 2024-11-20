@@ -10,5 +10,6 @@ public class Factura {
         double precio;
 
         System.out.println("Bienvenido(a), favor ingrese el código del producto:");
+        codProd = sc.nextInt();
     }
 }
