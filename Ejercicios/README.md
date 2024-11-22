@@ -41,6 +41,8 @@ que posee.
 - `ClasificarEdad.java`: Programa que solicita al usuario su edad para indicar en que clasificación se encuentra.
 - `TablaDeMultiplicar.java`: Programa que solicita al usuario un número entero positivo para mostrar su correspondiente
 tabla de multiplicar.
+- `NumerosPrimos.java`: Programa que solicita al usuario un número entero para determinar si es primo o no.
+- `Factura.java`: Programa donde se imprime una factura básica de compra con la información solicitada.
 
 ## Instrucciones
 
