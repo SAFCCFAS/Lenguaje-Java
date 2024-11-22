@@ -114,6 +114,8 @@ correspondiente.
   tabla de multiplicar.
 - `NumerosPrimos.java`: Programa que solicita al usuario un número entero para determinar si es primo o no.
 - `Factura.java`: Programa donde se imprime una factura básica de compra con la información solicitada.
+- `Fibonacci.java`: Programa que genera e imprime la sucesión de Fibonacci hasta el número de términos indicado por el
+  usuario, validando que sea mayor a 0.
 
 > 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 > 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje. 
@@ -122,5 +124,8 @@ correspondiente.
   (suma, resta, multiplicación, división).
 - `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como
   exponenciación y raíz cuadrada.
+- `Calculadora Geométrica_v1.java` / `Calculadora Geométrica_v1.java`: Aplicación de consola que calcula el área y/o
+  perimetro de figuras geométricas planas, incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos,
+  polígonos regulares y octágono.
 - `ConversionDeTiempo_v1.java`/`ConversionDeTiempo_v2.java`: Programa que pide una unidad de tiempo y un valor al
   usuario y devuelve las equivalencias en otras unidades de tiempo.
