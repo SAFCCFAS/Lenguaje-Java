@@ -8,5 +8,7 @@ public class SumarElementosArray {
         int n;
         System.out.println("Bienvenido(a), favior ingrese el tamaño que poseerá el array o arreglo:");
         n = sc.nextInt();
+
+        sc.close();
     }
 }
