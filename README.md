@@ -53,7 +53,7 @@ java HolaMundo
 La estructura está organizada en carpetas temáticas que agrupan los ejemplos según el concepto de Java que cubren.
 - 📚 **Fundamentos/**: Compendio de algunos fundamentos basicos pero importantes de Java.
 - 📚 **Ejercicios/**: Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos ordenados en 
-carpetas correspondiente al tema:
+subcarpetas correspondiente al tema:
   - **Cadenas**/:Carpeta dedicada a la manipulación de cadenas en Java, con ejemplos de operaciones como concatenación, 
   subcadenas, longitud, etc.
   - **Calculadoras**/: Contiene programas con diferentes tipos de calculadoras, desde las más básicas hasta las más 
@@ -63,6 +63,8 @@ carpetas correspondiente al tema:
   - **Primitivos**/: Ejemplos de tipos primitivos en Java, como  `int `, `long`, `float`, `double` y `boolean`.
   - **EstructurasDeControl**/: Contiene ejemplos de estructuras de control como condicionales (`if`, `switch`) y bucles 
   (`for`, `while`).
+- 📚 **EjerciciosArrays/**: Esta carpeta contiene ejercicios prácticos diseñados para reforzar los conceptos aprendidos 
+sobre arrays. Los ejercicios están organizados en subcarpetas según los temas específicos.
 
 **Descripción de carpetas y ejemplos**
 

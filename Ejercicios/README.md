@@ -14,12 +14,12 @@ Cada ejercicio se enfoca en un concepto específico y ayuda a practicar la progr
 - `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como 
 exponenciación y raíz cuadrada.
 - `Calculadora Geométrica_v1.java` / `Calculadora Geométrica_v1.java`: Aplicación de consola que calcula el área y/o 
-perimetro de figuras geométricas planas, incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, 
+perímetro de figuras geométricas planas, incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, 
 polígonos regulares y octágono.
 - `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C),
   Fahrenheit (°F) y Kelvin (K). El usuario elige la unidad de entrada, ingresa la temperatura y selecciona la unidad de
   conversión.
-- `AdivinaNumero.java`: Programa que genera un número aleatorio entre 1 y 100, y solicita al usuario que lo adivine.
+- `AdivinaNumero.java`: Programa que genera un número aleatorio entre 1 y 100, y solícita al usuario que lo adivine.
     El programa debe indicar si el número ingresado es alto o bajo que el número secreto hasta que el usuario acierte.
 - `ContadorDeDigitos.java`: Programa que pide un número entero positivo al usuario y cuenta la cantidad de dígitos que 
 tiene.
@@ -27,19 +27,19 @@ tiene.
 usuario y devuelve las equivalencias en otras unidades de tiempo.
 - `FizzBuzz.java`: Programa que imprime números del 1 al 100, reemplazando múltiplos de 3 con "Fizz", múltiplos de 5 con
   "Buzz" y múltiplos de ambos con "FizzBuzz".
-- `BuscarMaxMin.java`: Programa que solicita al usuario ingresar una cantidad definida de números enteros y determina el
+- `BuscarMaxMin.java`: Programa que solícita al usuario ingresar una cantidad definida de números enteros y determina el
 valor mínimo y máximo de los números ingresados.
 - `FactorialNumero.java`: Programa que calcula el factorial de un número entero positivo ingresado por el usuario.
-Solicita un número y muestra el resultado del factorial.
-- `Promedio.java`: Programa que solicita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
+Solícita un número y muestra el resultado del factorial.
+- `Promedio.java`: Programa que solícita al usuario 5 números enteros para hallar el promedio de la cantidad ingresada.
 - `TransformarCadena.java`: Programa que solicita al usuario una palabra o frase para pasar mayúscula y minúscula.
-- `ContarCaracteres.java`: Programa que solicita al usuario una palabra o frase para contar la cantidad de caracteres
+- `ContarCaracteres.java`: Programa que solícita al usuario una palabra o frase para contar la cantidad de caracteres
 que posee.
 - `ParidadNUmerica.java`: Programa que solicita al usuario un número entero positivo para determinar si es par o impar.
 - `DiaSemana.java`: Programa que solicita al usuario un número del 1 al 7 para mostrar el día de la semana
   correspondiente.
-- `ClasificarEdad.java`: Programa que solicita al usuario su edad para indicar en que clasificación se encuentra.
-- `TablaDeMultiplicar.java`: Programa que solicita al usuario un número entero positivo para mostrar su correspondiente
+- `ClasificarEdad.java`: Programa que solícita al usuario su edad para indicar en que clasificación se encuentra.
+- `TablaDeMultiplicar.java`: Programa que solícita al usuario un número entero positivo para mostrar su correspondiente
 tabla de multiplicar.
 - `NumerosPrimos.java`: Programa que solicita al usuario un número entero para determinar si es primo o no.
 - `Factura.java`: Programa donde se imprime una factura básica de compra con la información solicitada.
