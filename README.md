@@ -135,3 +135,5 @@ correspondiente.
 3. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos en los arrays o arreglos.
 
 **Archivos incluidos:**
+
+- 

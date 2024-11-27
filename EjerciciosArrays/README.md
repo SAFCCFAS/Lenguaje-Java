@@ -10,3 +10,6 @@ hasta manipulaciones de datos más complejas.
 
 >1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 >2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
+
+- `SumarElementosArray.java`: Solicita al usuario que ingrese el tamaño y los elementos de un array de números enteros, 
+luego suma todos los elementos del array e imprime el resultado.
