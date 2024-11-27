@@ -131,3 +131,7 @@ correspondiente.
   polígonos regulares y octágono.
 - `ConversionDeTiempo_v1.java`/`ConversionDeTiempo_v2.java`: Programa que pide una unidad de tiempo y un valor al
   usuario y devuelve las equivalencias en otras unidades de tiempo.
+
+3. Esta carpeta contendrá ejercicios prácticos para reforzar los conceptos aprendidos en los arrays o arreglos.
+
+**Archivos incluidos:**
