@@ -25,10 +25,9 @@ public class SumarElementosArray {
         }
 
         // Sumar los elementos del arreglo
-        for ( i = 0; i < cantidad; i++) {
-            suma += tam[i];
+        for (int num : tam) {
+            suma +=num;
         }
-
         System.out.println("La suma total de los números ingresados es: " + suma);
 
         sc.close();
