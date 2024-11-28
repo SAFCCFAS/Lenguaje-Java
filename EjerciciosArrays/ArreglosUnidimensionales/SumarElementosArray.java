@@ -1,11 +1,11 @@
-package EjerciciosArrays;
+package EjerciciosArrays.ArreglosUnidimensionales;
 
 import java.util.Scanner;
 
 public class SumarElementosArray {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int cantidad, n, suma = 0;
+        int cantidad, i, suma = 0;
         int[] tam;
 
         do {
@@ -19,13 +19,13 @@ public class SumarElementosArray {
         tam = new int[cantidad]; // Crear el arreglo de acuerdo al tamaño
 
         // Leer los elementos del arreglo
-        for (int i = 0; i < tam.length; i++) {
+        for (i = 0; i < tam.length; i++) {
             System.out.println("Ingrese el número de la posición " + i + ":");
             tam[i] = sc.nextInt();
         }
 
         // Sumar los elementos del arreglo
-        for (int i = 0; i < cantidad; i++) {
+        for ( i = 0; i < cantidad; i++) {
             suma += tam[i];
         }
 
