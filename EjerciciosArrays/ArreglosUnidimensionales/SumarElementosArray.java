@@ -3,8 +3,9 @@ package EjerciciosArrays.ArreglosUnidimensionales;
 import java.util.Scanner;
 
 public class SumarElementosArray {
+	static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        
         int cantidad, i, suma = 0;
         int[] tam;
 
@@ -25,10 +26,9 @@ public class SumarElementosArray {
         }
 
         // Sumar los elementos del arreglo
-        for ( i = 0; i < cantidad; i++) {
-            suma += tam[i];
+        for (int num : tam) {
+            suma +=num;
         }
-
         System.out.println("La suma total de los números ingresados es: " + suma);
 
         sc.close();
