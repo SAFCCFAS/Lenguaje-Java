@@ -15,9 +15,15 @@ public class SumarElementosArray {
 
         for (int i = 0; i < tam.length; i++) {
             System.out.println("Ingrese el número de la posición " + i + ":");
-            n = sc.nextInt();
+            tam[i] = sc.nextInt();
         }
 
+        for (int i = 0; i < cantidad; i++) {
+            suma += tam[i];
+
+        }
+
+        System.out.println("La suma total de los números ingresados es: " + suma);
 
         sc.close();
     }
