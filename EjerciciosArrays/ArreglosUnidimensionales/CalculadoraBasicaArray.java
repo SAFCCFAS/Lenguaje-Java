@@ -38,14 +38,12 @@ public class CalculadoraBasicaArray {
 
         if (opcion >= 1 && opcion <= 4) {
             System.out.printf("El resultado de la %s es: ", operacionesNombres[opcion - 1]);
-
             if (opcion == 4 && Double.isNaN(operaciones[3])) {
                 System.out.println("Error (división entre cero).");
             } else {
                 System.out.printf("%.2f%n", operaciones[opcion - 1]);
             }
         }
-
         sc.close();
     }
 }
