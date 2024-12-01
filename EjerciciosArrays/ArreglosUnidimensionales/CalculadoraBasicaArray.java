@@ -22,8 +22,6 @@ public class CalculadoraBasicaArray {
             }
             opcion = sc.nextInt();
 
-
-
         } while (opcion <= 0);
 
 
