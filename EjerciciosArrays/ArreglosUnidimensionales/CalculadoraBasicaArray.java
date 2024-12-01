@@ -16,6 +16,7 @@ public class CalculadoraBasicaArray {
         System.out.println("Los números que has ingresados son: " + n1 + " y " + n2 + ".");
 
         do {
+            opcion=1;
             System.out.println("¿Que operación desea realizar?");
             for (String nombre : operacionesNombres) {
                 System.out.printf("%d. %s.%n", opcion++, nombre);
