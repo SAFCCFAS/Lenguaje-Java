@@ -138,3 +138,5 @@ correspondiente.
 
 - `SumarElementosArray.java`: Solicita al usuario que ingrese el tamaño y los elementos de un array de números enteros,
   luego suma todos los elementos del array e imprime el resultado.
+- `CalculadoraBasicaArray.java`: Versión de calculadora básica con uso de array.
+- `CalculadoraAvanzadaArray.java`: Versión de calculadora avanzada con uso de array.
