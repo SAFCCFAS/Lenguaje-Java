@@ -16,7 +16,7 @@ public class CalculadoraBasicaArray {
         System.out.println("Los números que has ingresados son: " + n1 + " y " + n2 + ".");
 
         do {
-            opcion=1;
+            opcion=1; // esto reiniciará la variable en cada iteracción del bucle.
             System.out.println("¿Que operación desea realizar?");
             for (String nombre : operacionesNombres) {
                 System.out.printf("%d. %s.%n", opcion++, nombre);
