@@ -8,23 +8,35 @@ public class CalculadoraBasicaArray {
     public static void main(String[] args) {
         int n1, n2, opcion;
         String[] operacionesNombres = {"Suma", "Resta", "Multiplicación", "División"};
+        String eleccion;
         double[] operaciones = new double[4]; // Array para almacenar los resultados de las 4 operaciones
+
+        do { //repetirá el menú hasta que se reciba un ingreso válido.
+            opcion = 1;
+            System.out.println("Bienvenido(a), favor ingrese la opción correspondiente a la operación a realizar a continuación:");
+
+            for (String nombre : operacionesNombres) {
+                System.out.printf("%d. %s.%n", opcion++, nombre);
+            }
+            eleccion = sc.nextLine().trim();
+            if (eleccion.trim().isEmpty()) {
+                System.err.println("Error: Favor ingresar alguna de las opciones mostrada, intente nuevamente.");
+                continue;
+            } else if (!eleccion.matches("\\d+")) { // "\\d+" valida que la entrada sea un número entero positivo (uno o más dígitos).
+                System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
+                continue;
+            }
+            opcion = Integer.parseInt(eleccion);
+            if (opcion > operacionesNombres.length || opcion <= 0) {
+                System.err.printf("Error: Opción fuera de rango (1 - %d), intente nuevamente.%n", operacionesNombres.length);
+            }
+        } while (opcion > operacionesNombres.length || opcion <= 0); // si no hay coincidencia repetirá
+
+
         System.out.println("Ingrese el primer número:");
         n1 = sc.nextInt();
         System.out.println("Ingrese el segundo número:");
         n2 = sc.nextInt();
-        System.out.println("Los números que has ingresados son: " + n1 + " y " + n2 + ".");
-
-        do {
-            opcion=1; // esto reiniciará la variable en cada iteracción del bucle.
-            System.out.println("¿Que operación desea realizar?");
-            for (String nombre : operacionesNombres) {
-                System.out.printf("%d. %s.%n", opcion++, nombre);
-            }
-            opcion = sc.nextInt();
-
-        } while (opcion <= 0);
-
 
         switch (opcion) {
             case 1 -> operaciones[0] = n1 + n2;

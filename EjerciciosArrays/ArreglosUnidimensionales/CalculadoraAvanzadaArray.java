@@ -26,6 +26,9 @@ public class CalculadoraAvanzadaArray {
                 continue;
             }
             opc = Integer.parseInt(eleccion);
+            if (opc > nombreOperacion.length || opc <= 0) {
+                System.err.printf("Error: Opción fuera de rango (1 - %d), intente nuevamente.%n", nombreOperacion.length);
+            }
         } while (opc > nombreOperacion.length || opc <= 0); // si no hay coincidencia repetirá
 
 
