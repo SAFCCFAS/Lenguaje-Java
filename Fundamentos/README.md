@@ -9,6 +9,7 @@ variables, estructuras de control y otros conceptos esenciales.
 * [Tipo De Datos en Java](#tipos-de-datos-en-java)
 * [Variables](#variables)
 * [Separadores](#Separadores)
+* [Tipos De Impresiones](#tipos-de-impresiones-en-java)
 * [Operadores](#Operadores)
 * [Secuencias De Escape](#Secuencias-de-escape)
 * [Conversiones Y Contextos](#conversiones-y-contextos)
@@ -328,6 +329,8 @@ bloques, parámetros y elementos en las expresiones.
 |    ...    |      Indicar parámetros varargs (varios parámetros).      |
 |     @     |                   Usado en anotaciones.                   |
 |    ::     | Referencia a métodos o constructores (method references). |
+
+#### Tipos De Impresiones en Java
 
 ## Operadores
 
