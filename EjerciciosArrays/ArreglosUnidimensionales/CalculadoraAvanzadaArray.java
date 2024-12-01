@@ -9,7 +9,8 @@ public class CalculadoraAvanzadaArray {
         String[] nombreOperacion = {"Suma", "Resta", "Multiplicación", "División", "Modulo", "Potencia", "Raíz Cuadrada"};
         String eleccion;
         int opc = 1;
-        do {
+
+        do { //repetirá el menú hasta que se reciba un ingreso válido.
             opc = 1;
             System.out.println("Bienvenido(a), favor ingrese la opción correspondiente a la operación a realizar a continuación:");
 
@@ -17,11 +18,14 @@ public class CalculadoraAvanzadaArray {
                 System.out.printf("%d. %s.%n", opc++, nombre);
             }
             eleccion = sc.nextLine().trim();
-            if (eleccion.isEmpty() || eleccion.trim().isEmpty()) {
-                System.err.println("No puede ir vacía");
+            if (eleccion.trim().isEmpty()) {
+                System.err.println("Error: Favor ingresar alguna de las opciones mostrada, intente nuevamente.");
+                continue;
+            } else if (!eleccion.matches("\\d+")) { // "\\d+" valida que la entrada sea un número entero positivo (uno o más dígitos).
+                System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
                 continue;
             }
             opc = Integer.parseInt(eleccion);
-        } while (opc <= 0);
+        } while (opc > nombreOperacion.length || opc <= 0); // si no hay coincidencia repetirá
     }
 }
