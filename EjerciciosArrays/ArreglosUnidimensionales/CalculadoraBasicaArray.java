@@ -6,7 +6,7 @@ public class CalculadoraBasicaArray {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int n1, n2, opcion;
+        int n1, n2, opcion = 1;
         String[] operacionesNombres = {"Suma", "Resta", "Multiplicación", "División"};
         double[] operaciones = new double[4]; // Array para almacenar los resultados de las 4 operaciones
         System.out.println("Ingrese el primer número:");
@@ -15,8 +15,17 @@ public class CalculadoraBasicaArray {
         n2 = sc.nextInt();
         System.out.println("Los números que has ingresados son: " + n1 + " y " + n2 + ".");
 
-        System.out.println("¿Que operación desea realizar?\n1.Suma.\n2.Resta.\n3.Multiplicación.\n4.División.");
-        opcion = sc.nextInt();
+        do {
+            System.out.println("¿Que operación desea realizar?");
+            for (String nombre : operacionesNombres) {
+                System.out.printf("%d. %s.%n", opcion++, nombre);
+            }
+            opcion = sc.nextInt();
+
+
+
+        } while (opcion <= 0);
+
 
         switch (opcion) {
             case 1 -> operaciones[0] = n1 + n2;
