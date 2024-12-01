@@ -8,7 +8,7 @@ public class CalculadoraAvanzadaArray {
     public static void main(String[] args) {
         String[] nombreOperacion = {"Suma", "Resta", "Multiplicación", "División", "Modulo", "Potencia", "Raíz Cuadrada"};
         String eleccion;
-        int opc = 1;
+        int opc;
 
         do { //repetirá el menú hasta que se reciba un ingreso válido.
             opc = 1;
@@ -27,5 +27,9 @@ public class CalculadoraAvanzadaArray {
             }
             opc = Integer.parseInt(eleccion);
         } while (opc > nombreOperacion.length || opc <= 0); // si no hay coincidencia repetirá
+
+
+
+        sc.close();
     }
 }

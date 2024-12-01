@@ -6,7 +6,7 @@ public class CalculadoraBasicaArray {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        int n1, n2, opcion = 1;
+        int n1, n2, opcion;
         String[] operacionesNombres = {"Suma", "Resta", "Multiplicación", "División"};
         double[] operaciones = new double[4]; // Array para almacenar los resultados de las 4 operaciones
         System.out.println("Ingrese el primer número:");
