@@ -12,9 +12,7 @@ public class CalculadoraAvanzada_v2 {
         String nombreoperacion = null;
         boolean control = true;
         do {
-            System.out.println("Bienvenido(a)!, ¿Que operación desea realizar?" +
-                    "\n1.Suma.\n2.Resta.\n3.Multiplicación.\n4.División.\n5.Modulo.\n6.Potencia.\n7.Raíz Cuadrada." +
-                    "\n8.Salir.");
+            System.out.println("Bienvenido(a)!, ¿Que operación desea realizar?" + "\n1.Suma.\n2.Resta.\n3.Multiplicación.\n4.División.\n5.Modulo.\n6.Potencia.\n7.Raíz Cuadrada." + "\n8.Salir.");
             operacion = leer.nextInt();
 
             switch (operacion) {
@@ -50,14 +48,14 @@ public class CalculadoraAvanzada_v2 {
                     System.exit(0);
                     break;
                 default:
-                    System.err.println("Error: opción o ingreso no válido intente nuevamente." +
-                            "\nOpciones válidas 1 al 8");
+                    System.err.println("Error: opción o ingreso no válido intente nuevamente." + "\nOpciones válidas 1 al 8");
                     break;
             }
         } while (control);
-        System.out.println("Usted a elegido: " + nombreoperacion);
+
 
         if (operacion >= 1 && operacion <= 5) {
+            System.out.println("Usted a elegido: " + nombreoperacion);
             System.out.println("Ingrese un número");
             n1 = leer.nextDouble();
             System.out.println("Ingrese un número");
