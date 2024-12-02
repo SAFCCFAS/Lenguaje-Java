@@ -506,7 +506,7 @@ Las expresiones regulares están compuestas por:
 3. **Coincidencia de Palabras Específicas**:
    ```regex
    \\b(palabra)\\b
-   Esta expresión busca la palabra "palabra" como una coincidencia completa, evitando coincidencias parciales.
+   // Esta expresión busca la palabra "palabra" como una coincidencia completa, evitando coincidencias parciales.
    ```
 
 **Uso Generalizado en Java**
