@@ -80,9 +80,9 @@ manipularlo dentro del programa.
 
 Las variables se declaran de la siguiente manera:
 
-    ~~~
-    tipo nombreVariable;
-    ~~~
+~~~
+tipo nombreVariable;
+~~~
 
 **Usos Especiales**
 
