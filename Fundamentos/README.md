@@ -1,4 +1,4 @@
-[# ☕ Fundamentos de Java
+# ☕ Fundamentos de Java
 
 Este `README.md` complementa los comentarios en el código y proporciona una visión general de los ejercicios y ejemplos
 básicos que cubren los fundamentos del lenguaje Java. Incluye información sobre la sintaxis básica, tipos de datos,
