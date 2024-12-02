@@ -359,28 +359,28 @@ se describen en detalle.
 
 1. Método `print()`:
 
-## Operadores
+### Operadores
 
-**Operadores.java:**
+`Operadores.java:`Ejemplos prácticos del uso de operadores en Java.
 
-* Ejemplos prácticos del uso de operadores en Java.
-* Objetivo: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos,
-  condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta.
-  El código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
+- **Objetivo**: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos,
+  condicionales, bit a bit, y de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El
+  código ilustra cómo realizar cálculos matemáticos, comparaciones, y operaciones lógicas y bit a bit.
 
-Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más operandos
-(valores, variables, expresiones). Estos operadores permiten realizar cálculos matemáticos, operaciones lógicas y de
-asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, formados por caracteres ASCII.
+Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más
+operandos (valores, variables, expresiones). Estos operadores permiten realizar cálculos matemáticos, operaciones
+lógicas y de asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, formados por caracteres
+ASCII.
 
-* **Clasificación de Operadores en Java**
-    * **Operadores Aritméticos**: Permiten realizar operaciones matemáticas básicas.
-    * **Operadores Lógicos y Relacionales**: Ayudan a comparar valores y controlar el flujo del programa mediante
-      decisiones
-      lógicas.
-    * **Operadores de Asignación**: Usados para asignar valores a variables.
-    * **Operadores Unarios**: Operan sobre un solo operando.
-    * **Operadores Bit a Bit**: Trabajan a nivel de bits sobre valores enteros.
-    * **Operadores de Shift (Desplazamiento)**: Desplazan bits a la izquierda o derecha.
+**Clasificación de Operadores en Java**
+
+1. **Operadores Aritméticos**: Permiten realizar operaciones matemáticas básicas.
+2. **Operadores Lógicos y Relacionales**: Ayudan a comparar valores y controlar el flujo del programa mediante
+   decisiones lógicas.
+3. **Operadores de Asignación**: Usados para asignar valores a variables.
+4. **Operadores Unarios**: Operan sobre un solo operando.
+5. **Operadores Bit a Bit**: Trabajan a nivel de bits sobre valores enteros.
+6. **Operadores de Shift (Desplazamiento)**: Desplazan bits a la izquierda o derecha.
 
 |         Categoría          |             Operador             |                               Descripción                               |               Ejemplo                |
 |:--------------------------:|:--------------------------------:|:-----------------------------------------------------------------------:|:------------------------------------:|
@@ -394,15 +394,14 @@ asignación, manipulación de bits, entre otros. Existen 38 operadores en Java, 
 | **Shift (Desplazamiento)** |        `<<`, `>>`, `>>>`         |                Desplazan bits a la izquierda o derecha.                 |          `int z = x << 2;`           |        
 |  **Asignación Compuesta**  |    `+=`,`-=`,`*=`, `/=`, `%=`    |             Combina operadores aritméticos con asignación.              |              `a += 5;`               |
 
-## Secuencias De Escape
+### Secuencias De Escape
 
-**SecuenciasDeEscape.java:**
+`SecuenciasDeEscape.java:` Ejemplos prácticos del uso de secuencias de escape en Java.
 
-* Ejemplos prácticos del uso de secuencias de escape en Java.
-* Objetivo: Demostrar el uso de las principales secuencias de escape disponibles en Java, como `\n` para saltos de
-  línea, `\t` para tabulación, `\"` y `\'` para incluir comillas dentro de cadenas, así como `\\` para incluir una
-  barra invertida. El código ilustra cómo utilizar estas secuencias para mejorar la presentación de texto en la
-  consola, haciendo más legible la salida y permitiendo la inclusión de caracteres especiales.
+- **Objetivo**: Demostrar el uso de las principales secuencias de escape disponibles en Java, como `\n` para saltos de
+  línea, `\t` para tabulación, `\"` y `\'` para incluir comillas dentro de cadenas, así como `\\` para incluir una barra
+  invertida. El código ilustra cómo utilizar estas secuencias para mejorar la presentación de texto en la consola,
+  haciendo más legible la salida y permitiendo la inclusión de caracteres especiales.
 
 Las secuencias de escape son combinaciones de caracteres que permiten representar caracteres especiales que no se pueden
 introducir directamente en una cadena de texto. En Java, se utilizan principalmente en literales de caracteres,
@@ -430,21 +429,20 @@ caracteres que indican el carácter que se desea representar.
     * **Uso**: Se utiliza para indicar que un objeto no está asignado.
     * **Ejemplo**: `String texto = null;`
 
-## Conversiones y Contextos
+### Conversiones y Contextos
 
-**ConversionesYContextos.java**:
+`ConversionesYContextos.java`: Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
 
-* Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
-* Objetivo: Explicar el concepto de conversión de tipos (casting), tanto implícita como explícita, y cómo el contexto
-  de una operación puede influir en el tipo resultante.
+- **Objetivo**: Explicar el concepto de conversión de tipos (casting), tanto implícita como explícita, y cómo el
+  contexto de una operación puede influir en el tipo resultante.
 
 La **conversión de tipos** en Java es fundamental para manipular datos de diferentes tipos de manera eficiente y sin
 errores. Java realiza conversiones automáticas (implícitas) cuando los tipos son compatibles, como en expresiones que
 combinan diferentes tipos numéricos. Sin embargo, cuando los tipos no son compatibles, se requiere una conversión
 explícita, que debe realizar el programador.
 
-Java también implementa la promoción de tipo dentro de las expresiones. Esto significa que tipos más pequeños, como char
-, byte y short, se promueven a int, y si hay un long, float o double en la expresión, el tipo final se ajusta al más
+Java también implementa la promoción de tipo dentro de las expresiones. Esto significa que tipos más pequeños, como
+char, byte y short, se promueven a int, y si hay un long, float o double en la expresión, el tipo final se ajusta al más
 grande. Esto garantiza la coherencia en las operaciones, pero es importante tener en cuenta que la variable original no
 se ve afectada fuera de la expresión.
 
@@ -453,16 +451,16 @@ objeto en otro diferente. Existen diferentes reglas y promociones que se aplican
 operaciones en expresiones. A continuación, te presento una tabla que resume las promociones válidas para los diferentes
 tipos de datos en Java:
 
-|  Tipo   |                      Promociones Válidas                       |
-|:-------:|:--------------------------------------------------------------:|
-| double  |                            Ninguna                             |
-|  float  |                             double                             |
-|  long   |                         float o double                         |
-|   int   |                      long, float o double                      |
-|  char   |                   int, long, float o double                    |
-|  short  |            int, long, float o double (pero no char)            |
-|  byte   |        short, int, long, float o double (pero no char)         |
-| boolean | Ninguna (los valores boolean no se consideran números en Java) |
+|   Tipo    |                      Promociones Válidas                       |
+|:---------:|:--------------------------------------------------------------:|
+| `double`  |                            Ninguna                             |
+|  `float`  |                            `double`                            |
+|  `long`   |                       `float` o `double`                       |
+|   `int`   |                   `long`, `float` o `double`                   |
+|  `char`   |               `int`, `long`, `float` o `double`                |
+|  `short`  |       `int`, `long`, `float` o `double` (pero no `char`)       |
+|  `byte`   |  `short`, `int`, `long`, `float` o `double` (pero no `char`)   |
+| `boolean` | Ninguna (los valores boolean no se consideran números en Java) |
 
 **Conversión de `String` a Otros Tipos en Java**
 
@@ -471,12 +469,12 @@ Al trabajar con cadenas de texto, a menudo es necesario convertir un `String` en
 
 **Ejemplo de uso del método `parse`**
 
-```java
+~~~
 String numeroString = "123";
 int numeroInt = Integer.parseInt(numeroString); // Convierte String a int
 String decimalString = "3.14";
 double numeroDouble = Double.parseDouble(decimalString); // Convierte String a double
-```
+~~~
 
 **Conversión a `char` en Java**
 
@@ -487,25 +485,27 @@ La conversión a `char` se puede realizar desde diferentes tipos de datos, como 
   obtener. Esta conversión puede implicar una promoción, ya que el valor int se transformará en su correspondiente
   carácter.
 
-```java
+~~~
 int numero = 65; // Código Unicode para 'A'
 char letra = (char) numero; // Convierte int a char
-```
+~~~
 
 * **Ejemplo de conversión de `String` a `char`**
   De String a char: Si deseas obtener un carácter específico de un String, puedes acceder a él mediante su índice.
   Recuerda que un String puede contener múltiples caracteres, y puedes usar el método charAt para obtener uno en
   particular.
 
-```Java
+~~~
 String texto = "Hola";
 char primeraLetra = texto.charAt(0); // Obtiene 'H'
-```
+~~~
 
-## Estructuras De Control
+### Estructuras De Control
 
-**EstructurasDeControl.java**: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
+`EstructurasDeControl.java`: Ejemplos de las estructuras de control en Java, que permiten modificar el flujo de
 ejecución del programa a través de decisiones y repeticiones.
+
+- **Objetivo**: Familiarizarse con las estructuras de control existentes en Java y conocer sus capacidades.
 
 Las estructuras de control permiten modificar el flujo de ejecución de un programa en función de condiciones y
 repetición de acciones. En Java, las principales estructuras de control se dividen en:
@@ -569,27 +569,30 @@ correspondiente, puedes consultar la tabla a continuación:
 |  `break`   |                              `break;`                              |
 | `continue` |                            `continue;`                             |
 
-## **Entrada De Datos**
+### **Entrada De Datos**
 
-**EntradaDeDatos.java**: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
+`EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
+
+- **Objetivo**: Familiarizarse con el uso de la clase `Scanner` para recibir algún tipo de tipo de datos a utilizar
+  dentro del programa.
 
 En Java, la entrada de datos permite que los programas interactúen con los usuarios, obteniendo información desde el
 teclado u otras fuentes de entrada. Para lograrlo, se utiliza la clase `Scanner` del paquete `java.util`. Esta clase
 proporciona métodos convenientes para leer diferentes tipos de datos como enteros, cadenas, números decimales, etc.
 
-## Uso de la clase `Scanner`
+**Uso de la clase `Scanner`**
 
 Para utilizar el `Scanner`, primero debes importarlo:
 
-```java
+~~~
 import java.util.Scanner;
-```
+~~~
 
 Luego, puedes crear una instancia de Scanner asociada al teclado (entrada estándar) de esta forma:
 
-```java
+~~~
 Scanner input = new Scanner(System.in);
-```
+~~~
 
 **Leer diferentes tipos de datos**
 
@@ -597,25 +600,29 @@ El Scanner tiene varios métodos para leer distintos tipos de datos:
 
 - **Enteros**:
 
-```java
+~~~
 int numero = input.nextInt();
-```
+~~~
 
 - **Decimales (punto flotante)**:
 
-```java
+~~~
 double decimal = input.nextDouble();
-```
+~~~
 
 - **Cadenas de caracteres**:
-    * Para leer una **palabra**:
-  ```java
-  String palabra = input.next();
-  ```
-    * Para leer una **línea completa**:
-  ```java
-  String linea = input.nextLine();
-  ```
+
+1. Para leer una **palabra**:
+
+~~~
+String palabra = input.next();
+~~~
+
+2. Para leer una **línea completa**:
+
+~~~
+String linea = input.nextLine();
+~~~
 
 **Limpieza del buffer**
 
@@ -626,23 +633,20 @@ Un detalle importante cuando se mezclan lecturas de diferentes tipos de datos es
 Para solucionar esto, después de leer un número y antes de leer una cadena con `nextLine()`, es necesario limpiar el
 buffer llamando a `nextLine()`:
 
-```java
+~~~
 int numero = input.nextInt();
-input.
-
-nextLine();  // Limpia el buffer
-
+input.nextLine();  // Limpia el buffer
 String texto = input.nextLine();  // Ahora puedes leer la línea completa
-```
+~~~
 
 **Cerrar el Scanner**
 
 Una vez que terminas de usar el `Scanner`, es una buena práctica cerrar el recurso para liberar los recursos del
 sistema. Esto se hace llamando al método `close()`:
 
-```java
+~~~
 input.close();
-```
+~~~
 
 **Resumen**
 
@@ -666,29 +670,29 @@ Para declarar un arreglo en Java, se especifica el tipo de datos de los elemento
 arreglo y corchetes vacíos. Por ejemplo, para declarar un arreglo de enteros llamado "numeros", se usaría la siguiente
 sintaxis:
 
-```java
+~~~
 int[] numeros; // tipo[] nombreArreglo;
-```
+~~~
 
 Para crear el arreglo y asignarle un tamaño, se utiliza el operador "new" seguido del tipo de datos y el tamaño del
 arreglo entre corchetes. Por ejemplo, para crear un arreglo de 10 enteros, se utilizaría la siguiente sintaxis:
 
-```java
+~~~
 numeros =new int[10]; // nombreArreglo = new tipo[tamaño]
-```
+~~~
 
 También es posible declarar y crear un arreglo en una sola línea:
 
-```java
+~~~
 int[] numeros = new int[6]; // tipo[] nombreArreglo = new tipo[tamaño]
-```
+~~~
 
 Es importante destacar que en la declaración de un arreglo, no se puede especificar el número de elementos dentro de los
 corchetes. Hacerlo resultará en un error de sintaxis.
 
-```java
+~~~
 int[5]numeros; // Error de sintaxis
-```
+~~~
 
 **Inicialización de arreglos**
 
@@ -698,17 +702,17 @@ Los arreglos se pueden inicializar con valores al momento de su creación. Hay d
   inicializan con valores predeterminados según su tipo de datos. Por ejemplo, los elementos de un arreglo de enteros se
   inicializan con 0, los de tipo double con 0.0, y los de tipo boolean con false.
 
-```java
+~~~
 int[] numeros = new int[5]; // numeros = [0, 0, 0, 0, 0]
-```
+~~~
 
 * **Inicialización con un inicializador de arreglos:** Se puede proporcionar una lista de valores entre llaves para
   inicializar los elementos del arreglo. Por ejemplo:
 *
 
-```java
+~~~
 int[] numeros = {1, 2, 3, 4, 5};
-```
+~~~
 
 **Accediendo a los elementos de un arreglo**
 
@@ -716,9 +720,9 @@ Para acceder a un elemento específico de un arreglo, se utiliza el nombre del a
 entre corchetes. Por ejemplo, para acceder al tercer elemento del arreglo "numeros", se utilizaría la siguiente
 sintaxis:
 
-```java
+~~~
 int tercerNumero = numeros[2];
-```
+~~~
 
 **moverse a través de un arreglo**
 
@@ -726,24 +730,19 @@ Para recorrer todos los elementos de un arreglo, se puede utilizar un ciclo "for
 
 **Ciclo "for"**:
 
-```java
-for(int i = 0;
-i<numeros.length;i++){
-        System.out.
-
-println(numeros[i]);
+~~~
+for(int i = 0; i<numeros.length;i++){
+    System.out.println(numeros[i]);
 }
-```
+~~~
 
 **Ciclo "for mejorado"**:
 
-```java
+~~~
 for(int numero :numeros){
-        System.out.
-
-println(numero);
+    System.out.println(numero);
 }
-```
+~~~
 
 **Pasando arreglos a métodos**
 
@@ -784,7 +783,7 @@ Para crear un `ArrayList` de objetos `String`, se utilizaría la siguiente sinta
 ArrayList<String> lista = new ArrayList<String>();
 ```
 
-### Resumen
+**Resumen**
 
 Los arreglos son una parte fundamental de la programación en Java. Permiten almacenar y manipular colecciones de datos
 del mismo tipo de manera eficiente. La clase `Arrays` proporciona métodos de utilidad para trabajar con arreglos, y
@@ -794,24 +793,19 @@ la clase `ArrayList` ofrece una alternativa dinámica a los arreglos con un tama
 
 Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar tu aprendizaje de Java:
 
-- **[Curso de Java para Principiantes](https://www.youtube.com/watch?v=8cm1x4bC5wE)**: Un curso completo que cubre los
+- [Curso de Java para Principiantes](https://www.youtube.com/watch?v=8cm1x4bC5wE): Un curso completo que cubre los
   fundamentos de Java desde cero, ideal para quienes están comenzando.
 
--
-    *
+- [Java Programming and Software Engineering Fundamentals](https://www.youtube.com/playlist?list=PLu0WxIzDvnq_8e88Xk8f56a7bD3F3qO0u):
+  Una serie de videos que cubren los conceptos básicos y avanzados de Java, además de la programación orientada a
+  objetos.
 
-*[Java Programming and Software Engineering Fundamentals](https://www.youtube.com/playlist?list=PLu0WxIzDvnq_8e88Xk8f56a7bD3F3qO0u)
-**:
-Una serie de videos que cubren los conceptos básicos y avanzados de Java, además de la programación orientada a
-objetos.
-
-- **[Canal de Programación de Píldoras Informáticas](https://www.youtube.com/user/pildorasinformaticas)**: Un canal en
+- [Canal de Programación de Píldoras Informáticas](https://www.youtube.com/user/pildorasinformaticas): Un canal en
   español que ofrece tutoriales sobre Java y otros lenguajes de programación, perfecto para quienes prefieren aprender
-  en
-  su idioma nativo.
+  en su idioma nativo.
 
-- **[Java Brains](https://www.youtube.com/user/koushks)**: Un canal con muchos tutoriales que cubren diversos aspectos
-  de Java, desde lo básico hasta conceptos más avanzados.
+- [Java Brains](https://www.youtube.com/user/koushks): Un canal con muchos tutoriales que cubren diversos aspectos de
+  Java, desde lo básico hasta conceptos más avanzados.
 
 ### Nota
 
