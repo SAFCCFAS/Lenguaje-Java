@@ -143,7 +143,7 @@ permite que las variables almacenen datos que se pueden utilizar y manipular en 
 Después de declarar una variable, puedes asignarle un valor de la siguiente manera:
 
 ~~~
-nombreVariable =valor;
+nombreVariable=valor;
 ~~~
 
 Ejemplo: si has declarado una variable entera llamada edad, puedes asignarle un valor de esta forma:
@@ -163,123 +163,104 @@ int edad = 25; // Declaración y Asignación
 
 1. **Tipo Compatible**: el valor asignado debe ser del mismo tipo que la variable. Por ejemplo,
    no puedes asignar un valor String a una variable int.
+    ~~~        
+    int numero = 10;  // Correcto: '10' es un literal entero.
+    String texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
+    int numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
+    ~~~
 
-~~~        
-int numero = 10;  // Correcto: '10' es un literal entero.
-String texto = "Hola";  // Correcto: "Hola" es una cadena de texto.
-int numero = "Hola";  // Incorrecto: "Hola" no puede ser asignado a un 'int'.
-~~~
-
-> Esta regla ayuda a prevenir errores lógicos en el código, asegurando que las operaciones realizadas
-> con las variables sean válidas según su tipo.
+   > Esta regla ayuda a prevenir errores lógicos en el código, asegurando que las operaciones realizadas con las
+   variables sean válidas según su tipo.
 
 2. **Valores Literales**: puedes asignar valores literales directamente, como números, caracteres o cadenas.
-
-~~~
-char letra = 'A';  // Asignación de un carácter literal.
-boolean esVerdadero = true;  // Asignación de un valor booleano literal.
-~~~
-
-> Los literales son útiles para inicializar variables con valores conocidos en el momento de la declaración.
+    ~~~
+    char letra = 'A';  // Asignación de un carácter literal.
+    boolean esVerdadero = true;  // Asignación de un valor booleano literal.
+    ~~~
+   > Los literales son útiles para inicializar variables con valores conocidos en el momento de la declaración.
 
 3. **Valores por Defecto**: cuando declaras variables de tipo primitivo en el ámbito de una clase, Java les asigna
    automáticamente un valor por defecto si no se les da uno explícitamente. Esto varía según el tipo de dato.
    Ejemplo:
-
-~~~
-int contador; // Valor por defecto: 0
-boolean estado; // Valor por defecto: false
-char letra; // Valor por defecto: '\u0000' (carácter nulo)
-~~~
-
-> Los valores por defecto son útiles para evitar errores al usar variables no inicializadas.
-> Sin embargo, es buena práctica inicializar siempre las variables antes de usarlas.
+    ~~~
+    int contador; // Valor por defecto: 0
+    boolean estado; // Valor por defecto: false
+    char letra; // Valor por defecto: '\u0000' (carácter nulo)
+    ~~~
+   > Los valores por defecto son útiles para evitar errores al usar variables no inicializadas. Sin embargo, es buena
+   práctica inicializar siempre las variables antes de usarlas.
 
 4. **Expresiones**: puedes asignar el resultado de expresiones a una variable. Una expresión puede incluir operadores
    aritméticos, lógicos o de comparación.
    Ejemplo:
-
-~~~
-int resultado = 5 + 10;  // Asignación del resultado de la suma.
-double promedio = (nota1 + nota2 + nota3) / 3;  // Asignación usando una expresión aritmética.
-~~~
-
-> Permite realizar cálculos y lógica en una sola línea de código, facilitando la manipulación de datos.
+    ~~~
+    int resultado = 5 + 10;  // Asignación del resultado de la suma.
+    double promedio = (nota1 + nota2 + nota3) / 3;  // Asignación usando una expresión aritmética.
+    ~~~
+   > Permite realizar cálculos y lógica en una sola línea de código, facilitando la manipulación de datos.
 
 5. **Asignación Múltiple**: puedes declarar y asignar valores a múltiples variables del mismo tipo en una sola línea, lo
    que puede hacer que el código sea más limpio y conciso.
    Ejemplo:
-
-~~~
-int a, b, c; // Declaración de múltiples variables.
-a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
-~~~
-
-> Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con el mismo valor,
-> ahorrando espacio y mejorando la legibilidad.
+    ~~~
+    int a, b, c; // Declaración de múltiples variables.
+    a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
+    ~~~
+   > Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con el mismo valor,
+   ahorrando espacio y mejorando la legibilidad.
 
 6. **Asincronía y Cambios**: el valor de una variable puede cambiar durante la ejecución del programa. Puedes reasignar
    un nuevo valor a la misma variable en cualquier momento, lo que permite la manipulación dinámica de datos.
    Ejemplo:
-
-~~~
-int edad = 25; // Inicialmente asignado.
-edad = 30; // Reasignación del valor de la variable.
-~~~
-
-> Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las variables en función
-> de la lógica del programa y las interacciones del usuario.
+    ~~~
+    int edad = 25; // Inicialmente asignado.
+    edad = 30; // Reasignación del valor de la variable.
+    ~~~
+   > Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las variables en
+   función de la lógica del programa y las interacciones del usuario.
 
 7. **Uso de Operadores de Asignación Compuestos**: Java ofrece operadores de asignación compuestos que combinan una
    operación aritmética con la asignación. Esto puede hacer que el código sea más conciso y legible.
    Ejemplo:
-
-~~~
-int total = 10; // Inicialización.
-total += 5; // Equivalente a total = total + 5; total ahora es 15.
-~~~
-
-> Los operadores de asignación compuestos son útiles para simplificar expresiones en las que necesitas modificar el
-> valor de una variable en función de su valor actual.
+    ~~~
+    int total = 10; // Inicialización.
+    total += 5; // Equivalente a total = total + 5; total ahora es 15.
+    ~~~
+   > Los operadores de asignación compuestos son útiles para simplificar expresiones en las que necesitas modificar el
+   valor de una variable en función de su valor actual.
 
 **Uso de Comillas en Java**
 
 - **Comillas dobles** (`""`): En Java, las comillas dobles se utilizan para definir cadenas de texto (strings).
   Un string es una secuencia de caracteres que puede incluir letras, números, espacios y otros símbolos.
   Ejemplo:
-
-~~~
-String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
-~~~
-
-> El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un objeto de tipo String.
-> Sin las comillas dobles, el compilador no interpretaría correctamente la secuencia de caracteres como una cadena de
-> texto.
+    ~~~
+    String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
+    ~~~
+  > El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un objeto de tipo
+  String. Sin las comillas dobles, el compilador no interpretaría correctamente la secuencia de caracteres como una
+  cadena de texto.
 
 - **Comillas simples** (`''`): Las comillas simples se utilizan para definir un solo carácter (char). Un char es un tipo
   de dato que representa un único carácter, como una letra, un número o un símbolo.
   Ejemplo:
-
-~~~
-char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
-~~~
-
-> Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. Si se usan comillas
-> dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de texto, lo que generará
-> un error de tipo.
+    ~~~
+    char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
+    ~~~
+  > Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. Si se usan comillas
+  dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de texto, lo que generará
+  un error de tipo.
 
 - **Números**: Los números en Java, ya sean enteros (int, long, etc.) o decimales (float, double), se representan
   directamente como valores numéricos sin comillas. Esto se debe a que son tipos de datos primitivos y no necesitan ser
   encapsulados para ser utilizados en cálculos o asignaciones.
   Ejemplo:
-
-~~~
-int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
-double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
-~~~
-
-> Al no usar comillas para los números, el compilador puede reconocer y operar con ellos directamente. Si se colocaran
-> entre comillas, serían interpretados como cadenas de texto, lo que impediría realizar operaciones matemáticas.
+    ~~~
+    int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
+    double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
+    ~~~
+  > Al no usar comillas para los números, el compilador puede reconocer y operar con ellos directamente. Si se colocaran
+  entre comillas, serían interpretados como cadenas de texto, lo que impediría realizar operaciones matemáticas.
 
 **Resumen**
 
@@ -357,7 +338,44 @@ En Java, existen varios métodos para imprimir datos en la consola, cada uno con
 adaptan a diferentes necesidades. Los métodos más comunes son `print()`, `println()`, y `printf()`. A continuación,
 se describen en detalle.
 
-1. Método `print()`:
+1. **Método `print()`**: Imprime el texto en la consola sin añadir un salto de línea al final. Esto significa que el
+   cursor permanece en la misma línea después de la impresión.
+    - **Sintaxis**:
+   ~~~
+   System.out.print(String input_data);
+   ~~~
+
+2. **Método `println()`**: Similar a `print()`, pero añade un salto de línea después de imprimir el texto. Esto mueve el
+   cursor a la siguiente línea.
+    - **Sintaxis**:
+   ~~~
+     System.out.println(String input_data);
+   ~~~
+
+3. **Método `printf()`**: Permite imprimir texto con formato específico. Es similar a la función `printf` en C y utiliza
+   especificadores de formato para controlar cómo se imprimen los datos.
+    - **Sintaxis**:
+   ~~~
+     System.out.printf(String format, Object... args);
+   ~~~
+
+**Comparación de Métodos**
+
+| Método      | Salto de Línea | Uso Común                                       |
+|-------------|----------------|-------------------------------------------------|
+| `print()`   | No             | Imprimir en la misma línea                      |
+| `println()` | Sí             | Imprimir y mover el cursor a la siguiente línea |
+| `printf()`  | Depende        | Imprimir con formato específico                 |
+
+**Consideraciones Adicionales**
+
+- **Sobrecarga de Métodos**: Tanto `println()` como `printf()` están sobrecargados, lo que significa que pueden aceptar
+  diferentes tipos de argumentos (cadenas, enteros, booleanos, etc.).
+- **Secuencias de Escape**: Se pueden usar secuencias de escape como `\n` (salto de línea) y `\t` (tabulación) para dar
+  formato adicional a las cadenas[6].
+
+Estos métodos son fundamentales para la salida de datos en programas Java y permiten una interacción efectiva con el
+usuario al mostrar información relevante durante la ejecución del programa.
 
 ### Operadores
 
@@ -599,30 +617,28 @@ Scanner input = new Scanner(System.in);
 El Scanner tiene varios métodos para leer distintos tipos de datos:
 
 - **Enteros**:
-
-~~~
-int numero = input.nextInt();
-~~~
+    ~~~
+    int numero = input.nextInt();
+    ~~~
 
 - **Decimales (punto flotante)**:
-
-~~~
-double decimal = input.nextDouble();
-~~~
+    ~~~
+    double decimal = input.nextDouble();
+    ~~~
 
 - **Cadenas de caracteres**:
 
 1. Para leer una **palabra**:
 
-~~~
-String palabra = input.next();
-~~~
+    ~~~
+    String palabra = input.next();
+    ~~~
 
 2. Para leer una **línea completa**:
 
-~~~
-String linea = input.nextLine();
-~~~
+    ~~~
+    String linea = input.nextLine();
+    ~~~
 
 **Limpieza del buffer**
 
@@ -702,17 +718,16 @@ Los arreglos se pueden inicializar con valores al momento de su creación. Hay d
   inicializan con valores predeterminados según su tipo de datos. Por ejemplo, los elementos de un arreglo de enteros se
   inicializan con 0, los de tipo double con 0.0, y los de tipo boolean con false.
 
-~~~
-int[] numeros = new int[5]; // numeros = [0, 0, 0, 0, 0]
-~~~
+    ~~~
+    int[] numeros = new int[5]; // numeros = [0, 0, 0, 0, 0]
+    ~~~
 
 * **Inicialización con un inicializador de arreglos:** Se puede proporcionar una lista de valores entre llaves para
   inicializar los elementos del arreglo. Por ejemplo:
-*
 
-~~~
-int[] numeros = {1, 2, 3, 4, 5};
-~~~
+    ~~~
+    int[] numeros = {1, 2, 3, 4, 5};
+    ~~~
 
 **Accediendo a los elementos de un arreglo**
 
@@ -795,22 +810,17 @@ Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar
 
 - [Curso de Java para Principiantes](https://www.youtube.com/watch?v=8cm1x4bC5wE): Un curso completo que cubre los
   fundamentos de Java desde cero, ideal para quienes están comenzando.
-
 - [Java Programming and Software Engineering Fundamentals](https://www.youtube.com/playlist?list=PLu0WxIzDvnq_8e88Xk8f56a7bD3F3qO0u):
   Una serie de videos que cubren los conceptos básicos y avanzados de Java, además de la programación orientada a
   objetos.
-
 - [Canal de Programación de Píldoras Informáticas](https://www.youtube.com/user/pildorasinformaticas): Un canal en
   español que ofrece tutoriales sobre Java y otros lenguajes de programación, perfecto para quienes prefieren aprender
   en su idioma nativo.
-
 - [Java Brains](https://www.youtube.com/user/koushks): Un canal con muchos tutoriales que cubren diversos aspectos de
   Java, desde lo básico hasta conceptos más avanzados.
 
-### Nota
-
-Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te animo a que los explores y
-practiques los conceptos que vayas aprendiendo para obtener una comprensión más sólida de Java.
+> Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te animo a que los explores y
+> practiques los conceptos que vayas aprendiendo para obtener una comprensión más sólida de Java.
 
 ## Referencias
 
@@ -836,3 +846,4 @@ practiques los conceptos que vayas aprendiendo para obtener una comprensión má
 * [Java Language Specification (JLS): Chapter 10. Arrays](https://docs.oracle.com/javase/specs/jls/se17/html/jls-10.html)
 * [Geeksforgeeks: Arrays in Java](https://www.geeksforgeeks.org/arrays-in-java/)
 * [JavaPoint: Java Arrays](https://www.javatpoint.com/array-in-java)
+* [JavaPoint: print() Vs. println() in Java](https://www.javatpoint.com/print-vs-println-in-java)
