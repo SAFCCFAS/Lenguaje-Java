@@ -1,4 +1,4 @@
-# ☕ Fundamentos de Java
+[# ☕ Fundamentos de Java
 
 Este `README.md` complementa los comentarios en el código y proporciona una visión general de los ejercicios y ejemplos
 básicos que cubren los fundamentos del lenguaje Java. Incluye información sobre la sintaxis básica, tipos de datos,
@@ -80,7 +80,9 @@ manipularlo dentro del programa.
 
 Las variables se declaran de la siguiente manera:
 
-`tipo` *nombreVariable;*
+~~~
+tipo nombreVariable;
+~~~
 
 **Usos Especiales**
 
@@ -207,69 +209,77 @@ double promedio = (nota1 + nota2 + nota3) / 3;  // Asignación usando una expres
 5. **Asignación Múltiple**: puedes declarar y asignar valores a múltiples variables del mismo tipo en una sola línea, lo
    que puede hacer que el código sea más limpio y conciso.
    Ejemplo:
-    ~~~
-       int a, b, c; // Declaración de múltiples variables.
-       a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
-    ~~~
-    * **Importancia**: Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo
-      con
-      el mismo valor, ahorrando espacio y mejorando la legibilidad.
+
+~~~
+int a, b, c; // Declaración de múltiples variables.
+a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
+~~~
+
+> Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con el mismo valor,
+> ahorrando espacio y mejorando la legibilidad.
 
 6. **Asincronía y Cambios**: el valor de una variable puede cambiar durante la ejecución del programa. Puedes reasignar
    un nuevo valor a la misma variable en cualquier momento, lo que permite la manipulación dinámica de datos.
    Ejemplo:
-    ```Java
-       int edad = 25; // Inicialmente asignado.
-       edad = 30; // Reasignación del valor de la variable.
-    ```
-    * **Importancia**: Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las
-      variables en función de la lógica del programa y las interacciones del usuario.
+
+~~~
+int edad = 25; // Inicialmente asignado.
+edad = 30; // Reasignación del valor de la variable.
+~~~
+
+> Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las variables en función
+> de la lógica del programa y las interacciones del usuario.
 
 7. **Uso de Operadores de Asignación Compuestos**: Java ofrece operadores de asignación compuestos que combinan una
    operación aritmética con la asignación. Esto puede hacer que el código sea más conciso y legible.
    Ejemplo:
-    ```Java
-        int total = 10; // Inicialización.
-        total += 5; // Equivalente a total = total + 5; total ahora es 15.
-    ```
-    * **Importancia**: Los operadores de asignación compuestos son útiles para simplificar expresiones en las que
-      necesitas modificar el valor de una variable en función de su valor actual.
+
+~~~
+int total = 10; // Inicialización.
+total += 5; // Equivalente a total = total + 5; total ahora es 15.
+~~~
+
+> Los operadores de asignación compuestos son útiles para simplificar expresiones en las que necesitas modificar el
+> valor de una variable en función de su valor actual.
 
 **Uso de Comillas en Java**
 
 - **Comillas dobles** (`""`): En Java, las comillas dobles se utilizan para definir cadenas de texto (strings).
   Un string es una secuencia de caracteres que puede incluir letras, números, espacios y otros símbolos.
   Ejemplo:
-   ```Java
-      String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
-  ```
 
-    * **Importancia**: El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un
-      objeto de tipo String. Sin las comillas dobles, el compilador no interpretaría correctamente la secuencia de
-      caracteres como una cadena de texto.
+~~~
+String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
+~~~
+
+> El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un objeto de tipo String.
+> Sin las comillas dobles, el compilador no interpretaría correctamente la secuencia de caracteres como una cadena de
+> texto.
 
 - **Comillas simples** (`''`): Las comillas simples se utilizan para definir un solo carácter (char). Un char es un tipo
   de dato que representa un único carácter, como una letra, un número o un símbolo.
   Ejemplo:
-    ```Java
-    char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
-    ```
 
-**Importancia**: Las comillas simples son necesarias para indicar que se está trabajando con un carácter único.
-Si se usan comillas dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de
-texto, lo que generará un error de tipo.
+~~~
+char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
+~~~
+
+> Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. Si se usan comillas
+> dobles en lugar de simples, el compilador intentará interpretar la entrada como una cadena de texto, lo que generará
+> un error de tipo.
 
 - **Números**: Los números en Java, ya sean enteros (int, long, etc.) o decimales (float, double), se representan
   directamente como valores numéricos sin comillas. Esto se debe a que son tipos de datos primitivos y no necesitan ser
   encapsulados para ser utilizados en cálculos o asignaciones.
   Ejemplo:
-    ```Java
-          int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
-          double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
-    ```
-    * **Importancia**: Al no usar comillas para los números, el compilador puede reconocer y operar con ellos
-      directamente. Si se colocaran entre comillas, serían interpretados como cadenas de texto, lo que impediría
-      realizar operaciones matemáticas.
+
+~~~
+int numero = 10; // 'numero' es una variable de tipo int que contiene un valor numérico.
+double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
+~~~
+
+> Al no usar comillas para los números, el compilador puede reconocer y operar con ellos directamente. Si se colocaran
+> entre comillas, serían interpretados como cadenas de texto, lo que impediría realizar operaciones matemáticas.
 
 **Resumen**
 
@@ -283,32 +293,24 @@ En Java, existen tres tipos principales de variables que se utilizan para almace
 
 * **Variables de Instancia (Non-Static Fields)**: Estas son variables declaradas dentro de una clase, pero fuera de
   cualquier método, constructor o bloque. No llevan la palabra clave static.
-
-  **Características**:
-  Su valor es específico para cada instancia (objeto) de la clase, lo que significa que cada objeto puede tener un
-  estado diferente.
-  Se crean cuando se instancia un objeto de la clase y se destruyen cuando el objeto se destruye.
-  La inicialización no es obligatoria; el valor por defecto depende del tipo de datos
-  (por ejemplo, null para String, 0 para int).
-
+    * **Características**: Su valor es específico para cada instancia (objeto) de la clase, lo que significa que cada
+      objeto puede tener un estado diferente. Se crean cuando se instancia un objeto de la clase y se destruyen cuando
+      el objeto se destruye.
+  > La inicialización no es obligatoria; el valor por defecto depende del tipo de datos (por ejemplo, `null` para
+  `String`, `0` para `int`).
 
 * **Variables de Clase (Static Fields)**: Se declaran de manera similar a las variables de instancia, pero llevan la
   palabra clave static.
-
-  **Características**:
-  Hay una única copia de esta variable compartida entre todas las instancias de la clase, lo que significa que su
-  valor es el mismo para todos los objetos.
-  Se crean cuando la clase se carga en memoria y se destruyen al final de la ejecución del programa.
-  La inicialización no es obligatoria; también tiene valores por defecto según el tipo de datos.
-
+    * **Características**: Hay una única copia de esta variable compartida entre todas las instancias de la clase, lo
+      que significa que su valor es el mismo para todos los objetos. Se crean cuando la clase se carga en memoria y se
+      destruyen al final de la ejecución del programa.
+  > La inicialización no es obligatoria; también tiene valores por defecto según el tipo de datos.
 
 * **Variables Locales**: Son variables que se declaran dentro de un método, constructor o bloque. No tienen una palabra
   clave especial; su ámbito se define por su ubicación.
-
-  **Características**:
-  Son accesibles solo dentro del método donde se declaran y no desde otras partes de la clase.
-  Se crean en el momento de la declaración y se destruyen cuando se sale del bloque de código.
-  La inicialización es obligatoria antes de usarlas.
+    * **Características**: Son accesibles solo dentro del método donde se declaran y no desde otras partes de la clase.
+      Se crean en el momento de la declaración y se destruyen cuando se sale del bloque de código.
+  > La inicialización es obligatoria antes de usarlas.
 
 **Parámetros**
 
@@ -317,17 +319,16 @@ constructores. Al igual que las variables locales, su ámbito es limitado al mé
 
 **Diferencias Clave**:
 
-* Alcance:
+1. Alcance:
     * Local: dentro de un método.
     * Instancia: dentro de la clase.
     * Estática: dentro de la clase.
-
-* Duración:
+2. Duración:
     * Local: vida corta, solo en la ejecución del método.
     * Instancia: vida del objeto.
     * Estática: vida del programa.
 
-* Acceso:
+3. Acceso:
     * Local: solo en el método.
     * Instancia: requiere un objeto.
     * Estática: puede ser accedida directamente desde la clase.
