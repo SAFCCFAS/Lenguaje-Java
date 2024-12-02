@@ -52,7 +52,9 @@ public class CalculadoraAvanzadaArray {
                 valor1 = Integer.parseInt(entrada);
             }
         } while (entrada.trim().isEmpty() || !entrada.matches("\\d+"));
+
         sc.close();
+
         switch (opc) {
             case 1 -> operaciones[0] = valor + valor1;
             case 2 -> operaciones[1] = valor - valor1;

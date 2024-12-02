@@ -885,8 +885,6 @@ la clase `ArrayList` ofrece una alternativa dinámica a los arreglos con un tama
 
 Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar tu aprendizaje de Java:
 
-- [Curso de Java para Principiantes](https://www.youtube.com/watch?v=8cm1x4bC5wE): Un curso completo que cubre los
-  fundamentos de Java desde cero, ideal para quienes están comenzando.
 - [Java Programming and Software Engineering Fundamentals](https://www.youtube.com/playlist?list=PLu0WxIzDvnq_8e88Xk8f56a7bD3F3qO0u):
   Una serie de videos que cubren los conceptos básicos y avanzados de Java, además de la programación orientada a
   objetos.
