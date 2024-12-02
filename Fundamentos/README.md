@@ -13,6 +13,7 @@ variables, estructuras de control y otros conceptos esenciales.
 * [Tipos De Impresiones](#tipos-de-impresiones-en-java)
 * [Operadores](#Operadores)
 * [Secuencias De Escape](#Secuencias-de-escape)
+* [Expresiones Regulares (Regex)](#expresiones-regulares-regex)
 * [Conversiones Y Contextos](#conversiones-y-contextos)
 * [Estructuras De Control](#estructuras-de-control)
 * [Entrada De Datos](#entrada-de-datos)
@@ -447,6 +448,82 @@ caracteres que indican el carácter que se desea representar.
     * **Uso**: Se utiliza para indicar que un objeto no está asignado.
     * **Ejemplo**: `String texto = null;`
 
+### Expresiones Regulares (Regex)
+
+Las **expresiones regulares (regex)** en Java son herramientas poderosas utilizadas para buscar, validar y manipular
+cadenas de texto. Estas secuencias de caracteres forman patrones que permiten realizar tareas como la validación de
+formatos (por ejemplo, números de teléfono o correos electrónicos), la búsqueda de coincidencias específicas y
+operaciones de reemplazo en textos. Aunque es común utilizar el paquete `java.util.regex`, es posible comprender el
+concepto de regex sin profundizar en los detalles técnicos de las clases específicas.
+
+- **¿Qué es Regex?**: Una **expresión regular** es una secuencia de caracteres que forma un patrón de búsqueda. Este
+  patrón se utiliza para realizar operaciones de búsqueda y manipulación de texto, como:
+    - **Validación**: Comprobar si una cadena cumple con un formato específico (por ejemplo, un número de teléfono o un
+      correo electrónico).
+    - **Búsqueda**: Encontrar coincidencias dentro de cadenas.
+    - **Reemplazo**: Sustituir partes de una cadena que coinciden con el patrón.
+
+**Estructura Básica de una Expresión Regular**
+
+Las expresiones regulares están compuestas por:
+
+1. **Literales**: Caracteres que coinciden exactamente con sí mismos (por ejemplo, `a`, `b`, `1`, `@`).
+
+2. **Metacaracteres**: Caracteres especiales que tienen significados específicos:
+    - `.`: Coincide con cualquier carácter (excepto un salto de línea).
+    - `^`: Indica el inicio de una línea.
+    - `$`: Indica el final de una línea.
+    - `*`: Coincide con cero o más repeticiones del carácter anterior.
+    - `+`: Coincide con una o más repeticiones del carácter anterior.
+    - `?`: Coincide con cero o una repetición del carácter anterior.
+    - `\\d`: Coincide con cualquier dígito (equivalente a `[0-9]`).
+    - `\\w`: Coincide con cualquier carácter alfanumérico (equivalente a `[a-zA-Z0-9_]`).
+    - `\\s`: Coincide con cualquier espacio en blanco.
+
+3. **Cuantificadores**: Controlan cuántas veces debe aparecer un elemento:
+    - `{n}`: Exactamente n veces.
+    - `{n,}`: Al menos n veces.
+    - `{n,m}`: Entre n y m veces.
+
+4. **Grupos y Alternativas**:
+    - Paréntesis `()` se utilizan para agrupar partes de la expresión.
+    - La barra vertical `|` se utiliza para indicar alternativas (por ejemplo, `abc|def` coincide con "abc" o "def").
+
+**Ejemplos Comunes de Expresiones Regulares**
+
+1. **Validación de Correos Electrónicos**:
+   ```regex
+   [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,}
+   // Esta expresión valida direcciones de correo electrónico comunes.
+   ```
+
+2. **Búsqueda de Números Enteros**:
+   ```regex
+   -?\\d+
+   // Esta expresión busca números enteros, permitiendo que sean positivos o negativos.
+   ```
+
+3. **Coincidencia de Palabras Específicas**:
+   ```regex
+   \\b(palabra)\\b
+   Esta expresión busca la palabra "palabra" como una coincidencia completa, evitando coincidencias parciales.
+   ```
+
+**Uso Generalizado en Java**
+
+Las **expresiones regulares (regex)** en Java son patrones poderosos que se utilizan comúnmente para buscar, validar y
+manipular cadenas de texto. Aunque normalmente se emplean las clases del paquete `java.util.regex`, puedes entender las
+expresiones regulares como una herramienta conceptual que aplica patrones a cadenas. Por ejemplo, puedes validar si la
+entrada del usuario es un número entero sin profundizar en los detalles técnicos de las clases específicas, como verás
+en algunos programas de este repositorio.
+
+**Conclusión**
+
+Las expresiones regulares son esenciales para tareas como la validación de formatos (por ejemplo, números de teléfono o
+correos electrónicos), la búsqueda de coincidencias y las operaciones de reemplazo en textos. A pesar de que el paquete
+`java.util.regex` es comúnmente utilizado, el concepto de regex puede entenderse sin necesidad de conocer a fondo las
+clases específicas.
+
 ### Conversiones y Contextos
 
 `ConversionesYContextos.java`: Ejemplos que ilustran cómo se pueden convertir entre diferentes tipos de datos en Java.
@@ -847,3 +924,7 @@ Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar
 * [Geeksforgeeks: Arrays in Java](https://www.geeksforgeeks.org/arrays-in-java/)
 * [JavaPoint: Java Arrays](https://www.javatpoint.com/array-in-java)
 * [JavaPoint: print() Vs. println() in Java](https://www.javatpoint.com/print-vs-println-in-java)
+* [The Java™ Tutorials: What Are Regular Expressions?](https://docs.oracle.com/javase/tutorial/essential/regex/intro.html)
+* [The Java™ Tutorials: Predefined Character Classes](https://docs.oracle.com/javase/tutorial/essential/regex/pre_char_classes.html)
+* [JavaPoint:Java Regex](https://www.javatpoint.com/java-regex)
+* [Geeksforgeeks: Java Regex Programs – Basic to Advanced](https://www.geeksforgeeks.org/java-regex-programs/)
