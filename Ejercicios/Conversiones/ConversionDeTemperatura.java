@@ -10,6 +10,7 @@ public class ConversionDeTemperatura {
         double temp, cambioUnidad;
         boolean control = true;
         String nombreUnidad = null, simbUnd = null, newUnd = null;
+
         do {
             System.out.println("Bienvenido(a), favor indique la unidad de temperatura a convertir. \n1. Celsius (°C)." +
                     "\n2. Fahrenheit (°F). \n3. Kelvin (K). \n4. Salir.");
