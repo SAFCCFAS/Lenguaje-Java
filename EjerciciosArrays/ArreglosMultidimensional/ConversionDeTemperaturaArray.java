@@ -30,7 +30,7 @@ public class ConversionDeTemperaturaArray {
             }
             System.out.printf("%n%d. Salir%n", opc);
             eleccion = sc.nextLine().trim();
-            if (eleccion.trim().isEmpty() || !eleccion.matches("\\d+")) { // en caso de entrada vacía.
+            if (eleccion.trim().isEmpty() || !eleccion.matches("\\d+")) { // en caso de entrada vacía o no válida.
                 System.err.println("Error: Favor ingresar alguna de las opciones mostrada, intente nuevamente.");
                 continue;
             }
