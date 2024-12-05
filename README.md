@@ -140,3 +140,4 @@ correspondiente.
   luego suma todos los elementos del array e imprime el resultado.
 - `CalculadoraBasicaArray.java`: Versión de calculadora básica con uso de array.
 - `CalculadoraAvanzadaArray.java`: Versión de calculadora avanzada con uso de array.
+- `ConversionDeTemperaturaArray.java`: Versión de conversión de temperaturas con uso de arrays
