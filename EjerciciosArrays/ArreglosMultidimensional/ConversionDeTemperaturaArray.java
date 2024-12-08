@@ -39,6 +39,7 @@ public class ConversionDeTemperaturaArray {
                 System.err.printf("Error: Opción fuera de rango (1 - %d), intente nuevamente.%n", unidades.length + 1);
             } else if (opc == unidades.length + 1) { // Opción para salir.
                 System.out.println("Gracias por utilizar el programa. ¡Hasta luego!");
+                break;
             } else {
                 System.out.printf("Usted a elegido: %s (%s). ", unidades[opc - 1][0], unidades[opc - 1][1]);
             }

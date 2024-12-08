@@ -3,19 +3,20 @@ package EjerciciosArrays.ArreglosMultidimensional;
 import java.util.Scanner;
 
 public class CalculadoraGeometricaArray {
+
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         String[] opciones = {"Calcular área", "Calcular Perímetro", "Conversión de unidades"};
         String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
         String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
-        String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro","Milímetro"}, {"Grados","Radianes"}};
+        String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Grados", "Radianes"}};
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
         double[] valores = new double[4];
         String eleccion;
-        int opc, fig, conv, count,und;
+        int opc, fig, conv, count, und;
 
-        do {
+        do { // Repetir menú hasta recibir opciones válidas
             opc = 1;
             System.out.println("Bienvenido(a), favor elija la opción a realizar a continuación:");
             for (String opcion : opciones) {
@@ -30,6 +31,7 @@ public class CalculadoraGeometricaArray {
             opc = Integer.parseInt(eleccion);
             if (opc > opciones.length + 1 || opc <= 0) {
                 System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", opciones.length + 1);
+                continue;
             } else if (opc == opciones.length + 1) {
                 System.out.println("Gracias por usar el programa, ¡Hasta la próxima!");
                 break;
@@ -55,6 +57,8 @@ public class CalculadoraGeometricaArray {
                         System.out.println("Regresando al menú anterior...");
                         break;
                     }
+                    System.out.println("Usted a elegido: " + nombreFiguras[fig-1]);
+                    valores[0]=sc.nextDouble();
                 } while (true);
             } else {
                 do {
@@ -62,11 +66,11 @@ public class CalculadoraGeometricaArray {
                     System.out.printf("Favor elija la %s a realizar:%n", opciones[opc - 1]);
                     for (String conversion : opcionConversiones) {
                         System.out.printf("%d. %s (", conv++, conversion);
-                        count=0;
+                        count = 0; // Contador para iterar sobre los elementos
                         for (String simbolos : simbUnidades[conv - 2]) {
                             System.out.printf("%s", simbolos);
-                            if (++count<simbUnidades[conv-2].length){
-                                System.out.print(", ");
+                            if (++count < simbUnidades[conv - 2].length) {
+                                System.out.print(", "); // Agregar coma excepto en el último elemento
                             }
                         }
                         System.out.println(").");
@@ -80,26 +84,71 @@ public class CalculadoraGeometricaArray {
                     conv = Integer.parseInt(eleccion);
                     if (conv > opcionConversiones.length + 1 || conv <= 0) {
                         System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", opcionConversiones.length + 1);
+                        continue;
                     } else if (conv == opcionConversiones.length + 1) {
                         System.out.println("Regresando al menú anterior...");
                         break;
                     }
-                    System.out.println("Usted a elegido : "+opcionConversiones[conv-1]);
-                    if (conv == 1||conv==2) {
+                    System.out.println("Usted a elegido : " + opcionConversiones[conv - 1]);
+                    System.out.printf("Favor indique la unidad de %s a usar:%n", opcionConversiones[conv - 1]);
+                    if (conv == 1 || conv == 2) {
                         do {
-                            und=1;
-                            System.out.printf("Favor indique la unidad de %s a usar:%n",opcionConversiones[conv-1]);
-                            if (conv==1){
-                                for (String[] nombre:nombreUnidades){
-                                    System.out.printf("%d. %n",und++);
+                            und = 1;
+                            count = 0;
+                            if (conv == 1) {
+                                for (String longitud : nombreUnidades[conv - 1]) {
+                                    // Muestra la opción de unidad con su símbolo correspondiente e incrementa el contador `und` y `count`.
+                                    System.out.printf("%d. %s (%s).%n", und++, longitud, simbUnidades[conv - 1][count]);
+                                    count++;
+                                }
+                            } else {
+                                for (String area : nombreUnidades[conv - 2]) {
+                                    if (!area.equals("Milímetro")) { // Filtro para omitir "milímetro"
+                                        System.out.printf("%d. %s cuadrado (%s).%n", und++, area, simbUnidades[conv - 1][count]);
+                                        count++;
+                                    }
                                 }
                             }
-                            eleccion=sc.nextLine();
-                            und=Integer.parseInt(eleccion);
+                            System.out.printf("%d. Regresar al menú anterior.%n", und++);
+                            eleccion = sc.nextLine();
+                            if (eleccion.trim().isEmpty() || !eleccion.matches("-?\\d+")) {
+                                System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
+                                continue;
+                            }
+                            und = Integer.parseInt(eleccion);
+                            if (und > count + 1 || und <= 0) {
+                                System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", count + 1);
+                            } else if (und == count + 1) {
+                                System.out.println("Regresando el menú anterior...");
+                                break;
+                            }
+                        } while (true);
+                    } else {
+                        do {
+                            und = 1;
+                            count = 0;
+                            for (String angulos : nombreUnidades[conv - 2]) {
+                                System.out.printf("%d. %s (%s)%n", und++, angulos, simbUnidades[conv - 1][count]);
+                                count++;
+                            }
+                            System.out.printf("%d. Regresar al menú anterior.%n", und++);
+                            eleccion = sc.nextLine();
+                            if (eleccion.trim().isEmpty() || !eleccion.matches("-?\\d+")) {
+                                System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
+                                continue;
+                            }
+                            und = Integer.parseInt(eleccion);
+                            if (und > count + 1 || und <= 0) {
+                                System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", count + 1);
+                            } else if (und == count + 1) {
+                                System.out.println("Regresando el menú anterior...");
+                                break;
+                            }
                         } while (true);
                     }
                 } while (true);
             }
         } while (true);
+        sc.close();
     }
 }
