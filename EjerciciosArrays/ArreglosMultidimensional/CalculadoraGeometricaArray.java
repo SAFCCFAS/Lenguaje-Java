@@ -30,6 +30,7 @@ public class CalculadoraGeometricaArray {
             opc = Integer.parseInt(eleccion);
             if (opc > opciones.length + 1 || opc <= 0) {
                 System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", opciones.length + 1);
+                continue;
             } else if (opc == opciones.length + 1) {
                 System.out.println("Gracias por usar el programa, ¡Hasta la próxima!");
                 break;
@@ -80,6 +81,7 @@ public class CalculadoraGeometricaArray {
                     conv = Integer.parseInt(eleccion);
                     if (conv > opcionConversiones.length + 1 || conv <= 0) {
                         System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", opcionConversiones.length + 1);
+                        continue;
                     } else if (conv == opcionConversiones.length + 1) {
                         System.out.println("Regresando al menú anterior...");
                         break;
