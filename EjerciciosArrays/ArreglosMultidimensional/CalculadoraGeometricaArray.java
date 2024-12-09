@@ -13,7 +13,7 @@ public class CalculadoraGeometricaArray {
         String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Grados", "Radianes"}};
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
         double[] valores = new double[4];
-        String eleccion;
+        String eleccion, valor;
         int opc, fig, conv, count, und;
 
         do { // Repetir menú hasta recibir opciones válidas
@@ -53,12 +53,32 @@ public class CalculadoraGeometricaArray {
                     fig = Integer.parseInt(eleccion);
                     if (fig > nombreFiguras.length + 1 || fig <= 0) {
                         System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", nombreFiguras.length + 1);
+                        continue;
                     } else if (fig == nombreFiguras.length + 1) {
                         System.out.println("Regresando al menú anterior...");
                         break;
                     }
-                    System.out.println("Usted a elegido: " + nombreFiguras[fig-1]);
-                    valores[0]=sc.nextDouble();
+                    System.out.println("Usted a elegido: " + nombreFiguras[fig - 1]);
+                    switch (fig) {
+                        case 1 -> {
+                            System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
+                            valor = sc.nextLine();
+                            if (!valor.matches("\\d+(\\.\\d+)?")) {
+                                System.err.println("Error: Entrada no válida, ingrese un número.");
+                                continue;
+                            }
+                            valores[0] = Double.parseDouble(valor);
+                            if (opc == 1) {
+                                System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], Math.pow(valores[0], 2));
+                            } else {
+                                System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
+                            }
+                        }
+                        case 2->{
+
+                        }
+                    }
+                    return; // en este punto y altura de nivel de conocimiento es preferible terminar el programa.
                 } while (true);
             } else {
                 do {
@@ -109,7 +129,7 @@ public class CalculadoraGeometricaArray {
                                     }
                                 }
                             }
-                            System.out.printf("%d. Regresar al menú anterior.%n", und++);
+                            System.out.printf("%d. Regresar al menú anterior.%n", count+1);
                             eleccion = sc.nextLine();
                             if (eleccion.trim().isEmpty() || !eleccion.matches("-?\\d+")) {
                                 System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
@@ -131,7 +151,7 @@ public class CalculadoraGeometricaArray {
                                 System.out.printf("%d. %s (%s)%n", und++, angulos, simbUnidades[conv - 1][count]);
                                 count++;
                             }
-                            System.out.printf("%d. Regresar al menú anterior.%n", und++);
+                            System.out.printf("%d. Regresar al menú anterior.%n", count+1);
                             eleccion = sc.nextLine();
                             if (eleccion.trim().isEmpty() || !eleccion.matches("-?\\d+")) {
                                 System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
