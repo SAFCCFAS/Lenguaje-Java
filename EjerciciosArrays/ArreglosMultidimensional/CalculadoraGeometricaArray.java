@@ -8,7 +8,8 @@ public class CalculadoraGeometricaArray {
 
     public static void main(String[] args) {
         String[] opciones = {"Calcular área", "Calcular Perímetro", "Conversión de unidades"};
-        String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
+        String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo",
+            "Polígono Regular", "Octágono"};
         String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
         String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Grados", "Radianes"}};
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
@@ -52,7 +53,8 @@ public class CalculadoraGeometricaArray {
                     }
                     fig = Integer.parseInt(eleccion);
                     if (fig > nombreFiguras.length + 1 || fig <= 0) {
-                        System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", nombreFiguras.length + 1);
+                        System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n",
+                                nombreFiguras.length + 1);
                         continue;
                     } else if (fig == nombreFiguras.length + 1) {
                         System.out.println("Regresando al menú anterior...");
@@ -75,9 +77,21 @@ public class CalculadoraGeometricaArray {
                                     System.out.printf("El perímetro del %s es: %.2f%n", nombreFiguras[fig - 1], 4 * valores[0]);
                                 }
                             }
+<<<<<<< HEAD
                             case 2 -> {
                                 for (count = 0; count < 2; count++) {
                                     System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
+=======
+                            valores[0] = Double.parseDouble(valor);
+                            if (opc == 1) {
+                                System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1],
+                                        Math.pow(valores[0], 2));
+                            } else {
+                                System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
+                            }
+                        }
+                        case 2 -> {
+>>>>>>> origin/main
 
                                     valor = sc.nextLine();
                                     if (!valor.matches("-?\\d+(\\.\\d+)?") || valor.trim().isEmpty() || valor.equals("0")) {
@@ -144,7 +158,8 @@ public class CalculadoraGeometricaArray {
                     }
                     conv = Integer.parseInt(eleccion);
                     if (conv > opcionConversiones.length + 1 || conv <= 0) {
-                        System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", opcionConversiones.length + 1);
+                        System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n",
+                                opcionConversiones.length + 1);
                         continue;
                     } else if (conv == opcionConversiones.length + 1) {
                         System.out.println("Regresando al menú anterior...");
@@ -165,7 +180,8 @@ public class CalculadoraGeometricaArray {
                             } else {
                                 for (String area : nombreUnidades[conv - 2]) {
                                     if (!area.equals("Milímetro")) { // Filtro para omitir "milímetro"
-                                        System.out.printf("%d. %s cuadrado (%s).%n", und++, area, simbUnidades[conv - 1][count]);
+                                        System.out.printf("%d. %s cuadrado (%s).%n", und++, area,
+                                                simbUnidades[conv - 1][count]);
                                         count++;
                                     }
                                 }
@@ -178,7 +194,8 @@ public class CalculadoraGeometricaArray {
                             }
                             und = Integer.parseInt(eleccion);
                             if (und > count + 1 || und <= 0) {
-                                System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", count + 1);
+                                System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n",
+                                        count + 1);
                             } else if (und == count + 1) {
                                 System.out.println("Regresando el menú anterior...");
                                 break;
@@ -207,7 +224,8 @@ public class CalculadoraGeometricaArray {
                             }
                             und = Integer.parseInt(eleccion);
                             if (und > count + 1 || und <= 0) {
-                                System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", count + 1);
+                                System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n",
+                                        count + 1);
                             } else if (und == count + 1) {
                                 System.out.println("Regresando el menú anterior...");
                                 break;
