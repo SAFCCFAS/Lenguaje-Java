@@ -67,12 +67,11 @@ public class CalculadoraGeometricaArray {
                                 if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
                                     System.err.println("Error: Entrada no válida, ingrese un número.");
                                     continue;
-                                }
-                                valores[0] = Double.parseDouble(valor);
-                                if (valores[0] <= 0) {
-                                    System.err.println("Error: El valor debe ser mayor a 0, intente nuevamente.");
+                                } else if (valor.matches("0")) {
+                                    System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
                                     continue;
                                 }
+                                valores[0] = Double.parseDouble(valor);
                                 if (opc == 1) {
                                     System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], Math.pow(valores[0], 2));
                                 } else {
@@ -193,6 +192,38 @@ public class CalculadoraGeometricaArray {
                                         }
                                     }
                                     System.out.printf("El perímetro del %s es: %s", nombreFiguras[fig - 1], (valores[0] + valores[1] + valores[2] + valores[3]));
+                                }
+                            }
+                            case 6 -> {
+                                if (opc == 1) {
+                                    for (count = 0; count < 2; count++) {
+                                        while (true) {
+                                            System.out.printf("Favor ingrese diagonal %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
+                                            valor = sc.nextLine();
+                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                                System.err.println("Error: Entrada no válida, ingrese un número.");
+                                                continue;
+                                            } else if (valor.matches("0")) {
+                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                                continue;
+                                            }
+                                            valores[count] = Double.parseDouble(valor);
+                                            break;
+                                        }
+                                    }
+                                    System.out.printf("El área del %s es: %s", nombreFiguras[fig - 1], (valores[0] * valores[1]) / 2);
+                                }else{
+                                    System.out.printf("Favor ingrese longitud de lado del %s:%n",nombreFiguras[fig-1]);
+                                    valor=sc.nextLine();
+                                    if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                        System.err.println("Error: Entrada no válida, ingrese un número.");
+                                        continue;
+                                    } else if (valor.matches("0")) {
+                                        System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                        continue;
+                                    }
+                                    valores[0]=Double.parseDouble(valor);
+                                    System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
                                 }
                             }
                         }
