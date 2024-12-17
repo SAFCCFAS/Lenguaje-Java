@@ -6,5 +6,4 @@
 .settings
 .classpath
 .project
-/nbproject/private/
-/build/
+*.xml
