@@ -16,6 +16,7 @@ public class CalculadoraGeometricaArray {
         String eleccion, valor;
         int opc, fig, conv, count, und;
 
+
         do { // Repetir menú hasta recibir opciones válidas
             opc = 1;
             System.out.println("Bienvenido(a), favor elija la opción a realizar a continuación:");
@@ -59,26 +60,93 @@ public class CalculadoraGeometricaArray {
                         break;
                     }
                     System.out.println("Usted a elegido: " + nombreFiguras[fig - 1]);
-                    switch (fig) {
-                        case 1 -> {
-                            System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
-                            valor = sc.nextLine();
-                            if (!valor.matches("\\d+(\\.\\d+)?")) {
-                                System.err.println("Error: Entrada no válida, ingrese un número.");
-                                continue;
+                    do {
+                        switch (fig) {
+                            case 1 -> {
+                                System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
+                                valor = sc.nextLine().trim();
+                                if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                    System.err.println("Error: Entrada no válida, ingrese un número.");
+                                    continue;
+                                }
+                                valores[0] = Double.parseDouble(valor);
+                                if (valores[0] <= 0) {
+                                    System.err.println("Error: El valor debe ser mayor a 0, intente nuevamente.");
+                                    continue;
+                                }
+                                if (opc == 1) {
+                                    System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], Math.pow(valores[0], 2));
+                                } else {
+                                    System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
+                                }
                             }
-                            valores[0] = Double.parseDouble(valor);
-                            if (opc == 1) {
-                                System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], Math.pow(valores[0], 2));
-                            } else {
-                                System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
+                            case 2 -> {
+                                for (count = 0; count < 2; count++) {
+                                    while (true) { // Bucle para validar cada entrada.
+                                        System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
+                                        valor = sc.nextLine().trim();
+                                        if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                            System.err.println("Error: Entrada no válida, ingrese un número.");
+                                            continue;
+                                        } else if (valor.matches("0")) {
+                                            System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                            continue;
+                                        }
+                                        valores[count] = Double.parseDouble(valor);
+                                        break; // Salir del bucle cuando se reciba entrada válida.
+                                    }
+                                }
+                                if (opc == 1) {
+                                    System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], valores[0] * valores[1]);
+                                } else {
+                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], 2 * (valores[0] + valores[1]));
+                                }
                             }
-                        }
-                        case 2->{
+                            case 3 -> {
+                                if (opc == 1) {
+                                    for (count = 0; count < 2; count++) {
+                                        while (true) {
+                                            System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "base" : "altura", nombreFiguras[fig - 1]);
+                                            valor = sc.nextLine().trim();
+                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                                System.err.println("Error: Entrada no válida, ingrese un número.");
+                                                continue;
+                                            } else if (valor.matches("0")) {
+                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                                continue;
+                                            }
+                                            valores[count] = Double.parseDouble(valor);
+                                            break;
+                                        }
+                                    }
+                                    System.out.printf("El área del %s es: %s", nombreFiguras[fig - 1], (valores[0] * valores[1]) / 2);
+                                } else {
+                                    for (count = 0; count < 3; count++) {
+                                        while (true) {
+                                            System.out.printf("Favor ingrese lado %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
+                                            valor = sc.nextLine().trim();
+                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                                System.err.println("Error: Entrada no válida, ingrese un número.");
+                                                continue;
+                                            } else if (valor.matches("0")) {
+                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                                continue;
+                                            }
+                                            valores[count] = Double.parseDouble(valor);
+                                            break;
+                                        }
+                                    }
+                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], valores[0] + valores[1] + valores[2]);
+                                }
+                            }
+                            case 4 ->{
+                                System.out.printf("Favor ingrese el radio del %s:%n",nombreFiguras[fig-1]);
+                                valor = sc.nextLine();
 
+                            }
                         }
-                    }
-                    return; // en este punto y altura de nivel de conocimiento es preferible terminar el programa.
+                        return; // con el nivel de conocimiento actual considero prudente terminar el programa este punto.
+                    } while (true);
                 } while (true);
             } else {
                 do {
@@ -129,7 +197,7 @@ public class CalculadoraGeometricaArray {
                                     }
                                 }
                             }
-                            System.out.printf("%d. Regresar al menú anterior.%n", count+1);
+                            System.out.printf("%d. Regresar al menú anterior.%n", count + 1);
                             eleccion = sc.nextLine();
                             if (eleccion.trim().isEmpty() || !eleccion.matches("-?\\d+")) {
                                 System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
@@ -151,7 +219,7 @@ public class CalculadoraGeometricaArray {
                                 System.out.printf("%d. %s (%s)%n", und++, angulos, simbUnidades[conv - 1][count]);
                                 count++;
                             }
-                            System.out.printf("%d. Regresar al menú anterior.%n", count+1);
+                            System.out.printf("%d. Regresar al menú anterior.%n", count + 1);
                             eleccion = sc.nextLine();
                             if (eleccion.trim().isEmpty() || !eleccion.matches("-?\\d+")) {
                                 System.err.println("Error: Opción ingresada no válida, intente nuevamente.");
