@@ -253,9 +253,9 @@ public class CalculadoraGeometricaArray {
                                         }
                                         System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], (valores[0] * Math.pow(valores[1], 2)) / (4 * Math.tan(Math.PI / valores[0])));
                                     }
-                                }else{
-                                    for (count=0;count<2;count++){
-                                        while (true){
+                                } else {
+                                    for (count = 0; count < 2; count++) {
+                                        while (true) {
                                             System.out.printf("Favor, ingrese %s del %s:%n", (count == 0) ? "longitud de lado" : "números de lados", nombreFiguras[fig - 1]);
                                             valor = sc.nextLine().trim();
                                             if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
