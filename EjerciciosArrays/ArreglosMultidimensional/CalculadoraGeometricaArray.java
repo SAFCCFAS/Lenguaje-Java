@@ -61,8 +61,12 @@ public class CalculadoraGeometricaArray {
                     System.out.println("Usted a elegido: " + nombreFiguras[fig - 1]);
                     do {
                         switch (fig) {
-                            case 1 -> {
-                                System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
+                            case 1, 8 -> {
+                                if (fig == 1) {
+                                    System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
+                                } else {
+                                    System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
+                                }
                                 valor = sc.nextLine().trim();
                                 if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
                                     System.err.println("Error: Entrada no válida, ingrese un número.");
