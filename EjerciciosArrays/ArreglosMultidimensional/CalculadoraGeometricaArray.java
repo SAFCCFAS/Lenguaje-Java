@@ -68,11 +68,8 @@ public class CalculadoraGeometricaArray {
                                     System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
                                 }
                                 valor = sc.nextLine().trim();
-                                if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
-                                    System.err.println("Error: Entrada no válida, ingrese un número.");
-                                    continue;
-                                } else if (valor.matches("0")) {
-                                    System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty() || Double.parseDouble(valor) <= 0) {
+                                    System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
                                     continue;
                                 }
                                 valores[0] = Double.parseDouble(valor);
@@ -81,10 +78,10 @@ public class CalculadoraGeometricaArray {
                                 } else if (fig == 1) {
                                     System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
                                 }
-                                if (opc ==1 && fig == 8) {
-                                    System.out.printf("El área del %s es: %s%n",nombreFiguras[fig-1],(2+4/Math.sqrt(2))* Math.pow(valores[0],2));
-                                }else if (fig==8){
-                                    System.out.printf("El perímetro del %s es: %s%n",nombreFiguras[fig-1],8*valores[0]);
+                                if (opc == 1 && fig == 8) {
+                                    System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], (2 + 4 / Math.sqrt(2)) * Math.pow(valores[0], 2));
+                                } else if (fig == 8) {
+                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], 8 * valores[0]);
                                 }
                             }
                             case 2 -> {
@@ -270,23 +267,6 @@ public class CalculadoraGeometricaArray {
                                         }
                                     }
                                     System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], valores[0] * valores[1]);
-                                }
-                            }
-                            case 8->{
-                                System.out.printf("Favor ingrese longitud de lado del %s%n",nombreFiguras[fig-1]);
-                                valor = sc.nextLine().trim();
-                                if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
-                                    System.err.println("Error: Entrada no válida, ingrese un número.");
-                                    continue;
-                                } else if (valor.matches("0")) {
-                                    System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
-                                    continue;
-                                }
-                                valores[0]=Double.parseDouble(valor);
-                                if (opc==1){
-                                    System.out.printf("El área del %s es: %s%n",nombreFiguras[fig-1],(2+4/Math.sqrt(2))* Math.pow(valores[0],2));
-                                }else{
-                                    System.out.printf("El perímetro del %s es: %s%n",nombreFiguras[fig-1],8*valores[0]);
                                 }
                             }
                         }
