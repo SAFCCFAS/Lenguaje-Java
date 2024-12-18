@@ -269,7 +269,7 @@ public class CalculadoraGeometricaArray {
                                             break;
                                         }
                                     }
-                                    System.out.printf("El perímetro del %s es: %s%n",nombreFiguras[fig-1],valores[0]*valores[1]);
+                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], valores[0] * valores[1]);
                                 }
                             }
                             case 8->{
