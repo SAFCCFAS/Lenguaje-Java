@@ -78,7 +78,7 @@ public class CalculadoraGeometricaArray {
                                 valores[0] = Double.parseDouble(valor);
                                 if (opc == 1 && fig == 1) {
                                     System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], Math.pow(valores[0], 2));
-                                } else {
+                                } else if (fig == 1) {
                                     System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
                                 }
                             }
