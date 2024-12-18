@@ -81,6 +81,11 @@ public class CalculadoraGeometricaArray {
                                 } else if (fig == 1) {
                                     System.out.printf("El perímetro %s es: %s%n", nombreFiguras[fig - 1], valores[0] * 4);
                                 }
+                                if (opc ==1 && fig == 8) {
+                                    System.out.printf("El área del %s es: %s%n",nombreFiguras[fig-1],(2+4/Math.sqrt(2))* Math.pow(valores[0],2));
+                                }else if (fig==8){
+                                    System.out.printf("El perímetro del %s es: %s%n",nombreFiguras[fig-1],8*valores[0]);
+                                }
                             }
                             case 2 -> {
                                 for (count = 0; count < 2; count++) {
