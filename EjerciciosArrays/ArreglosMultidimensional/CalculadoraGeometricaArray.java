@@ -100,12 +100,12 @@ public class CalculadoraGeometricaArray {
                                         if (fig == 2) {
                                             System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
                                         } else if (fig == 6) {
-                                            if (opc==1){
-                                                System.out.printf("Favor ingrese diagonal %s del %s:%n",(count == 0) ? "1" : "2", nombreFiguras[fig - 1]);
-                                            }else {
+                                            if (opc == 1) {
+                                                System.out.printf("Favor ingrese diagonal %s del %s:%n", (count == 0) ? "1" : "2", nombreFiguras[fig - 1]);
+                                            } else {
                                                 if (count == 0) {
                                                     System.out.printf("Favor ingrese longitud de largo del %s:%n", nombreFiguras[fig - 1]);
-                                                }else {
+                                                } else {
                                                     break;
                                                 }
                                             }
