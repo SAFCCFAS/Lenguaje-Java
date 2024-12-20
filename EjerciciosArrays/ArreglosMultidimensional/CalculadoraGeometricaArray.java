@@ -101,7 +101,7 @@ public class CalculadoraGeometricaArray {
                                             System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
                                         } else if (fig == 6) {
                                             if (opc == 1) {
-                                                System.out.printf("Favor ingrese diagonal %s del %s:%n", (count == 0) ? "1" : "2", nombreFiguras[fig - 1]);
+                                                System.out.printf("Favor ingrese diagonal %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
                                             } else {
                                                 if (count == 0) {
                                                     System.out.printf("Favor ingrese longitud de largo del %s:%n", nombreFiguras[fig - 1]);
@@ -142,78 +142,48 @@ public class CalculadoraGeometricaArray {
                                     System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], perimetros);
                                 }
                             }
-                            case 3 -> {
-                                if (opc == 1) {
-                                    for (count = 0; count < 2; count++) {
-                                        while (true) {
-                                            System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "base" : "altura", nombreFiguras[fig - 1]);
-                                            valor = sc.nextLine().trim();
-                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
-                                                System.err.println("Error: Entrada no válida, ingrese un número.");
-                                                continue;
-                                            } else if (valor.matches("0")) {
-                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
-                                                continue;
+                            case 3, 5 -> {
+                                for (count = 0; count < (opc == 1 ? (fig == 3 ? 2 : 3) : (fig == 3 ? 3 : 4)); count++) {
+                                    while (true) {
+                                        if (fig == 3) {
+                                            if (opc == 1) {
+                                                System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "base" : "altura", nombreFiguras[fig - 1]);
+                                            } else {
+                                                System.out.printf("Favor ingrese lado %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
                                             }
-                                            valores[count] = Double.parseDouble(valor);
-                                            break;
-                                        }
-                                    }
-                                    System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], (valores[0] * valores[1]) / 2);
-                                } else {
-                                    for (count = 0; count < 3; count++) {
-                                        while (true) {
-                                            System.out.printf("Favor ingrese lado %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
-                                            valor = sc.nextLine().trim();
-                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
-                                                System.err.println("Error: Entrada no válida, ingrese un número.");
-                                                continue;
-                                            } else if (valor.matches("0")) {
-                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
-                                                continue;
+                                        } else {
+                                            if (opc == 1) {
+                                                System.out.printf("Favor ingrese base %s del %s:%n", (count == 0) ? "1" : (count == 1) ? "2" : "altura", nombreFiguras[fig - 1]);
+                                            } else {
+                                                System.out.printf("Favor ingrese longitud de%s del %s:%n", (count == 0) ? " la base menor" : (count == 1) ? " la base mayor" : (count == 2) ? "l lado izquierdo" : "l lado derecho", nombreFiguras[fig - 1]);
                                             }
-                                            valores[count] = Double.parseDouble(valor);
-                                            break;
                                         }
+                                        valor = sc.nextLine().trim();
+                                        if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
+                                            System.err.println("Error: Entrada no válida, ingrese un número.");
+                                            continue;
+                                        } else if (valor.matches("0")) {
+                                            System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
+                                            continue;
+                                        }
+                                        valores[count] = Double.parseDouble(valor);
+                                        break;
                                     }
-                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], valores[0] + valores[1] + valores[2]);
                                 }
-                            }
-                            case 5 -> {
-                                if (opc == 1) {
-                                    for (count = 0; count < 3; count++) {
-                                        while (true) {
-                                            System.out.printf("Ingrese base %s del %s:%n", (count == 0) ? "1" : (count == 1) ? "2" : "altura", nombreFiguras[fig - 1]);
-                                            valor = sc.nextLine().trim();
-                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
-                                                System.err.println("Error: Entrada no válida, ingrese un número.");
-                                                continue;
-                                            } else if (valor.matches("0")) {
-                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
-                                                continue;
-                                            }
-                                            valores[count] = Double.parseDouble(valor);
-                                            break;
-                                        }
-                                    }
-                                    System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], (valores[0] + valores[1]) / 2 * valores[2]);
-                                } else {
-                                    for (count = 0; count < 4; count++) {
-                                        while (true) {
-                                            System.out.printf("Favor ingrese longitud de%s del %s:%n", (count == 0) ? " la base menor" : (count == 1) ? " la base mayor" : (count == 2) ? "l lado izquierdo" : "l lado derecho", nombreFiguras[fig - 1]);
-                                            valor = sc.nextLine().trim();
-                                            if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
-                                                System.err.println("Error: Entrada no válida, ingrese un número.");
-                                                continue;
-                                            } else if (valor.matches("0")) {
-                                                System.err.println("Error: valor ingresado debe ser mayor a 0, intente nuevamente.");
-                                                continue;
-                                            }
-                                            valores[count] = Double.parseDouble(valor);
-                                            break;
-                                        }
-                                    }
-                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], (valores[0] + valores[1] + valores[2] + valores[3]));
+                                if (opc==1){
+                                    areas = switch (fig) {
+                                        case 3 -> (valores[0] * valores[1]) / 2;
+                                        case 5 -> ((valores[0] + valores[1]) / 2) * valores[2];
+                                        default -> 0;
+                                    };
+                                    System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], areas);
+                                }else {
+                                    perimetros = switch (fig) {
+                                        case 3 -> valores[0] + valores[1] + valores[2];
+                                        case 5 -> valores[0] + valores[1] + valores[2] + valores[3];
+                                        default -> 0;
+                                    };
+                                    System.out.printf("El perímetro del %s es: %s%n", nombreFiguras[fig - 1], perimetros);
                                 }
                             }
                         }

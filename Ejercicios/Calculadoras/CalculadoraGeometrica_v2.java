@@ -123,13 +123,13 @@ public class CalculadoraGeometrica_v2 {
                             System.exit(0);
                         } else if (fig == 5) {
                             figura = "Trapecio";
-                            System.out.println("Ingrese longitud de la base menor" + figura);
+                            System.out.println("Ingrese longitud de la base menor " + figura);
                             valor = sc.nextDouble();
-                            System.out.println("Ingrese longitud de la base mayor" + figura);
+                            System.out.println("Ingrese longitud de la base mayor " + figura);
                             valor1 = sc.nextDouble();
-                            System.out.println("Ingrese longitud del lado izquierdo" + figura);
+                            System.out.println("Ingrese longitud del lado izquierdo " + figura);
                             valor2 = sc.nextDouble();
-                            System.out.println("Ingrese longitud del lado derecho" + figura);
+                            System.out.println("Ingrese longitud del lado derecho " + figura);
                             valor3 = sc.nextDouble();
                             System.out.println("El perímetro del " + figura + " es: " + (valor + valor1 + valor2 + valor3));
                             System.exit(0);
