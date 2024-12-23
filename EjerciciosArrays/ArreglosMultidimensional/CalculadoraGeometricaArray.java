@@ -94,8 +94,7 @@ public class CalculadoraGeometricaArray {
                             }
                             case 2, 6, 7 -> {
                                 for (count = 0; count < 2; count++) {
-                                    while (true) {
-                                        // Bucle para validar cada entrada.
+                                    while (true) { // Bucle para validar cada entrada.
                                         switch (fig) {
                                             case 2 -> System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
                                             case 6 -> {
