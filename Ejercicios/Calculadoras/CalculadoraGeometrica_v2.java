@@ -214,8 +214,6 @@ public class CalculadoraGeometrica_v2 {
                                             cambioMed = "mm";
                                             System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 1000);
                                         }
-                                        default -> {
-                                        }
                                     }
                                         return;
                                     }
@@ -273,7 +271,6 @@ public class CalculadoraGeometrica_v2 {
                             } while (true);
                             }
                             case 2 -> {
-                            OUTER_1:
                             do {
                                 System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²).\n3. Centímetro cuadro (cm²).\n4. Regresar al menú anterior.");
                                 conv = sc.nextInt();
@@ -324,37 +321,33 @@ public class CalculadoraGeometrica_v2 {
                                         return;
                                     }
                                     case 4 -> {
-                                        break OUTER_1;
-                                    }
-                                    default -> {
+                                        break;
                                     }
                                 }
                             } while (true);
                             }
                             case 3 -> {
-                            OUTER_2:
                             do {
                                 System.out.println("Favor indique la unidad a convertir:\n1. Grados.\n2. Radianes.\n3. Regresar al menú anterior.");
                                 conv = sc.nextInt();
                                 switch (conv) {
-                                    case 1:
+                                    case 1 -> {
                                         simbMed = "Grados";
                                         System.out.println("Favor, ingrese el valor en " + simbMed);
                                         valor = sc.nextDouble();
                                         cambioMed = "Radianes";
                                         System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * Math.PI / 180);
-                                        break;
-                                    case 2:
+                                    }
+                                    case 2 -> {
                                         simbMed = "Radianes";
                                         System.out.println("Favor, ingrese el valor en " + simbMed);
                                         valor = sc.nextDouble();
                                         cambioMed = "Grados";
                                         System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + valor * 180 / Math.PI);
+                                    }
+                                    case 3 -> {
                                         break;
-                                    case 3:
-                                        break OUTER_2;
-                                    default:
-                                        break;
+                                    }
                                 }
                             } while (true);
                             }
@@ -367,14 +360,13 @@ public class CalculadoraGeometrica_v2 {
                     }
                     case 4 -> {
                         System.out.println("¡Hasta la próxima!");
-                        System.exit(0);
+                        return;
                     }
                     default -> {
                         System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
                     }
                 }
             } while (true);
-
         }
     }
 }
