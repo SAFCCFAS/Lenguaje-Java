@@ -64,15 +64,9 @@ public class CalculadoraGeometricaArray {
                         switch (fig) {
                             case 1, 4, 8 -> {
                             switch (fig) {
-                                case 1:
-                                    System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
-                                    break;
-                                case 4:
-                                    System.out.printf("Favor ingrese el radio del %s:%n", nombreFiguras[fig - 1]);
-                                    break;
-                                default:
-                                    System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
-                                    break;
+                                case 1 -> System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
+                                case 4 -> System.out.printf("Favor ingrese el radio del %s:%n", nombreFiguras[fig - 1]);
+                                default -> System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
                             }
                                 valor = sc.nextLine().trim();
                                 if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty() || Double.parseDouble(valor) <= 0) {
@@ -100,21 +94,22 @@ public class CalculadoraGeometricaArray {
                             }
                             case 2, 6, 7 -> {
                                 for (count = 0; count < 2; count++) {
-                                    while (true) { // Bucle para validar cada entrada.
-                                        if (fig == 2) {
-                                            System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
-                                        } else if (fig == 6) {
-                                            if (opc == 1) {
-                                                System.out.printf("Favor ingrese diagonal %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
-                                            } else {
-                                                if (count == 0) {
-                                                    System.out.printf("Favor ingrese longitud de largo del %s:%n", nombreFiguras[fig - 1]);
+                                    while (true) {
+                                        // Bucle para validar cada entrada.
+                                        switch (fig) {
+                                            case 2 -> System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
+                                            case 6 -> {
+                                                if (opc == 1) {
+                                                    System.out.printf("Favor ingrese diagonal %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
                                                 } else {
-                                                    break;
+                                                    if (count == 0) {
+                                                        System.out.printf("Favor ingrese longitud de largo del %s:%n", nombreFiguras[fig - 1]);
+                                                    } else {
+                                                        break;
+                                                    }
                                                 }
                                             }
-                                        } else {
-                                            System.out.printf("Favor, ingrese %s del %s:%n", (count == 0) ? "número de lados" : "largo de cada lado", nombreFiguras[fig - 1]);
+                                            default -> System.out.printf("Favor, ingrese %s del %s:%n", (count == 0) ? "número de lados" : "largo de cada lado", nombreFiguras[fig - 1]);
                                         }
                                         valor = sc.nextLine().trim();
                                         if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
@@ -125,7 +120,7 @@ public class CalculadoraGeometricaArray {
                                             continue;
                                         }
                                         valores[count] = Double.parseDouble(valor);
-                                        break; // Salir del bucle cuando se reciba entrada válida.
+                                        break;
                                     }
                                 }
                                 if (opc == 1) {
