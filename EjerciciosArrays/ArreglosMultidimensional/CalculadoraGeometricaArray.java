@@ -63,13 +63,17 @@ public class CalculadoraGeometricaArray {
                     do {
                         switch (fig) {
                             case 1, 4, 8 -> {
-                                if (fig == 1) {
+                            switch (fig) {
+                                case 1:
                                     System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
-                                } else if (fig == 4) {
+                                    break;
+                                case 4:
                                     System.out.printf("Favor ingrese el radio del %s:%n", nombreFiguras[fig - 1]);
-                                } else {
+                                    break;
+                                default:
                                     System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
-                                }
+                                    break;
+                            }
                                 valor = sc.nextLine().trim();
                                 if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty() || Double.parseDouble(valor) <= 0) {
                                     System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");

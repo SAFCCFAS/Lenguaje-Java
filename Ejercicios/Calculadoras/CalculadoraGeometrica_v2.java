@@ -7,7 +7,7 @@ public class CalculadoraGeometrica_v2 {
 
     public static void main(String[] args) {
         String figura, simbMed, cambioMed;
-        int contar, opc, fig, opc1, conv;
+        int opc, fig, opc1, conv;
         double valor, valor1, valor2, valor3;
         String eleccion;
 
