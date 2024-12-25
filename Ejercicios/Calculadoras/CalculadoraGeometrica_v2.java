@@ -7,10 +7,9 @@ public class CalculadoraGeometrica_v2 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String figura, categoria, medida, simbMed;
+        String figura, categoria, medida, simbMed,eleccion, entrada;
         int opc, fig, contar, origen, unidad, destino;
         double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro;
-        String eleccion, entrada;
 
         while (true) {
             System.out.println("Bienvenido(a) favor indicar que desea realizar:");
