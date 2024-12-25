@@ -85,7 +85,13 @@ public class CalculadoraGeometrica_v2 {
                                     }
                                 }
                                 case 2, 6, 7 -> {
-                                    for (contar = 0; contar < 2; contar++) {
+                                    int limite = switch (fig) {
+                                        case 2 -> 2; // Rectángulo: siempre requiere largo y ancho
+                                        case 6 -> (opc == 1) ? 2 : 1; // Rombo: dos diagonales para área, un lado para perímetro
+                                        case 7 -> 2; // Polígono regular: número de lados y largo de cada uno
+                                        default -> 2; // Otras figuras por defecto (si se agregan más)
+                                    };
+                                    for (contar = 0; contar < limite; contar++) {
                                         while (true) {
                                             switch (fig) {
                                                 case 2 -> System.out.printf("Favor, ingrese %s %s:%n", (contar == 0) ? "largo" : "ancho", figura);
@@ -95,8 +101,6 @@ public class CalculadoraGeometrica_v2 {
                                                     } else {
                                                         if (contar == 0) {
                                                             System.out.printf("Favor, ingrese longitud de largo del %s:%n", figura);
-                                                        } else {
-                                                            break;
                                                         }
                                                     }
                                                 }
@@ -118,8 +122,7 @@ public class CalculadoraGeometrica_v2 {
                                             }
                                             break;
                                         }
-                                    }
-                                    if (opc == 1) {
+                                    } if (opc == 1) {
                                         area = switch (fig) {
                                             case 2 -> (valor * valor1);
                                             case 6 -> ((valor * valor1) / 2);
@@ -136,8 +139,7 @@ public class CalculadoraGeometrica_v2 {
                                         };
                                         System.out.printf("El perímetro del %s es: %.2f%n", figura, perimetro);
                                     }
-                                }
-                                case 3, 5 -> {
+                                } case 3, 5 -> {
                                     for (contar = 0; contar < (opc == 1 ? (fig == 3 ? 2 : 3) : (fig == 3 ? 3 : 4)); contar++) {
                                         while (true) {
                                             if (fig == 3) {
@@ -196,11 +198,9 @@ public class CalculadoraGeometrica_v2 {
                                     }
                                 }
                             }
-                        }
-                        return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
+                        } return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
                     }
-                }
-                case 3 -> {
+                } case 3 -> {
                     while (true) {
                         System.out.println("Elija la categoría de unidades a convertir:");
                         System.out.println("1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²).\n3. Ángulos (Grados a Radianes, Radianes a Grados).");
