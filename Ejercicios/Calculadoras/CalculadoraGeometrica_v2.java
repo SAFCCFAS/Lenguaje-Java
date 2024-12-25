@@ -7,7 +7,7 @@ public class CalculadoraGeometrica_v2 {
     static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String figura, categoria, medida, simbMed,eleccion, entrada;
+        String figura, categoria, medida, simbMed, eleccion, entrada;
         int opc, fig, contar, origen, unidad, destino;
         double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro;
 
@@ -39,17 +39,17 @@ public class CalculadoraGeometrica_v2 {
                             break;
                         }
                         fig = Integer.parseInt(eleccion);
-                        figura = null;
-                        switch (fig) {
-                            case 1 -> figura = "Cuadrado";
-                            case 2 -> figura = "Rectángulo";
-                            case 3 -> figura = "Triángulo";
-                            case 4 -> figura = "Círculo";
-                            case 5 -> figura = "Trapecio";
-                            case 6 -> figura = "Rombo";
-                            case 7 -> figura = "Polígono regular";
-                            case 8 -> figura = "Octágono";
-                        }
+                        figura = switch (fig) {
+                            case 1 -> "Cuadrado";
+                            case 2 -> "Rectángulo";
+                            case 3 -> "Triángulo";
+                            case 4 -> "Círculo";
+                            case 5 -> "Trapecio";
+                            case 6 -> "Rombo";
+                            case 7 -> "Polígono regular";
+                            case 8 -> "Octágono";
+                            default -> null;
+                        };
                         if (figura != null) {
                             System.out.println("Usted a elegido " + figura);
                             switch (fig) {
@@ -121,7 +121,8 @@ public class CalculadoraGeometrica_v2 {
                                             }
                                             break;
                                         }
-                                    } if (opc == 1) {
+                                    }
+                                    if (opc == 1) {
                                         area = switch (fig) {
                                             case 2 -> (valor * valor1);
                                             case 6 -> ((valor * valor1) / 2);
@@ -138,7 +139,8 @@ public class CalculadoraGeometrica_v2 {
                                         };
                                         System.out.printf("El perímetro del %s es: %.2f%n", figura, perimetro);
                                     }
-                                } case 3, 5 -> {
+                                }
+                                case 3, 5 -> {
                                     for (contar = 0; contar < (opc == 1 ? (fig == 3 ? 2 : 3) : (fig == 3 ? 3 : 4)); contar++) {
                                         while (true) {
                                             if (fig == 3) {
@@ -197,9 +199,11 @@ public class CalculadoraGeometrica_v2 {
                                     }
                                 }
                             }
-                        } return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
+                        }
+                        return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
                     }
-                } case 3 -> {
+                }
+                case 3 -> {
                     while (true) {
                         System.out.println("Elija la categoría de unidades a convertir:");
                         System.out.println("1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²).\n3. Ángulos (Grados a Radianes, Radianes a Grados).");
@@ -213,12 +217,12 @@ public class CalculadoraGeometrica_v2 {
                             break;
                         }
                         origen = Integer.parseInt(eleccion);
-                        categoria = null;
-                        switch (origen) {
-                            case 1 -> categoria = "Longitud";
-                            case 2 -> categoria = "Área";
-                            case 3 -> categoria = "Ángulos";
-                        }
+                        categoria = switch (origen) {
+                            case 1 -> "Longitud";
+                            case 2 -> "Área";
+                            case 3 -> "Ángulos";
+                            default -> null;
+                        };
                         if (categoria != null) {
                             System.out.println("Usted a elegido " + categoria);
                             if (origen == 1) {
@@ -422,7 +426,7 @@ public class CalculadoraGeometrica_v2 {
                                     if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
                                         System.err.println("Error: Ingreso no válido, favor ingrese un número.");
                                         continue;
-                                    }else if (entrada.equals("0")) {
+                                    } else if (entrada.equals("0")) {
                                         System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
                                         continue;
                                     }
