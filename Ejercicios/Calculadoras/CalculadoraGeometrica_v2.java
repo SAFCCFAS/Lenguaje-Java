@@ -415,50 +415,25 @@ public class CalculadoraGeometrica_v2 {
                                         break;
                                     }
                                     unidad = Integer.parseInt(eleccion);
-                                    medida = null;
-                                    simbMed = null;
-                                    switch (unidad) {
-                                        case 1 -> {
-                                            medida = "Grados";
-                                            simbMed = "°";
-                                        }
-                                        case 2 -> {
-                                            medida = "Radianes";
-                                            simbMed = "rad";
-                                        }
+                                    medida = (unidad == 1) ? "Grados" : "Radianes";
+                                    simbMed = (unidad == 1) ? "°" : "rad";
+
+                                    System.out.printf("Favor, ingrese el valor en %s (%s):%n", medida, simbMed);
+                                    entrada = sc.nextLine().trim();
+                                    if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
+                                        System.err.println("Error: Ingreso no válido, favor ingrese un número.");
+                                        continue;
+                                    }else if (entrada.equals("0")) {
+                                        System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
+                                        continue;
                                     }
-                                    if (medida != null) {
-                                        System.out.printf("Favor, ingrese el valor en %s (%s):%n", medida, simbMed);
-                                        entrada = sc.nextLine().trim();
-                                        if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
-                                            System.err.println("Error: Ingreso no válido, favor ingrese un número.");
-                                            continue;
-                                        }
-                                        valor = Double.parseDouble(entrada);
-                                        System.out.println("Favor, indique la unidad a de destino:");
-                                        if (unidad == 1) {
-                                            System.out.println("1. Radianes.\n2. Grados.");
-                                        } else {
-                                            System.out.println("1. Grados.\n2. Radianes.");
-                                        }
-                                        eleccion = sc.nextLine().trim();
-                                        if (eleccion.isEmpty() || !eleccion.matches("[1-2]")) {
-                                            System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
-                                            continue;
-                                        }
-                                        destino = Integer.parseInt(eleccion);
-                                        if (unidad == 1) {
-                                            switch (destino) {
-                                                case 1 -> System.out.printf("%.2f %s a Radianes es: %.2f%n", valor, simbMed, valor * Math.PI / 180);
-                                                case 2 -> System.out.printf("%.2f %s a Grados es: %.2f%n", valor, simbMed, valor * 180 / Math.PI);
-                                            }
-                                        } else {
-                                            switch (destino) {
-                                                case 1 -> System.out.printf("%.2f %s a Grados es: %.2f%n", valor, simbMed, valor * 180 / Math.PI);
-                                                case 2 -> System.out.printf("%.2f %s a Radianes es: %.2f%n", valor, simbMed, valor * Math.PI / 180);
-                                            }
-                                        }
+                                    valor = Double.parseDouble(entrada);
+                                    if (unidad == 1) {
+                                        System.out.printf("%.2f %s a Radianes (rad) es: %.2f%n", valor, simbMed, Math.toRadians(valor));
+                                    } else {
+                                        System.out.printf("%.2f %s a Grados (°) es: %.2f%n", valor, simbMed, Math.toDegrees(valor));
                                     }
+                                    return;
                                 }
                             }
                         }

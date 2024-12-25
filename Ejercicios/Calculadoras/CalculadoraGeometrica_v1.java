@@ -11,16 +11,15 @@ public class CalculadoraGeometrica_v1 {
         double result, valor, valor1, valor2, valor3;
         boolean subControl, controlUnd;
 
-        do { // repetir el menú hasta que se ingrese la opción correcta
-            System.out.println("Bienvenido(a) favor indicar que desea realizar:\n1. Calcular área. \n2. Calcular perímetro."
-                    + "\n3. Conversión de unidades.\n4. Salir.");
+        while (true) { // repetir el menú hasta que se ingrese la opción correcta
+            System.out.println("Bienvenido(a) favor indicar que desea realizar:");
+            System.out.println("1. Calcular área. \n2. Calcular perímetro." + "\n3. Conversión de unidades.\n4. Salir.");
             opc = sc.nextInt();
             subControl = true;
             do { //repetir el submenú hasta que se ingrese la opción correcta
                 switch (opc) {
                     case 1 -> {
-                        System.out.println("Elija la figura a calcular área:\n1. Cuadrado.\n2. Rectángulo.\n3. Triángulo.\n4. Círculo.\n5. Trapecio."
-                                + "\n6. Rombo.\n7. Polígono regular.\n8. Octágono.\n9. Regresa menú anterior");
+                        System.out.println("Elija la figura a calcular área:\n1. Cuadrado.\n2. Rectángulo.\n3. Triángulo.\n4. Círculo.\n5. Trapecio." + "\n6. Rombo.\n7. Polígono regular.\n8. Octágono.\n9. Regresa menú anterior");
                         fig = sc.nextInt();
                         if (fig == 1) {
                             figura = "Cuadrado";
@@ -39,12 +38,12 @@ public class CalculadoraGeometrica_v1 {
                             System.out.println("El área del " + figura + " es: " + result);
                             System.exit(0);
                         } else if (fig == 3 || fig == 6) {
-                            if (fig == 3){
+                            if (fig == 3) {
                                 figura = "Triángulo";
                                 System.out.println("Favor, ingrese base del " + figura + ":");
                                 valor = sc.nextDouble();
                                 System.out.println("Favor, ingrese altura del " + figura + ":");
-                            }else {
+                            } else {
                                 figura = "Rombo";
                                 System.out.println("Favor, ingrese diagonal 1 del " + figura + ":");
                                 valor = sc.nextDouble();
@@ -96,8 +95,7 @@ public class CalculadoraGeometrica_v1 {
                         }
                     }
                     case 2 -> {
-                        System.out.println("Elija la figura a calcular perímetro:\n1. Cuadrado.\n2. Rectángulo.\n3. Triángulo.\n4. Círculo."
-                                + "\n5. Trapecio.\n6. Rombo.\n7. Polígono regular.\n8. Octágono.\n9. Regresa menú anterior.");
+                        System.out.println("Elija la figura a calcular perímetro:\n1. Cuadrado.\n2. Rectángulo.\n3. Triángulo.\n4. Círculo." + "\n5. Trapecio.\n6. Rombo.\n7. Polígono regular.\n8. Octágono.\n9. Regresa menú anterior.");
                         fig = sc.nextInt();
                         if (fig == 1 || fig == 6) {
                             figura = "Cuadrado";
@@ -162,22 +160,19 @@ public class CalculadoraGeometrica_v1 {
                         }
                     }
                     case 3 -> {
-                        System.out.println("Elija al conversión de unidad a realizar:\n1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²)."
-                                + "\n3. Ángulos (Grados a Radianes, Radianes a Grados).\n4. Regresar al menú principal.");
+                        System.out.println("Elija al conversión de unidad a realizar:\n1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²)." + "\n3. Ángulos (Grados a Radianes, Radianes a Grados).\n4. Regresar al menú principal.");
                         opc1 = sc.nextInt();
                         controlUnd = true;
                         switch (opc1) {
                             case 1 -> {
                                 do { //repetir el submenú hasta que se ingrese la opción correcta
-                                    System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm)."
-                                            + "\n4. Milímetro (mm).\n5. Regresar al menú anterior.");
+                                    System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm)." + "\n4. Milímetro (mm).\n5. Regresar al menú anterior.");
                                     conv = sc.nextInt();
                                     if (conv == 1) {
                                         simbMed = "km";
                                         System.out.println("Favor, ingrese la longitud en " + simbMed);
                                         valor = sc.nextDouble();
-                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Metro (m).\n2. Centímetro (cm)." +
-                                                "\n3. Milímetro (mm).");
+                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Metro (m).\n2. Centímetro (cm)." + "\n3. Milímetro (mm).");
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "m";
@@ -199,8 +194,7 @@ public class CalculadoraGeometrica_v1 {
                                         simbMed = "m";
                                         System.out.println("Favor, ingrese la longitud en " + simbMed);
                                         valor = sc.nextDouble();
-                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Centímetro (cm)." +
-                                                "\n3. Milímetro (mm).");
+                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Centímetro (cm)." + "\n3. Milímetro (mm).");
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km";
@@ -222,8 +216,7 @@ public class CalculadoraGeometrica_v1 {
                                         simbMed = "cm";
                                         System.out.println("Favor, ingrese la longitud en " + simbMed);
                                         valor = sc.nextDouble();
-                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Metro (m)." +
-                                                "\n3. Milímetro (mm).");
+                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Metro (m)." + "\n3. Milímetro (mm).");
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km";
@@ -276,15 +269,13 @@ public class CalculadoraGeometrica_v1 {
                             }
                             case 2 -> {
                                 do {
-                                    System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²)."
-                                            + "\n3. Centímetro cuadro (cm²).\n4. Regresar al menú anterior.");
+                                    System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²)." + "\n3. Centímetro cuadro (cm²).\n4. Regresar al menú anterior.");
                                     conv = sc.nextInt();
                                     if (conv == 1) {
                                         simbMed = "km²";
                                         System.out.println("Favor, ingrese la longitud en " + simbMed);
                                         valor = sc.nextDouble();
-                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Metro cuadrado (m²)." +
-                                                "\n2. Centímetro cuadro (cm²).");
+                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Metro cuadrado (m²)." + "\n2. Centímetro cuadro (cm²).");
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "m²";
@@ -301,8 +292,7 @@ public class CalculadoraGeometrica_v1 {
                                         simbMed = "m²";
                                         System.out.println("Favor, ingrese la longitud en " + simbMed);
                                         valor = sc.nextDouble();
-                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro cuadrado (km²)" +
-                                                ".\n2. Centímetro cuadro (cm²).");
+                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro cuadrado (km²)" + ".\n2. Centímetro cuadro (cm²).");
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km²";
@@ -319,8 +309,7 @@ public class CalculadoraGeometrica_v1 {
                                         simbMed = "cm²";
                                         System.out.println("Favor, ingrese la longitud en " + simbMed);
                                         valor = sc.nextDouble();
-                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro cuadrado (km²)." +
-                                                "\n2. Metro cuadro (m²).");
+                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro cuadrado (km²)." + "\n2. Metro cuadro (m²).");
                                         conv = sc.nextInt();
                                         if (conv == 1) {
                                             cambioMed = "km²";
@@ -377,6 +366,6 @@ public class CalculadoraGeometrica_v1 {
                     }
                 }
             } while (subControl);
-        } while (true);
+        }
     }
 }
