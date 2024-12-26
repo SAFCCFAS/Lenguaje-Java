@@ -7,7 +7,7 @@ public class CalculadoraBasica_v1 {
         Scanner leer = new Scanner(System.in);
         int n1, n2, operacion, suma, resta, multiplicacion, resultado; // declaración de variables a usar
         double division;
-        String nombreOperacion = null;
+        String nombreOperacion;
         System.out.println("Ingrese un número:"); // solicitud de números
         n1 = leer.nextInt();
         System.out.println("Ingrese un número:");

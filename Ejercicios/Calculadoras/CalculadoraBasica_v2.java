@@ -6,7 +6,7 @@ public class CalculadoraBasica_v2 {
     public static void main(String[] args) {
         Scanner leer = new Scanner(System.in);
         int n1, n2, operacion;
-        String nombreOperacion = null;
+        String nombreOperacion;
         System.out.println("Ingrese un número:");
         n1 = leer.nextInt();
         System.out.println("Ingrese un número:");
