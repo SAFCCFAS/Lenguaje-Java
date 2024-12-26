@@ -63,11 +63,11 @@ public class CalculadoraGeometricaArray {
                     do {
                         switch (fig) {
                             case 1, 4, 8 -> {
-                            switch (fig) {
-                                case 1 -> System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
-                                case 4 -> System.out.printf("Favor ingrese el radio del %s:%n", nombreFiguras[fig - 1]);
-                                default -> System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
-                            }
+                                switch (fig) {
+                                    case 1 -> System.out.printf("Ingrese lado del %s:%n", nombreFiguras[fig - 1]);
+                                    case 4 -> System.out.printf("Favor ingrese el radio del %s:%n", nombreFiguras[fig - 1]);
+                                    default -> System.out.printf("Favor ingrese longitud de lado del %s%n", nombreFiguras[fig - 1]);
+                                }
                                 valor = sc.nextLine().trim();
                                 if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty() || Double.parseDouble(valor) <= 0) {
                                     System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
@@ -79,7 +79,8 @@ public class CalculadoraGeometricaArray {
                                         case 1 -> Math.pow(valores[0], 2);
                                         case 4 -> Math.PI * Math.pow(valores[0], 2);
                                         case 8 -> (2 + 4 / Math.sqrt(2)) * Math.pow(valores[0], 2);
-                                        default -> 0; // Este valor por defecto no debería alcanzarse debido a las validaciones previas
+                                        default -> 0; // Este valor por defecto no debería alcanzarse debido a las validaciones
+                                        // previas
                                     };
                                     System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], areas);
                                 } else {
@@ -96,7 +97,8 @@ public class CalculadoraGeometricaArray {
                                 for (count = 0; count < 2; count++) {
                                     while (true) { // Bucle para validar cada entrada.
                                         switch (fig) {
-                                            case 2 -> System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
+                                            case 2 ->
+                                                    System.out.printf("Favor ingrese %s del %s:%n", (count == 0) ? "largo" : "ancho", nombreFiguras[fig - 1]);
                                             case 6 -> {
                                                 if (opc == 1) {
                                                     System.out.printf("Favor ingrese diagonal %s del %s:%n", count + 1, nombreFiguras[fig - 1]);
@@ -108,7 +110,8 @@ public class CalculadoraGeometricaArray {
                                                     }
                                                 }
                                             }
-                                            default -> System.out.printf("Favor, ingrese %s del %s:%n", (count == 0) ? "número de lados" : "largo de cada lado", nombreFiguras[fig - 1]);
+                                            default ->
+                                                    System.out.printf("Favor, ingrese %s del %s:%n", (count == 0) ? "número de lados" : "largo de cada lado", nombreFiguras[fig - 1]);
                                         }
                                         valor = sc.nextLine().trim();
                                         if (!valor.matches("\\d+(\\.\\d+)?") || valor.trim().isEmpty()) {
@@ -168,14 +171,14 @@ public class CalculadoraGeometricaArray {
                                         break;
                                     }
                                 }
-                                if (opc==1){
+                                if (opc == 1) {
                                     areas = switch (fig) {
                                         case 3 -> (valores[0] * valores[1]) / 2;
                                         case 5 -> ((valores[0] + valores[1]) / 2) * valores[2];
                                         default -> 0;
                                     };
                                     System.out.printf("El área del %s es: %s%n", nombreFiguras[fig - 1], areas);
-                                }else {
+                                } else {
                                     perimetros = switch (fig) {
                                         case 3 -> valores[0] + valores[1] + valores[2];
                                         case 5 -> valores[0] + valores[1] + valores[2] + valores[3];
@@ -225,7 +228,7 @@ public class CalculadoraGeometricaArray {
                             count = 0;
                             if (conv == 1) {
                                 for (String longitud : nombreUnidades[conv - 1]) {
-                                    // Muestra la opción de unidad con su símbolo correspondiente e incrementa elcontador 'und' y 'count'.
+                                    // Muestra la opción de unidad con su símbolo correspondiente e incrementa el contador 'und' y 'count'.
                                     System.out.printf("%d. %s (%s).%n", und++, longitud, simbUnidades[conv - 1][count]);
                                     count++;
                                 }
@@ -246,10 +249,12 @@ public class CalculadoraGeometricaArray {
                             und = Integer.parseInt(eleccion);
                             if (und > count + 1 || und <= 0) {
                                 System.err.printf("Error: Opción fuera del rango (1 - %d), intente nuevamente.%n", count + 1);
+                                continue;
                             } else if (und == count + 1) {
                                 System.out.println("Regresando el menú anterior...");
                                 break;
                             }
+                            System.out.printf("Usted a elegido: %s %n", conv == 1 ? nombreUnidades[conv - 1][und - 1] : nombreUnidades[conv - 2][und - 1]);
                         } while (true);
                     } else {
                         do {

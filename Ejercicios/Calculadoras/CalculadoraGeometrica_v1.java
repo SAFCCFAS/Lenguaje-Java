@@ -221,8 +221,7 @@ public class CalculadoraGeometrica_v1 {
                                 }
                             }
                         }
-                        return; // en este punto es mejor terminar el programa para no hacer el código más
-                        // complejo.
+                        return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
                     }
                 }
                 case 3 -> {
