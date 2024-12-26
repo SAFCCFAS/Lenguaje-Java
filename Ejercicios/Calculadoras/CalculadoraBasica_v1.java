@@ -16,25 +16,25 @@ public class CalculadoraBasica_v1 {
         System.out.println("¿Que operación desea realizar?\n1.Suma.\n2.Resta.\n3.Multiplicación.\n4.División.");
         operacion = leer.nextInt();
         switch (operacion) {
-            case 1:
+            case 1 -> {
                 nombreOperacion = "Suma";
                 suma = n1 + n2;
                 resultado = suma;
                 System.out.println("El resultado de la " + nombreOperacion + " es: " + resultado);
-                break;
-            case 2:
+            }
+            case 2 -> {
                 nombreOperacion = "Resta";
                 resta = n1 - n2;
                 resultado = resta;
                 System.out.println("El resultado de la " + nombreOperacion + " es: " + resultado);
-                break;
-            case 3:
+            }
+            case 3 -> {
                 nombreOperacion = "Multiplicación";
                 multiplicacion = n1 * n2;
                 resultado = multiplicacion;
                 System.out.println("El resultado de la " + nombreOperacion + " es: " + resultado);
-                break;
-            case 4:
+            }
+            case 4 -> {
                 nombreOperacion = "División";
                 if (n2 == 0) {
                     System.out.println("Error: No es posible dividir entre cero.");
@@ -42,9 +42,8 @@ public class CalculadoraBasica_v1 {
                     division = (double) n1 / n2; //casting a double
                     System.out.println("El resultado de la " + nombreOperacion + " es: " + division);
                 }
-                break;
-            default:
-                System.out.println("Operación no valida");
+            }
+            default -> System.out.println("Operación no valida");
         }
         leer.close();
     }
