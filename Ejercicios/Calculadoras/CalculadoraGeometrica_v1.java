@@ -8,7 +8,7 @@ public class CalculadoraGeometrica_v1 {
     public static void main(String[] args) {
         String figura, categoria, medida, simbMed, eleccion, entrada;
         int opc, fig, contar, origen, unidad, destino;
-        double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro;
+        double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro, conversion=0;
 
         while (true) { // repetir el menú hasta que se ingrese la opción correcta
             System.out.println("Bienvenido(a) favor indicar que desea realizar:");
@@ -25,7 +25,7 @@ public class CalculadoraGeometrica_v1 {
 
             switch (opc) {
                 case 1, 2 -> {
-                    while (true) { //repetir el submenú hasta que se ingrese la opción correcta
+                    while (true) { // repetir el submenú hasta que se ingrese la opción correcta
                         System.out.printf("Favor elija la figura a calcular %s", opc == 1 ? "área:\n" : "perímetro:\n");
                         System.out.println("1. Cuadrado.\n2. Rectángulo.\n3. Triángulo.\n4. Círculo.\n5. Trapecio.\n6. Rombo.");
                         System.out.println("7. Polígono regular.\n8. Octágono.\n9. Regresa menú anterior");
@@ -195,14 +195,48 @@ public class CalculadoraGeometrica_v1 {
                                         };
                                         System.out.println("El perímetro del " + figura + " es: " + perimetro);
                                     }
+                                    case 5 -> {
+                                        for (contar = 0; contar < 4; contar++) {
+                                            while (true) {
+                                                if (contar == 0) {
+                                                    System.out.printf("Favor, ingrese longitud de la base menor del %s:%n", figura);
+                                                } else if (contar == 1) {
+                                                    System.out.printf("Favor, ingrese longitud de la base mayor del %s:%n", figura);
+                                                } else {
+                                                    System.out.printf("Favor, ingrese longitud del lado %s del %s:%n", (contar == 2) ? "izquierdo" : "derecho", figura);
+                                                }
+                                                entrada = sc.nextLine().trim();
+                                                if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
+                                                    System.err.println("Error: Ingreso no válido, favor ingrese un número.");
+                                                    continue;
+                                                } else if (entrada.equals("0")) {
+                                                    System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
+                                                    continue;
+                                                }
+                                                if (contar == 0) {
+                                                    valor = Double.parseDouble(entrada);
+                                                } else if (contar == 1) {
+                                                    valor1 = Double.parseDouble(entrada);
+                                                } else if (contar == 2) {
+                                                    valor2 = Double.parseDouble(entrada);
+                                                } else {
+                                                    valor3 = Double.parseDouble(entrada);
+                                                }
+                                                break;
+                                            }
+                                        }
+                                        perimetro = valor + valor1 + valor2 + valor3;
+                                        System.out.printf("El perímetro del %s es: %.2f%n", figura, perimetro);
+                                    }
                                 }
                             }
                         }
-                        return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
+                        return; // en este punto es mejor terminar el programa para no hacer el código más
+                        // complejo.
                     }
                 }
                 case 3 -> {
-                    while (true){
+                    while (true) {
                         System.out.println("Elija la categoría de unidades a convertir:");
                         System.out.println("1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²).\n3. Ángulos (Grados a Radianes, Radianes a Grados).");
                         System.out.println("4. Regresar al menú principal.");
@@ -221,224 +255,211 @@ public class CalculadoraGeometrica_v1 {
                             case 3 -> "Ángulos";
                             default -> null;
                         };
-                        if (categoria!=null){
+                        if (categoria != null) {
                             System.out.println("Ha seleccionado: " + categoria);
-                            if (origen==1){
-                                
+                            if (origen == 1) {
+                                while (true) {
+                                    System.out.println("Favor elija la unidad a convertir:");
+                                    System.out.println("1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm).\n4. Milímetro (mm)");
+                                    System.out.println("5. Regresar al menú anterior.");
+                                    eleccion = sc.nextLine().trim();
+                                    if (eleccion.trim().isEmpty() || !eleccion.matches("[1-5]")) {
+                                        System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
+                                        continue;
+                                    } else if (eleccion.equals("5")) {
+                                        System.out.println("Regresando al menú principal...");
+                                        break;
+                                    }
+                                    unidad = Integer.parseInt(eleccion);
+                                    medida = switch (unidad) {
+                                        case 1 -> "Kilómetro";
+                                        case 2 -> "Metro";
+                                        case 3 -> "Centímetro";
+                                        case 4 -> "Milímetro";
+                                        default -> null;
+                                    };
+                                    simbMed = switch (unidad) {
+                                        case 1 -> "km";
+                                        case 2 -> "m";
+                                        case 3 -> "cm";
+                                        case 4 -> "mm";
+                                        default -> null;
+                                    };
+                                    if (medida != null) {
+                                        System.out.printf("Favor, ingrese la %s en %s (%s):%n", categoria, medida, simbMed);
+                                        entrada = sc.nextLine().trim();
+                                        if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
+                                            System.err.println("Error: Ingreso no válido, favor ingrese un número.");
+                                            continue;
+                                        } else if (entrada.equals("0")) {
+                                            System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
+                                            continue;
+                                        }
+                                        valor = Double.parseDouble(entrada);
+                                        if (unidad == 1) {
+                                            System.out.println("1. Metro (m).\n2. Centímetro (cm).\n3. Milímetro (mm).");
+                                        } else if (unidad == 2) {
+                                            System.out.println("1. Kilómetro (km).\n2. Centímetro (cm).\n3. Milímetro (mm).");
+                                        } else if (unidad == 3) {
+                                            System.out.println("1. Kilómetro (km).\n2. Metro (m).\n3. Milímetro (mm).");
+                                        } else {
+                                            System.out.println("1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm).");
+                                        }
+                                        eleccion = sc.nextLine().trim();
+                                        if (eleccion.isEmpty() || !eleccion.matches("[1-3]")) {
+                                            System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
+                                            continue;
+                                        }
+                                        destino = Integer.parseInt(eleccion);
+                                        switch (unidad) {
+                                            case 1 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor * 1000;
+                                                    case 2 -> conversion = valor * 100000;
+                                                    case 3 -> conversion = valor * 1000000;
+                                                }
+                                            }
+                                            case 2 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor / 1000;
+                                                    case 2 -> conversion = valor * 100;
+                                                    case 3 -> conversion = valor * 1000;
+                                                }
+                                            }
+                                            case 3 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor / 100000;
+                                                    case 2 -> conversion = valor / 100;
+                                                    case 3 -> conversion = valor * 10;
+                                                }
+                                            }
+                                            case 4 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor / 1000000;
+                                                    case 2 -> conversion = valor / 1000;
+                                                    case 3 -> conversion = valor / 10;
+                                                }
+                                            }
+                                        }
+                                    }
+									System.out.printf("La %s en %s (%s) es: %.2f%n", categoria, medida, simbMed, conversion);
+                                    return;
+                                }
+                            } else if (origen == 2) {
+								while (true) {
+									System.out.println("Favor elija la unidad a convertir:");
+									System.out.println("1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²).\n3. Centímetro cuadrado (cm²).");
+                                    System.out.println("4. Regresar al menú anterior.");
+                                    eleccion = sc.nextLine().trim();
+                                    if (eleccion.trim().isEmpty() || !eleccion.matches("[1-4]")) {
+                                        System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
+                                        continue;
+                                    } else if (eleccion.equals("4")) {
+                                        System.out.println("Regresando al menú anterior...");
+                                        break;
+                                    }
+                                    unidad = Integer.parseInt(eleccion);
+                                    medida = switch (unidad) {
+                                        case 1 -> "Kilómetro cuadrado";
+                                        case 2 -> "Metro cuadrado";
+                                        case 3 -> "Centímetro cuadrado";
+                                        default -> null;
+                                    };
+                                    simbMed = switch (unidad) {
+                                        case 1 -> "km²";
+                                        case 2 -> "m²";
+                                        case 3 -> "cm²";
+                                        default -> null;
+                                    };
+                                    if (medida != null) {
+                                        System.out.printf("Favor, ingrese la %s en %s (%s):%n", categoria, medida, simbMed);
+                                        entrada = sc.nextLine().trim();
+                                        if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
+                                            System.err.println("Error: Ingreso no válido, favor ingrese un número.");
+                                            continue;
+                                        } else if (entrada.equals("0")) {
+                                            System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
+                                            continue;
+                                        }
+                                        valor = Double.parseDouble(entrada);
+                                        if (unidad == 1) {
+                                            System.out.println("1. Metro cuadrado (m²).\n2. Centímetro cuadrado (cm²).");
+                                        } else if (unidad == 2) {
+                                            System.out.println("1. Kilómetro cuadrado (km²).\n2. Centímetro cuadrado (cm²).");
+                                        } else {
+                                            System.out.println("1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²).");
+                                        }
+                                        eleccion = sc.nextLine().trim();
+                                        if (eleccion.isEmpty() || !eleccion.matches("[1-2]")) {
+                                            System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
+                                            continue;
+                                        }
+                                        destino = Integer.parseInt(eleccion);
+                                        switch (unidad) {
+                                            case 1 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor * 1000000;
+                                                    case 2 -> conversion = valor * 10000000000L;
+                                                }
+                                            }
+                                            case 2 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor / 1000000;
+                                                    case 2 -> conversion = valor * 10000;
+                                                }
+                                            }
+                                            case 3 -> {
+                                                switch (destino) {
+                                                    case 1 -> conversion = valor / 10000000000L;
+                                                    case 2 -> conversion = valor / 10000;
+                                                }
+                                            }
+                                            default -> conversion = 0;
+                                        }
+                                    }
+                                    System.out.printf("La %s en %s (%s) es: %.2f%n", categoria, medida, simbMed, conversion);
+                                    return;
+								}
+							} else {
+                                while (true) {
+                                    System.out.println("Favor elija la unidad a convertir:\n1. Grados (°).\n2. Radianes (rad).");
+                                    System.out.println("3. Regresar al menú anterior.");
+                                    eleccion = sc.nextLine().trim();
+                                    if (eleccion.trim().isEmpty() || !eleccion.matches("[1-3]")) {
+                                        System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
+                                        continue;
+                                    } else if (eleccion.equals("3")) {
+                                        System.out.println("Regresando al menú anterior...");
+                                        break;
+                                    }
+                                    unidad = Integer.parseInt(eleccion);
+                                    simbMed = switch (unidad) {
+                                        case 1 -> "°";
+                                        case 2 -> "rad";
+                                        default -> null;
+                                    };
+                                    if (simbMed != null) {
+                                        System.out.printf("Favor, ingrese el valor en %s:%n", simbMed);
+                                        entrada = sc.nextLine().trim();
+                                        if (entrada.isEmpty() || !entrada.matches("\\d+(\\.\\d+)?")) {
+                                            System.err.println("Error: Ingreso no válido, favor ingrese un número.");
+                                            continue;
+                                        }
+                                        valor = Double.parseDouble(entrada);
+                                        if (unidad == 1) {
+                                            conversion = valor * Math.PI / 180;
+                                        } else {
+                                            conversion = valor * 180 / Math.PI;
+                                        }
+                                    }
+                                    System.out.printf("El valor en %s a (%s) es: %.2f%n", simbMed, (unidad == 1) ? "rad" : "°", conversion);
+                                    return;
+                                }
                             }
                         }
-                        return;
                     }
                 }
             }
         }
     }
 }
-
-//                    case 3 -> {
-//                        System.out.println("Elija al conversión de unidad a realizar:\n1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²)." + "\n3. Ángulos (Grados a Radianes, Radianes a Grados).\n4. Regresar al menú principal.");
-//                        opc1 = sc.nextInt();
-//                        controlUnd = true;
-//                        switch (opc1) {
-//                            case 1 -> {
-//                                do { //repetir el submenú hasta que se ingrese la opción correcta
-//                                    System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm)." + "\n4. Milímetro (mm).\n5. Regresar al menú anterior.");
-//                                    conv = sc.nextInt();
-//                                    if (conv == 1) {
-//                                        simbMed = "km";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Metro (m).\n2. Centímetro (cm)." + "\n3. Milímetro (mm).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "m";
-//                                            result = valor * 1000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "cm";
-//                                            result = valor * 100000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 3) {
-//                                            cambioMed = "mm";
-//                                            result = valor * 1000000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        }
-//                                    } else if (conv == 2) {
-//                                        simbMed = "m";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Centímetro (cm)." + "\n3. Milímetro (mm).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "km";
-//                                            result = valor / 1000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "cm";
-//                                            result = valor * 100;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 3) {
-//                                            cambioMed = "mm";
-//                                            result = valor * 1000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        }
-//                                    } else if (conv == 3) {
-//                                        simbMed = "cm";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Metro (m)." + "\n3. Milímetro (mm).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "km";
-//                                            result = valor / 100000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "m";
-//                                            result = valor / 100;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 3) {
-//                                            cambioMed = "mm";
-//                                            result = valor * 10;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else {
-//                                            System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
-//                                        }
-//                                    } else if (conv == 4) {
-//                                        simbMed = "mm";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "km";
-//                                            result = valor / 1000000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "m";
-//                                            result = valor / 1000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 3) {
-//                                            cambioMed = "cm";
-//                                            result = valor / 10;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else {
-//                                            System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
-//                                        }
-//                                    } else if (conv == 5) {
-//                                        controlUnd = false; //regresar al menú anterior
-//                                    } else {
-//                                        System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
-//                                    }
-//                                } while (controlUnd);
-//                            }
-//                            case 2 -> {
-//                                do {
-//                                    System.out.println("Favor indique la unidad a convertir:\n1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²)." + "\n3. Centímetro cuadro (cm²).\n4. Regresar al menú anterior.");
-//                                    conv = sc.nextInt();
-//                                    if (conv == 1) {
-//                                        simbMed = "km²";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Metro cuadrado (m²)." + "\n2. Centímetro cuadro (cm²).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "m²";
-//                                            result = valor * 1000000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "cm²";
-//                                            result = valor * 10_000_000_000L;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        }
-//                                    } else if (conv == 2) {
-//                                        simbMed = "m²";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro cuadrado (km²)" + ".\n2. Centímetro cuadro (cm²).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "km²";
-//                                            result = valor / 1000000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "cm²";
-//                                            result = valor * 10000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        }
-//                                    } else if (conv == 3) {
-//                                        simbMed = "cm²";
-//                                        System.out.println("Favor, ingrese la longitud en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        System.out.println("Favor, indique la unidad a que convertir:\n1. Kilómetro cuadrado (km²)." + "\n2. Metro cuadro (m²).");
-//                                        conv = sc.nextInt();
-//                                        if (conv == 1) {
-//                                            cambioMed = "km²";
-//                                            result = valor / 10_000_000_000L;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        } else if (conv == 2) {
-//                                            cambioMed = "cm²";
-//                                            result = valor / 10000;
-//                                            System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                            System.exit(0);
-//                                        }
-//                                    } else if (conv == 4) {
-//                                        controlUnd = false;
-//                                    }
-//                                } while (controlUnd);
-//                            }
-//                            case 3 -> {
-//                                do {
-//                                    System.out.println("Favor indique la unidad a convertir:\n1. Grados.\n2. Radianes.\n3. Regresar al menú anterior.");
-//                                    conv = sc.nextInt();
-//                                    if (conv == 1) {
-//                                        simbMed = "Grados";
-//                                        System.out.println("Favor, ingrese el valor en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        cambioMed = "Radianes";
-//                                        result = valor * Math.PI / 180;
-//                                        System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                        System.exit(0);
-//                                    } else if (conv == 2) {
-//                                        simbMed = "Radianes";
-//                                        System.out.println("Favor, ingrese el valor en " + simbMed);
-//                                        valor = sc.nextDouble();
-//                                        cambioMed = "Grados";
-//                                        result = valor * 180 / Math.PI;
-//                                        System.out.println(valor + " " + simbMed + " a " + cambioMed + " es: " + result);
-//                                        System.exit(0);
-//                                    } else if (conv == 3) {
-//                                        controlUnd = false;
-//                                    }
-//                                } while (controlUnd);
-//                            }
-//                            case 4 -> subControl = false;
-//                            default -> System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
-//                        }
-//                    }
-//                    case 4 -> {
-//                        System.out.println("¡Hasta la próxima!");
-//                        System.exit(0);
-//                    }
-//                    default -> {
-//                        System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
-//                        subControl = false;
-//                    }
-//                }
-//            } while (subControl);

@@ -9,7 +9,7 @@ public class CalculadoraGeometrica_v2 {
     public static void main(String[] args) {
         String figura, categoria, medida, simbMed, eleccion, entrada;
         int opc, fig, contar, origen, unidad, destino;
-        double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro;
+        double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro, conversion;
 
         while (true) {
             System.out.println("Bienvenido(a) favor indicar que desea realizar:");
@@ -200,7 +200,8 @@ public class CalculadoraGeometrica_v2 {
                                 }
                             }
                         }
-                        return; // en este punto es mejor terminar el programa para no hacer el código más complejo.
+                        return; // en este punto es mejor terminar el programa para no hacer el código más
+                        // complejo.
                     }
                 }
                 case 3 -> {
@@ -238,26 +239,20 @@ public class CalculadoraGeometrica_v2 {
                                         break;
                                     }
                                     unidad = Integer.parseInt(eleccion);
-                                    medida = null;
-                                    simbMed = null;
-                                    switch (unidad) {
-                                        case 1 -> {
-                                            medida = "Kilómetro";
-                                            simbMed = "km";
-                                        }
-                                        case 2 -> {
-                                            medida = "Metro";
-                                            simbMed = "m";
-                                        }
-                                        case 3 -> {
-                                            medida = "Centímetro";
-                                            simbMed = "cm";
-                                        }
-                                        case 4 -> {
-                                            medida = "Milímetro";
-                                            simbMed = "mm";
-                                        }
-                                    }
+                                    medida = switch (unidad) {
+                                        case 1 -> "Kilómetro";
+                                        case 2 -> "Metro";
+                                        case 3 -> "Centímetro";
+                                        case 4 -> "Milímetro";
+                                        default -> null;
+                                    };
+                                    simbMed = switch (unidad) {
+                                        case 1 -> "km";
+                                        case 2 -> "m";
+                                        case 3 -> "cm";
+                                        case 4 -> "mm";
+                                        default -> null;
+                                    };
                                     if (medida != null) {
                                         System.out.printf("Favor, ingrese la %s en %s (%s):%n", categoria, medida, simbMed);
                                         entrada = sc.nextLine().trim();
@@ -286,39 +281,33 @@ public class CalculadoraGeometrica_v2 {
                                         }
                                         destino = Integer.parseInt(eleccion);
                                         switch (unidad) {
-                                            case 1 -> {
-                                                switch (destino) {
-                                                    case 1 -> System.out.printf("%.2f %s a Metro (m) es: %.2f%n", valor, simbMed, valor * 1000);
-                                                    case 2 ->
-                                                            System.out.printf("%.2f %s a Centímetro (cm) es: %.2f%n", valor, simbMed, valor * 100000);
-                                                    case 3 ->
-                                                            System.out.printf("%.2f %s a Milímetro (mm) es: %.2f%n", valor, simbMed, valor * 1000000);
-                                                }
-                                            }
-                                            case 2 -> {
-                                                switch (destino) {
-                                                    case 1 -> System.out.printf("%.2f %s a Kilómetro (km) es: %.2f%n", valor, simbMed, valor / 1000);
-                                                    case 2 -> System.out.printf("%.2f %s a Centímetro (cm) es: %.2f%n", valor, simbMed, valor * 100);
-                                                    case 3 -> System.out.printf("%.2f %s a Milímetro (mm) es: %.2f%n", valor, simbMed, valor * 1000);
-                                                }
-                                            }
-                                            case 3 -> {
-                                                switch (destino) {
-                                                    case 1 ->
-                                                            System.out.printf("%.2f %s a Kilómetro (km) es: %.2f%n", valor, simbMed, valor / 100000);
-                                                    case 2 -> System.out.printf("%.2f %s a Metro (m) es: %.2f%n", valor, simbMed, valor / 100);
-                                                    case 3 -> System.out.printf("%.2f %s a Milímetro (mm) es: %.2f%n", valor, simbMed, valor * 10);
-                                                }
-                                            }
-                                            case 4 -> {
-                                                switch (destino) {
-                                                    case 1 ->
-                                                            System.out.printf("%.2f %s a Kilómetro (km) es: %.2f%n", valor, simbMed, valor / 1000000);
-                                                    case 2 -> System.out.printf("%.2f %s a Metro (m) es: %.2f%n", valor, simbMed, valor / 1000);
-                                                    case 3 -> System.out.printf("%.2f %s a Centímetro (cm) es: %.2f%n", valor, simbMed, valor / 10);
-                                                }
-                                            }
+                                            case 1 -> conversion = switch (destino) {
+                                                case 1 -> valor * 1000;
+                                                case 2 -> valor * 100_000;
+                                                case 3 -> valor * 1_000_000;
+                                                default -> 0;
+                                            };
+                                            case 2 -> conversion = switch (destino) {
+                                                case 1 -> valor / 1000;
+                                                case 2 -> valor * 100;
+                                                case 3 -> valor * 1000;
+                                                default -> 0;
+                                            };
+                                            case 3 -> conversion = switch (destino) {
+                                                case 1 -> valor / 1_000_000;
+                                                case 2 -> valor / 100;
+                                                case 3 -> valor * 10;
+                                                default -> 0;
+                                            };
+                                            case 4 -> conversion = switch (destino) {
+                                                case 1 -> valor / 1_000_000;
+                                                case 2 -> valor / 1_000;
+                                                case 3 -> valor / 10;
+                                                default -> 0;
+                                            };
+                                            default -> conversion = 0;
                                         }
+                                        System.out.printf("%.2f %s a %s es: %.2f%n", valor, simbMed, medida, conversion);
                                         return;
                                     }
                                 }
@@ -377,31 +366,24 @@ public class CalculadoraGeometrica_v2 {
                                         }
                                         destino = Integer.parseInt(eleccion);
                                         switch (unidad) {
-                                            case 1 -> {
-                                                switch (destino) {
-                                                    case 1 ->
-                                                            System.out.printf("%.2f %s a Metro cuadrado (m²) es: %.2f%n", valor, simbMed, valor * 1000000);
-                                                    case 2 ->
-                                                            System.out.printf("%.2f %s a Centímetro cuadrado (cm²) es: %.2f%n", valor, simbMed, valor * 10_000_000_000L);
-                                                }
-                                            }
-                                            case 2 -> {
-                                                switch (destino) {
-                                                    case 1 ->
-                                                            System.out.printf("%.2f %s a Kilómetro cuadrado (km²) es: %.2f%n", valor, simbMed, valor / 1000000);
-                                                    case 2 ->
-                                                            System.out.printf("%.2f %s a Centímetro cuadrado (cm²) es: %.2f%n", valor, simbMed, valor * 10000);
-                                                }
-                                            }
-                                            case 3 -> {
-                                                switch (destino) {
-                                                    case 1 ->
-                                                            System.out.printf("%.2f %s a Kilómetro cuadrado (km²) es: %.2f%n", valor, simbMed, valor / 10_000_000_000L);
-                                                    case 2 ->
-                                                            System.out.printf("%.2f %s a Metro cuadrado (m²) es: %.2f%n", valor, simbMed, valor / 10000);
-                                                }
-                                            }
+                                            case 1 -> conversion = switch (destino) {
+                                                case 1 -> valor * 1_000_000;
+                                                case 2 -> valor * 10_000_000;
+                                                default -> 0;
+                                            };
+                                            case 2 -> conversion = switch (destino) {
+                                                case 1 -> valor / 1_000_000;
+                                                case 2 -> valor * 10_000;
+                                                default -> 0;
+                                            };
+                                            case 3 -> conversion = switch (destino) {
+                                                case 1 -> valor / 10_000_000;
+                                                case 2 -> valor / 10_000;
+                                                default -> 0;
+                                            };
+                                            default -> conversion = 0;
                                         }
+                                        System.out.printf("%.2f %s a %s es: %.2f%n", valor, simbMed, medida, conversion);
                                         return;
                                     }
                                 }
