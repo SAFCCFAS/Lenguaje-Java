@@ -323,10 +323,10 @@ public class CalculadoraGeometrica_v1 {
 									destino = Integer.parseInt(eleccion);
 
 									medidaDestino = switch (unidad) {
-										case 1 -> destino == 1 ? "Metro" : destino == 2 ? "Centímetro" : "Milímetro";
-										case 2 -> destino == 1 ? "Kilómetro" : destino == 2 ? "Centímetro" : "Milímetro";
-										case 3 -> destino == 1 ? "Kilómetro" : destino == 2 ? "Metro" : "Milímetro";
-										default -> destino == 1 ? "Kilómetro" : destino == 2 ? "Metro" : "Centímetro";
+										case 1 -> destino == 1 ? "Metro" : destino == 2 ? "Centímetro" : "Milímetro"; // De Kilómetro a otras
+										case 2 -> destino == 1 ? "Kilómetro" : destino == 2 ? "Centímetro" : "Milímetro"; // De Metro a otras
+										case 3 -> destino == 1 ? "Kilómetro" : destino == 2 ? "Metro" : "Milímetro"; // De Centímetro a otras
+										default -> destino == 1 ? "Kilómetro" : destino == 2 ? "Metro" : "Centímetro"; // De Milímetro a otras
 									};
 
 									conversion = switch (destino) {
