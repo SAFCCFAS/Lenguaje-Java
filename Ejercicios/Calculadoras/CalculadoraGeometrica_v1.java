@@ -189,7 +189,7 @@ public class CalculadoraGeometrica_v1 {
 										System.out.print("Favor, ingrese ");
 										switch (fig) {
 											case 2 -> System.out.printf("%s del %s:%n", contar == 0 ? "largo" : "ancho", figura);
-											case 6 -> System.out.printf("longitud del largo del %s", figura);
+											case 6 -> System.out.printf("longitud del largo del %s:%n", figura);
 											default -> System.out.printf("%s del %s:%n", contar == 0 ? "número de lados" : "largo de cada largo", figura);
 										}
 										entrada = sc.nextLine().trim();
