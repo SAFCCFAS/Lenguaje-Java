@@ -8,7 +8,7 @@ public class CalculadoraGeometrica_v2 {
 	public static void main(String[] args) {
 		String opciones, figura, categoria, medidaOrigen, medidaDestino, eleccion, entrada;
 		int opcion, fig, contar, origen, destino, unidad, limite;
-		double valor, valor1, valor2, valor3, area, perimetro;
+		double valor = 0, valor1 = 0, valor2 = 0, valor3 = 0, area, perimetro;
 		boolean ingresoValido;
 
 		while (true) {
@@ -107,8 +107,80 @@ public class CalculadoraGeometrica_v2 {
 											}
 											default -> System.out.printf("longitud del lado del %s:%n", figura);
 										}
+										entrada = sc.nextLine().trim();
+										ingresoValido = !entrada.isEmpty() && entrada.matches("\\d+(\\.\\d+)?");
+										if (!ingresoValido || Double.parseDouble(entrada) <= 0) {
+											System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
+											continue;
+										}
 										break;
 									}
+									switch (contar) {
+										case 0 -> valor = Double.parseDouble(entrada);
+										case 1 -> valor1 = Double.parseDouble(entrada);
+										case 2 -> valor2 = Double.parseDouble(entrada);
+										default -> valor3 = Double.parseDouble(entrada);
+									}
+								}
+								area = switch (fig) {
+									case 1 -> Math.pow(valor, 2);
+									case 2 -> valor * valor1;
+									case 3, 6 -> (valor * valor1) / 2;
+									case 4 -> Math.PI * Math.pow(valor, 2);
+									case 5 -> ((valor + valor1) / 2) * valor2;
+									case 7 -> valor * Math.pow(valor1, 2) / (4 * Math.tan(Math.PI / valor));
+									default -> (2 + 4 / Math.sqrt(2)) * Math.pow(valor, 2);
+								};
+								System.out.printf("El área del %s es: %.2f%n", figura, area);
+								perimetro = switch (fig) {
+									case 1, 6 -> 4 * valor;
+									case 2 -> 2 * (valor + valor1);
+									case 3 -> valor + valor1 + valor2;
+									case 4 -> 2 * Math.PI * valor;
+									case 5 -> valor + valor1 + valor2 + valor3;
+									case 7 -> valor * valor1;
+									default -> 8 * valor;
+								};
+								return;
+							}
+						}
+					}
+				}
+				case 3 -> {
+					while (true) {
+						System.out.println("Favor elija la categoría de unidad a convertir:\n1. Longitud (km, m, cm, mm).\n2. Área (km², m², cm²).");
+						System.out.println("3. Ángulos (Grados a Radianes, Radianes a Grados).\n4. Regresar al menú principal.");
+						eleccion = sc.nextLine().trim();
+						ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("[1-4]");
+						if (!ingresoValido) {
+							System.err.println("Error: Opción o ingreso no válido, favor use las opciones dentro del rango.");
+							continue;
+						} else if (Integer.parseInt(eleccion) == 4) {
+							System.out.println("Regresando el menú anterior...");
+							break;
+						}
+						origen = Integer.parseInt(eleccion);
+						categoria = switch (origen) {
+							case 1 -> "Longitud";
+							case 2 -> "Área";
+							default -> "Ángulos";
+						};
+						System.out.println("Usted a elegido " + categoria);
+						switch (origen) {
+							case 1, 2 -> {
+								while (true) {
+									System.out.println("Favor indique la unidad a convertir:");
+									switch (origen) {
+										case 1 -> {
+											System.out.println("1. Kilómetro (km).\n2. Metro (m).\n3. Centímetro (cm).\n4. Milímetro (mm).");
+											System.out.println("5. Regresar al menú anterior.");
+										}
+										case 2 -> {
+											System.out.println("1. Kilómetro cuadrado (km²).\n2. Metro cuadrado (m²)\n3. Centímetro cuadrado (cm²).");
+											System.out.println("4. Regresar al menú anterior.");
+										}
+									}
+									break;
 								}
 							}
 						}
