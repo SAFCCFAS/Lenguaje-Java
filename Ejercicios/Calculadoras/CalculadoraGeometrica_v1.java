@@ -38,7 +38,7 @@ public class CalculadoraGeometrica_v1 {
 							break;
 						}
 						fig = Integer.parseInt(eleccion);
-						figura = switch (fig) { // asignar nombre a la figura correspodiente.
+						figura = switch (fig) { // asignar nombre a la figura correspondiente.
 							case 1 -> "Cuadrado";
 							case 2 -> "Rectángulo";
 							case 3 -> "Triángulo";
@@ -67,8 +67,8 @@ public class CalculadoraGeometrica_v1 {
 									valor = Double.parseDouble(entrada);
 									area = switch (fig) {
 										case 1 -> Math.pow(valor, 2);
-										case 4 -> (Math.PI * Math.pow(valor, 2));
-										default -> ((2 + 4 / Math.sqrt(2)) * Math.pow(valor, 2));
+										case 4 -> Math.PI * Math.pow(valor, 2);
+										default -> (2 + 4 / Math.sqrt(2)) * Math.pow(valor, 2);
 									};
 									System.out.printf("El área del %s es: %.2f%n", figura, area);
 									break;
@@ -97,9 +97,9 @@ public class CalculadoraGeometrica_v1 {
 									}
 								}
 								area = switch (fig) {
-									case 2 -> (valor * valor1);
-									case 6 -> ((valor * valor1) / 2);
-									default -> ((valor * Math.pow(valor1, 2)) / (4 * Math.tan(Math.PI / valor)));
+									case 2 -> valor * valor1;
+									case 6 -> (valor * valor1) / 2;
+									default -> (valor * Math.pow(valor1, 2)) / (4 * Math.tan(Math.PI / valor));
 								};
 								System.out.printf("El área del %s es: %.2f%n", figura, area);
 							}
@@ -126,8 +126,8 @@ public class CalculadoraGeometrica_v1 {
 									}
 								}
 								area = switch (fig) {
-									case 3 -> ((valor * valor1) / 2);
-									default -> (((valor + valor1) / 2) * valor2);
+									case 3 -> (valor * valor1) / 2;
+									default -> ((valor + valor1) / 2) * valor2;
 								};
 								System.out.printf("El área del %s es: %.2f%n", figura, area);
 							}
@@ -148,7 +148,7 @@ public class CalculadoraGeometrica_v1 {
 							break;
 						}
 						fig = Integer.parseInt(eleccion);
-						figura = switch (fig) { // asignar nombre a la figura correspodiente.
+						figura = switch (fig) { // asignar nombre a la figura correspondiente.
 							case 1 -> "Cuadrado";
 							case 2 -> "Rectángulo";
 							case 3 -> "Triángulo";
@@ -175,9 +175,9 @@ public class CalculadoraGeometrica_v1 {
 									}
 									valor = Double.parseDouble(entrada);
 									perimetro = switch (fig) {
-										case 1 -> (4 * valor);
-										case 4 -> (2 * Math.PI * valor);
-										default -> (8 * valor);
+										case 1 -> 4 * valor;
+										case 4 -> 2 * Math.PI * valor;
+										default -> 8 * valor;
 									};
 									System.out.printf("El perímetro del %s es: %.2f%n", figura, perimetro);
 									break;
@@ -206,9 +206,9 @@ public class CalculadoraGeometrica_v1 {
 									}
 								}
 								perimetro = switch (fig) {
-									case 2 -> (2 * (valor + valor1));
-									case 6 -> (valor * 4);
-									default -> (valor * valor1);
+									case 2 -> 2 * (valor + valor1);
+									case 6 -> valor * 4;
+									default -> valor * valor1;
 								};
 								System.out.printf("El perímetro del %s es: %.2f%n", figura, perimetro);
 							}
@@ -241,8 +241,8 @@ public class CalculadoraGeometrica_v1 {
 									}
 								}
 								perimetro = switch (fig) {
-									case 3 -> (valor + valor1 + valor2);
-									default -> (valor + valor1 + valor2 + valor3);
+									case 3 -> valor + valor1 + valor2;
+									default -> valor + valor1 + valor2 + valor3;
 								};
 								System.out.printf("El perímetro del %s es: %.2f%n", figura, perimetro);
 							}
