@@ -216,8 +216,10 @@ public class CalculadoraGeometrica_v2 {
 											System.err.println("Error: Ingreso no válido, favor ingrese un número mayor a 0.");
 											continue;
 										}
+                                        valor=Double.parseDouble(entrada);
 										break;
                                     }
+                                    System.out.println("Favor, indique la unidad a de destino:");
                                 }
                             }
                         }
