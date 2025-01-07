@@ -271,6 +271,7 @@ public class CalculadoraGeometrica_v2 {
                                         };
                                     }
                                     System.out.printf("%.2f %s a %s es: %.3f%n", valor, simbMed, medidaDestino, conversion);
+                                    return;
                                 }
                             }
                             case 3 -> {

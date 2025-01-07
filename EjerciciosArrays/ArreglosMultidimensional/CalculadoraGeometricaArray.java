@@ -13,7 +13,7 @@ public class CalculadoraGeometricaArray {
         String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Cuadrado"}, {"Grados", "Radianes"}};
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
         String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"}, {"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
-        String[][] entradaPerimetroStrings = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"}, {"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"Lado"}};
+        String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"}, {"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"Lado"}};
         double[] valores = new double[4];
         double areas, perimetros;
         String eleccion, valor;
@@ -60,57 +60,43 @@ public class CalculadoraGeometricaArray {
                         System.out.printf("Usted a elegido: %s.%n", nombreFiguras[fig - 1]);
                         switch (fig) {
                             case 1, 2, 3, 4, 5, 6, 7, 8 -> {
-                                while (true) {
-                                    if (opc == 1) {
-                                        for (contar = 0; contar < entradaArea[fig - 1].length; contar++) {
-                                            System.out.printf("Favor, ingrese %s del %s:%n", entradaArea[fig - 1][contar], nombreFiguras[fig - 1]);
-                                            valor = sc.nextLine().trim();
-                                            ingresoValido = !valor.trim().isEmpty() && valor.matches("\\d+(\\.\\d+)?");
-                                            if (!ingresoValido || Double.parseDouble(valor) <= 0) {
-                                                System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
-                                                continue;
-                                            }
-                                            valores[contar] = Double.parseDouble(valor);
+                                for (contar = 0; contar < (opc == 1 ? entradaArea[fig - 1].length : entradaPerimetro[fig - 1].length); contar++) {
+                                    valor = opc == 1 ? entradaArea[fig - 1][contar] : entradaPerimetro[fig - 1][contar];
+                                    while (true) {
+                                        System.out.printf("Favor, ingrese %s del %s:%n", valor, nombreFiguras[fig - 1]);
+                                        valor = sc.nextLine().trim();
+                                        ingresoValido = !valor.trim().isEmpty() && valor.matches("\\d+(\\.\\d+)?");
+                                        if (!ingresoValido || Double.parseDouble(valor) <= 0) {
+                                            System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
+                                            continue;
                                         }
-                                    } else {
-                                        for (contar = 0; contar < entradaPerimetroStrings[fig - 1].length; contar++) {
-                                            System.out.printf("Favor, ingrese %s del %s:%n", entradaPerimetroStrings[fig - 1][contar], nombreFiguras[fig - 1]);
-                                            valor = sc.nextLine().trim();
-                                            ingresoValido = !valor.trim().isEmpty() && valor.matches("\\d+(\\.\\d+)?");
-                                            if (!ingresoValido || Double.parseDouble(valor) <= 0) {
-                                                System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
-                                                continue;
-                                            }
-                                            valores[contar] = Double.parseDouble(valor);
-                                        }
+                                        break;
                                     }
-                                    break;
+                                    valores[contar] = Double.parseDouble(valor);
                                 }
                             }
                         }
-                        if (opc == 1) {
-                            areas = switch (fig) {
-                                case 1 -> Math.pow(valores[0], 2);
-                                case 2 -> valores[0] * valores[1];
-                                case 3, 6 -> (valores[0] * valores[1]) / 2;
-                                case 4 -> Math.PI * Math.pow(valores[0], 2);
-                                case 5 -> ((valores[0] + valores[1]) / 2) * valores[2];
-                                case 7 -> (valores[0] * Math.pow(valores[1], 2)) / (4 * Math.tan(Math.PI / valores[0]));
-                                default -> (2 + 4 / Math.sqrt(2)) * Math.pow(valores[0], 2);
-                            };
-                            System.out.printf("El área del %s es: %.2f%n", nombreFiguras[fig - 1], areas);
-                        } else {
-                            perimetros = switch (fig) {
-                                case 1, 6 -> valores[0] * 4;
-                                case 2 -> 2 * (valores[0] + valores[1]);
-                                case 3 -> valores[0] + valores[1] + valores[2];
-                                case 4 -> 2 * Math.PI * valores[0];
-                                case 5 -> valores[0] + valores[1] + valores[2] + valores[3];
-                                case 7 -> valores[0] * valores[1];
-                                default -> valores[0] * 8;
-                            };
-                            System.out.printf("El perímetro del %s es: %.2f%n", nombreFiguras[fig - 1], perimetros);
-                        }
+
+                        areas = switch (fig) {
+                            case 1 -> Math.pow(valores[0], 2);
+                            case 2 -> valores[0] * valores[1];
+                            case 3, 6 -> (valores[0] * valores[1]) / 2;
+                            case 4 -> Math.PI * Math.pow(valores[0], 2);
+                            case 5 -> ((valores[0] + valores[1]) / 2) * valores[2];
+                            case 7 -> (valores[0] * Math.pow(valores[1], 2)) / (4 * Math.tan(Math.PI / valores[0]));
+                            default -> (2 + 4 / Math.sqrt(2)) * Math.pow(valores[0], 2);
+                        };
+
+                        perimetros = switch (fig) {
+                            case 1, 6 -> valores[0] * 4;
+                            case 2 -> 2 * (valores[0] + valores[1]);
+                            case 3 -> valores[0] + valores[1] + valores[2];
+                            case 4 -> 2 * Math.PI * valores[0];
+                            case 5 -> valores[0] + valores[1] + valores[2] + valores[3];
+                            case 7 -> valores[0] * valores[1];
+                            default -> valores[0] * 8;
+                        };
+                        System.out.printf("El %s del %s es: %.2f%n", opc == 1 ? "área" : "perímetro", nombreFiguras[fig - 1], opc == 1 ? areas : perimetros);
                         return;
                     }
                 }
@@ -147,18 +133,13 @@ public class CalculadoraGeometricaArray {
                                 while (true) {
                                     und = 1;
                                     contar = 0;
-                                    if (opc == 1) {
-                                        for (String longitud : nombreUnidades[opc - 1]) {
-                                            System.out.printf("%d. %s (%s).%n", und++, longitud, simbUnidades[opc - 1][contar]);
-                                            contar++;
+                                    for (String unidades : opc == 1 ? nombreUnidades[opc - 1] : nombreUnidades[opc - 2]) {
+                                        if (opc == 1) {
+                                            System.out.printf("%d. %s (%s).%n", und++, unidades, simbUnidades[opc - 1][contar]);
+                                        } else if (!unidades.equals("Milímetro")) {
+                                            System.out.printf("%d. %s %s (%s).%n", und++, unidades, nombreUnidades[opc - 1][0], simbUnidades[opc - 1][contar]);
                                         }
-                                    } else {
-                                        for (String area : nombreUnidades[opc - 2]) {
-                                            if (!area.equals("Milímetro")) {
-                                                System.out.printf("%d. %s %s (%s).%n", und++, area, nombreUnidades[opc - 1][0], simbUnidades[opc - 1][contar]);
-                                                contar++;
-                                            }
-                                        }
+                                        contar++;
                                     }
                                     System.out.printf("%d. Regresar al menú anterior.%n", und);
                                     eleccion = sc.nextLine().trim();
@@ -171,7 +152,12 @@ public class CalculadoraGeometricaArray {
                                         break;
                                     }
                                     und = Integer.parseInt(eleccion);
-                                    System.out.printf("Usted a elegido: %s %n", opc == 1 ? nombreUnidades[opc - 1][und - 1] : nombreUnidades[opc - 2][und - 1] + " " + nombreUnidades[opc - 1][0]);
+                                    eleccion = opc == 1 ? nombreUnidades[opc - 1][und - 1] : nombreUnidades[opc - 2][und - 1] + " " + nombreUnidades[opc - 1][0];
+                                    System.out.printf("Usted a elegido: %s %n", eleccion);
+                                    while (true){
+                                        System.out.printf("ingrese %s en %s:%n",opcionConversiones[opc-1] ,eleccion);
+                                        break;
+                                    }
                                     break;
                                 }
                             }
