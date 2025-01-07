@@ -151,8 +151,8 @@ public class CalculadoraGeometricaArray {
                                         System.out.println("Regresando al menú anterior...");
                                         break;
                                     }
-                                    und = Integer.parseInt(eleccion);
-                                    eleccion = opc == 1 ? nombreUnidades[opc - 1][und - 1] : nombreUnidades[opc - 2][und - 1] + " " + nombreUnidades[opc - 1][0];
+                                    origen = Integer.parseInt(eleccion);
+                                    eleccion = opc == 1 ? nombreUnidades[opc - 1][origen - 1] : nombreUnidades[opc - 2][origen - 1] + " " + nombreUnidades[opc - 1][0];
                                     System.out.printf("Usted a elegido: %s %n", eleccion);
                                     while (true) {
                                         System.out.printf("ingrese %s en %s (%s):%n", opcionConversiones[opc - 1], eleccion,simbUnidades[opc-1][0]);
