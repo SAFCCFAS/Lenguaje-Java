@@ -154,8 +154,14 @@ public class CalculadoraGeometricaArray {
                                     und = Integer.parseInt(eleccion);
                                     eleccion = opc == 1 ? nombreUnidades[opc - 1][und - 1] : nombreUnidades[opc - 2][und - 1] + " " + nombreUnidades[opc - 1][0];
                                     System.out.printf("Usted a elegido: %s %n", eleccion);
-                                    while (true){
-                                        System.out.printf("ingrese %s en %s:%n",opcionConversiones[opc-1] ,eleccion);
+                                    while (true) {
+                                        System.out.printf("ingrese %s en %s (%s):%n", opcionConversiones[opc - 1], eleccion,simbUnidades[opc-1][0]);
+                                        valor = sc.nextLine().trim();
+                                        ingresoValido = !valor.trim().isEmpty() && valor.matches("\\d+(\\.\\d+)?");
+                                        if (!ingresoValido||Double.parseDouble(valor)<=0){
+                                            System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
+                                            continue;
+                                        }
                                         break;
                                     }
                                     break;
