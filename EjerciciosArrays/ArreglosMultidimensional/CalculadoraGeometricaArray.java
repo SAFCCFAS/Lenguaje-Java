@@ -11,6 +11,7 @@ public class CalculadoraGeometricaArray {
         String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
         String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
         String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Cuadrado"}, {"Grados", "Radianes"}};
+        String[][] cambioUnidades = new String[nombreUnidades.length - 1][2];
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
         String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"}, {"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
         String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"}, {"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"Lado"}};
@@ -28,7 +29,8 @@ public class CalculadoraGeometricaArray {
             }
             System.out.printf("%d. Salir.%n", contar);
             eleccion = sc.nextLine().trim();
-            ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("[1-" + contar + "]"); // valida si se ajusta a lo buscado.
+            ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("[1-" + contar + "]"); // valida si se ajusta
+            // a lo buscado.
             if (!ingresoValido) {
                 System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", opciones.length + 1);
                 continue;
@@ -155,12 +157,24 @@ public class CalculadoraGeometricaArray {
                                     eleccion = opc == 1 ? nombreUnidades[opc - 1][origen - 1] : nombreUnidades[opc - 2][origen - 1] + " " + nombreUnidades[opc - 1][0];
                                     System.out.printf("Usted a elegido: %s %n", eleccion);
                                     while (true) {
-                                        System.out.printf("ingrese %s en %s (%s):%n", opcionConversiones[opc - 1], eleccion,simbUnidades[opc-1][0]);
+                                        System.out.printf("ingrese %s en %s (%s):%n", opcionConversiones[opc - 1], eleccion, simbUnidades[opc - 1][origen - 1]);
                                         valor = sc.nextLine().trim();
                                         ingresoValido = !valor.trim().isEmpty() && valor.matches("\\d+(\\.\\d+)?");
-                                        if (!ingresoValido||Double.parseDouble(valor)<=0){
+                                        if (!ingresoValido || Double.parseDouble(valor) <= 0) {
                                             System.err.println("Error: Entrada no válida. Ingrese un número mayor que 0.");
                                             continue;
+                                        }
+                                        break;
+                                    }
+                                    while (true) {
+                                        System.out.println("Favor, elija unidad de destino:");
+                                        und = 1;
+                                        contar = 0;
+                                        for (String cambio : origen == 1 ? nombreUnidades[opc - 1] : nombreUnidades[opc - 2]) {
+                                            if (!cambio.equals(origen == 1 ? nombreUnidades[opc - 1][0] : nombreUnidades[opc - 2][0])) {
+                                                cambioUnidades[contar] = nombreUnidades[contar];
+                                                System.out.printf("%d. %s.%n", und++, cambio);
+                                            }
                                         }
                                         break;
                                     }
