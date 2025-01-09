@@ -18,7 +18,7 @@ public class CalculadoraGeometricaArray {
         double[] valores = new double[4];
         double areas, perimetros;
         String eleccion, valor;
-        int opc, fig, origen, destino, contar, und;
+        int opc, fig, origen, destino, contar, unidad;
         boolean ingresoValido;
 
         while (true) {
@@ -133,23 +133,23 @@ public class CalculadoraGeometricaArray {
                         switch (opc) {
                             case 1, 2 -> {
                                 while (true) {
-                                    und = 1;
+                                    unidad = 1;
                                     contar = 0;
                                     for (String unidades : opc == 1 ? nombreUnidades[opc - 1] : nombreUnidades[opc - 2]) {
                                         if (opc == 1) {
-                                            System.out.printf("%d. %s (%s).%n", und++, unidades, simbUnidades[opc - 1][contar]);
+                                            System.out.printf("%d. %s (%s).%n", unidad++, unidades, simbUnidades[opc - 1][contar]);
                                         } else if (!unidades.equals("Milímetro")) {
-                                            System.out.printf("%d. %s %s (%s).%n", und++, unidades, nombreUnidades[opc - 1][0], simbUnidades[opc - 1][contar]);
+                                            System.out.printf("%d. %s %s (%s).%n", unidad++, unidades, nombreUnidades[opc - 1][0], simbUnidades[opc - 1][contar]);
                                         }
                                         contar++;
                                     }
-                                    System.out.printf("%d. Regresar al menú anterior.%n", und);
+                                    System.out.printf("%d. Regresar al menú anterior.%n", unidad);
                                     eleccion = sc.nextLine().trim();
-                                    ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("[1-" + und + "]");
+                                    ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("[1-" + unidad + "]");
                                     if (!ingresoValido) {
-                                        System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", und);
+                                        System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", unidad);
                                         continue;
-                                    } else if (Integer.parseInt(eleccion) == und) {
+                                    } else if (Integer.parseInt(eleccion) == unidad) {
                                         System.out.println("Regresando al menú anterior...");
                                         break;
                                     }
@@ -168,14 +168,26 @@ public class CalculadoraGeometricaArray {
                                     }
                                     while (true) {
                                         System.out.println("Favor, elija unidad de destino:");
-                                        und = 1;
-                                        contar = 0;
-                                        for (String cambio : origen == 1 ? nombreUnidades[opc - 1] : nombreUnidades[opc - 2]) {
-                                            if (!cambio.equals(origen == 1 ? nombreUnidades[opc - 1][0] : nombreUnidades[opc - 2][0])) {
-                                                cambioUnidades[contar] = nombreUnidades[contar];
-                                                System.out.printf("%d. %s.%n", und++, cambio);
+                                        unidad=1;
+                                        contar=0;
+                                        if (opc == 1) { // Longitud
+                                            for (String cambio : nombreUnidades[opc - 1]) {
+                                                if (!cambio.equals(nombreUnidades[opc - 1][origen - 1])) {
+                                                    cambioUnidades[contar][0] = cambio;
+                                                    cambioUnidades[contar][1] = nombreUnidades[opc - 1][origen - 1];
+                                                    System.out.printf("%d. %s.%n", unidad++, cambio);
+                                                }
+                                            }
+                                        } else if (opc == 2) { // Área
+                                            for (String cambio : nombreUnidades[opc - 2]) {
+                                                if (!cambio.equals(nombreUnidades[opc - 2][origen - 1])) {
+                                                    cambioUnidades[contar][0] = cambio;
+                                                    cambioUnidades[contar][1] = nombreUnidades[opc - 2][origen - 1];
+                                                    System.out.printf("%d. %s.%n", unidad++, cambio);
+                                                }
                                             }
                                         }
+
                                         break;
                                     }
                                     break;
