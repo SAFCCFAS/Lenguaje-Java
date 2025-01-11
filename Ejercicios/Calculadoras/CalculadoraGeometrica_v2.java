@@ -3,7 +3,7 @@ package Ejercicios.Calculadoras;
 import java.util.Scanner;
 
 public class CalculadoraGeometrica_v2 {
-	static Scanner sc = new Scanner(System.in);
+    static Scanner sc = new Scanner(System.in);
 
     public static void main(String[] args) {
         String opciones, figura, categoria, medidaOrigen, medidaDestino, simbMed, eleccion, entrada, rangoValido;
