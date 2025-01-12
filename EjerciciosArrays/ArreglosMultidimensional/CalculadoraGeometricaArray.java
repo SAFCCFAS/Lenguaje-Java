@@ -11,10 +11,10 @@ public class CalculadoraGeometricaArray {
         String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
         String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
         String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Cuadrado"}, {"Grados", "Radianes"}};
-        String[][] cambioUnidades = new String[nombreUnidades.length - 1][2];
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
         String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"}, {"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
         String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"}, {"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"Lado"}};
+        String[][] cambioUnidades = new String[nombreUnidades.length - 1][2];
         double[] valores = new double[4];
         double areas, perimetros;
         String eleccion, valor;
@@ -167,21 +167,29 @@ public class CalculadoraGeometricaArray {
                                         break;
                                     }
                                     while (true) {
+                                        System.out.println("Favor, elija unidad de destino:");
                                         unidad = 1;
-                                        contar = 0;
-                                        System.out.println("Favor, elija la unidad de destino");
-										for (contar = 0; contar < (opc == 1 ? nombreUnidades[opc - 1].length : nombreUnidades[opc - 2].length); contar++) {
-											if (contar != (origen - 1)) { // Excluir la unidad de origen
-												if (opc == 1) {
-													System.out.printf("%d. %s (%s).%n", unidad++, nombreUnidades[opc - 1][contar], simbUnidades[opc - 1][contar]);
-												} else if (!nombreUnidades[opc - 2][contar].equals("Milímetro")) {
-													System.out.printf("%d. %s %s (%s).%n", unidad++, nombreUnidades[opc - 2][contar], nombreUnidades[opc - 1][0],simbUnidades[opc - 1][contar]);
-												}
-											}
-										}
+                                        for (contar = 0; contar < (opc == 1 ? nombreUnidades[opc - 1].length : nombreUnidades[opc - 2].length); contar++) {
+                                            if (contar != (origen - 1)) {
+                                                if (opc == 1) {
+                                                    System.out.printf("%d. %s (%s).%n", unidad++, nombreUnidades[opc - 1][contar], simbUnidades[opc - 1][contar]);
+                                                } else if (!nombreUnidades[opc - 2][contar].equals("Milímetro")) {
+                                                    System.out.printf("%d. %s %s (%s).%n", unidad++, nombreUnidades[opc - 2][contar], simbUnidades[opc - 1][contar], nombreUnidades[opc - 1][0]);
+                                                }
+                                            }
+                                        }
+                                        eleccion = sc.nextLine().trim();
+                                        ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("\\d+") && Integer.parseInt(eleccion) >= 1 && Integer.parseInt(eleccion) <= unidad - 1;
+                                        if (!ingresoValido) {
+                                            System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", unidad - 1);
+                                            continue;
+                                        }
+                                        destino = Integer.parseInt(eleccion);
+
                                         break;
                                     }
-                                    break;
+
+                                    return;
                                 }
                             }
                         }
