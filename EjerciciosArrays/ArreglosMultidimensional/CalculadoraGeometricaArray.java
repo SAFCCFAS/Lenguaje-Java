@@ -206,6 +206,7 @@ public class CalculadoraGeometricaArray {
 										System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", unidadDestino, simboloDestino);
 										break;
 									}
+									
 
 									break;
 								}
