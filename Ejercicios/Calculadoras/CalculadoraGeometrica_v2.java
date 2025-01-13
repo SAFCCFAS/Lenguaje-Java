@@ -270,7 +270,7 @@ public class CalculadoraGeometrica_v2 {
                                             default -> destino == 3 ? valor * 10_000_000 : valor * 10_000;
                                         };
                                     }
-                                    System.out.printf("%.2f %s a %s es: %.3f%n", valor, simbMed, medidaDestino, conversion);
+                                    System.out.printf("%.2f %s a %s es: %f%n", valor, simbMed, medidaDestino, conversion);
                                     return;
                                 }
                             }
