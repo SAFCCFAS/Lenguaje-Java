@@ -196,7 +196,8 @@ public class CalculadoraGeometricaArray {
                                         destino = Integer.parseInt(eleccion);
                                         unidadDestino = cambioUnidades[destino - 1][0];
                                         simboloDestino = cambioUnidades[destino - 1][1];
-                                        System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", unidadDestino, simboloDestino);
+                                        eleccion= opc == 2 ? unidadDestino +" "+ nombreUnidades[opc - 1][0]:unidadDestino;
+                                        System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", eleccion, simboloDestino);
                                         break;
                                     }
                                     break;
