@@ -14,11 +14,10 @@ public class CalculadoraGeometricaArray {
         String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
         String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"}, {"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
         String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"}, {"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"Lado"}};
-        String[][] cambioUnidades = new String[nombreUnidades.length - 1][2];
         double[] valores = new double[4];
         double areas, perimetros;
-        String eleccion, valor;
-        int opc, fig, origen, destino, contar, unidad;
+        String eleccion, valor,unidadDestino,simboloDestino;
+        int opc, fig, origen, numUnidades, indiceCambio, destino, contar, unidad;
         boolean ingresoValido;
 
         while (true) {
@@ -168,15 +167,25 @@ public class CalculadoraGeometricaArray {
                                     }
                                     while (true) {
                                         System.out.println("Favor, elija unidad de destino:");
+                                        numUnidades = opc == 1 ? nombreUnidades[opc - 1].length : nombreUnidades[opc - 2].length;
+                                        String[][] cambioUnidades = new String[numUnidades - 1][2];
                                         unidad = 1;
-                                        for (contar = 0; contar < (opc == 1 ? nombreUnidades[opc - 1].length : nombreUnidades[opc - 2].length); contar++) {
+                                        indiceCambio = 0;
+                                        for (contar = 0; contar < numUnidades; contar++) {
                                             if (contar != (origen - 1)) {
+                                                String unidadNombre = opc == 1 ? nombreUnidades[opc - 1][contar] : nombreUnidades[opc - 2][contar];
+                                                String unidadSimbolo = contar < simbUnidades[opc - 1].length ? simbUnidades[opc - 1][contar] : "";
+                                                cambioUnidades[indiceCambio][0] = unidadNombre;
+                                                cambioUnidades[indiceCambio][1] = unidadSimbolo;
+
                                                 if (opc == 1) {
-                                                    System.out.printf("%d. %s (%s).%n", unidad++, nombreUnidades[opc - 1][contar], simbUnidades[opc - 1][contar]);
+                                                    System.out.printf("%d. %s (%s).%n", unidad++, unidadNombre, unidadSimbolo);
                                                 } else if (!nombreUnidades[opc - 2][contar].equals("Milímetro")) {
-                                                    System.out.printf("%d. %s %s (%s).%n", unidad++, nombreUnidades[opc - 2][contar], simbUnidades[opc - 1][contar], nombreUnidades[opc - 1][0]);
+                                                    System.out.printf("%d. %s %s (%s).%n", unidad++, unidadNombre, nombreUnidades[opc - 1][0], unidadSimbolo);
                                                 }
+                                                indiceCambio++;
                                             }
+
                                         }
                                         eleccion = sc.nextLine().trim();
                                         ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("\\d+") && Integer.parseInt(eleccion) >= 1 && Integer.parseInt(eleccion) <= unidad - 1;
@@ -185,11 +194,12 @@ public class CalculadoraGeometricaArray {
                                             continue;
                                         }
                                         destino = Integer.parseInt(eleccion);
-
+                                        unidadDestino = cambioUnidades[destino - 1][0];
+                                        simboloDestino = cambioUnidades[destino - 1][1];
+                                        System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", unidadDestino, simboloDestino);
                                         break;
                                     }
-
-                                    return;
+                                    break;
                                 }
                             }
                         }
