@@ -188,16 +188,16 @@ public class CalculadoraGeometricaArray {
 
                                         }
                                         eleccion = sc.nextLine().trim();
-                                        ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("\\d+") && Integer.parseInt(eleccion) >= 1 && Integer.parseInt(eleccion) <= unidad - 1;
-                                        if (!ingresoValido) {
+                                        ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("\\d+");
+                                        if (!ingresoValido||!(Integer.parseInt(eleccion) >= 1 && Integer.parseInt(eleccion) <= unidad - 1)) {
                                             System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", unidad - 1);
                                             continue;
                                         }
                                         destino = Integer.parseInt(eleccion);
                                         unidadDestino = cambioUnidades[destino - 1][0];
                                         simboloDestino = cambioUnidades[destino - 1][1];
-                                        eleccion= opc == 2 ? unidadDestino +" "+ nombreUnidades[opc - 1][0]:unidadDestino;
-                                        System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", eleccion, simboloDestino);
+                                        unidadDestino = opc == 2 ? unidadDestino +" "+ nombreUnidades[opc - 1][0]:unidadDestino;
+                                        System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", unidadDestino, simboloDestino);
                                         break;
                                     }
                                     break;
