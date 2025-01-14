@@ -305,6 +305,7 @@ public class CalculadoraGeometrica_v2 {
                                     simbMed = unidad == 1 ? "rad" : "°";
                                     System.out.printf("Pasando a %s...%n", medidaDestino);
                                     conversion = unidad == 1 ? Math.toRadians(valor) : Math.toDegrees(valor);
+
                                     System.out.printf("%.2f %s a %s (%s) es: %.2f%n", valor, medidaOrigen, medidaDestino, simbMed, conversion);
                                     return;
                                 }
