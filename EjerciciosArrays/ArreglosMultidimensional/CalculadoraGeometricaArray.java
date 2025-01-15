@@ -66,7 +66,7 @@ public class CalculadoraGeometricaArray {
 						fig = Integer.parseInt(eleccion);
 						System.out.printf("Usted a elegido: %s.%n", nombreFiguras[fig - 1]);
 						switch (fig) {
-							case 1, 2, 3, 4, 5, 6, 7, 8 -> {
+							default -> {
 								for (contar = 0; contar < (opc == 1 ? entradaArea[fig - 1].length : entradaPerimetro[fig - 1].length); contar++) {
 									solicitud = opc == 1 ? entradaArea[fig - 1][contar] : entradaPerimetro[fig - 1][contar];
 									while (true) {
