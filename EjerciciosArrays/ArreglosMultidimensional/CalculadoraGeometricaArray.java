@@ -23,7 +23,7 @@ public class CalculadoraGeometricaArray {
 		double[] valores = new double[4];
 		double areas, perimetros, resultado, factor;
 		String[] unidadOrigen;
-		String eleccion,  solicitud, valor, simboloOrigen, unidadDestino, simboloDestino;
+		String eleccion, solicitud, valor, simboloOrigen, unidadDestino, simboloDestino;
 		int opc, fig, origen, numUnidades, indiceCambio, destino, contar, unidad, origenIndice, destinoIndice;
 		boolean ingresoValido;
 
