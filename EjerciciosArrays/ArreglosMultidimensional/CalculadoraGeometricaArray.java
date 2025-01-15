@@ -23,7 +23,7 @@ public class CalculadoraGeometricaArray {
 		double[] valores = new double[4];
 		double areas, perimetros, resultado, factor;
 		String[] unidadOrigen;
-		String eleccion, valor, simboloOrigen, unidadDestino, simboloDestino;
+		String eleccion,  solicitud, valor, simboloOrigen, unidadDestino, simboloDestino;
 		int opc, fig, origen, numUnidades, indiceCambio, destino, contar, unidad, origenIndice, destinoIndice;
 		boolean ingresoValido;
 
@@ -68,9 +68,9 @@ public class CalculadoraGeometricaArray {
 						switch (fig) {
 							case 1, 2, 3, 4, 5, 6, 7, 8 -> {
 								for (contar = 0; contar < (opc == 1 ? entradaArea[fig - 1].length : entradaPerimetro[fig - 1].length); contar++) {
-									valor = opc == 1 ? entradaArea[fig - 1][contar] : entradaPerimetro[fig - 1][contar];
+									solicitud = opc == 1 ? entradaArea[fig - 1][contar] : entradaPerimetro[fig - 1][contar];
 									while (true) {
-										System.out.printf("Favor, ingrese %s del %s:%n", valor, nombreFiguras[fig - 1]);
+										System.out.printf("Favor, ingrese %s del %s:%n", solicitud, nombreFiguras[fig - 1]);
 										valor = sc.nextLine().trim();
 										ingresoValido = !valor.trim().isEmpty() && valor.matches("\\d+(\\.\\d+)?");
 										if (!ingresoValido || Double.parseDouble(valor) <= 0) {
