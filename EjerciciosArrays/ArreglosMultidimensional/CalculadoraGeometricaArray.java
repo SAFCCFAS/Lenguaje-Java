@@ -7,19 +7,18 @@ public class CalculadoraGeometricaArray {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		String[] opciones = { "Calcular área", "Calcular Perímetro", "Conversión de unidades" };
-		String[] nombreFiguras = { "Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono" };
-		String[] opcionConversiones = { "Longitud", "Área", "Ángulo" };
-		String[][] nombreUnidades = { { "Kilómetro", "Metro", "Centímetro", "Milímetro" }, { "Cuadrado" }, { "Grados", "Radianes" } };
-		String[][] simbUnidades = { { "km", "m", "cm", "mm" }, { "km²", "m²", "cm²" }, { "°", "Rad" } };
-		String[][] entradaArea = { { "lado" }, { "largo", "ancho" }, { "base", "altura" }, { "radio" }, { "base mayor", "base menor", "altura" },
-				{ "diagonal mayor", "diagonal menor" }, { "número de lados", "largo de cada lado" }, { "lado" } };
-		String[][] entradaPerimetro = { { "lado" }, { "largo", "ancho" }, { "lado 1", "lado 2", "lado 3" }, { "radio" },
-				{ "base mayor", "base menor", "lado derecho", "lado izquierdo" }, { "lado" }, { "Número de lados", "Largo de cada lado" }, { "Lado" } };
-		double[][] factoresConversionLongitudes = { { 1000.0, 100000.0, 1000000.0 }, { 0.001, 100.0, 1000.0 }, { 0.00001, 0.01, 10.0 },
-				{ 0.000001, 0.001, 0.1 } };
-		double[][] factoresConversionArea = { { 1000000.0, 100000000.0 }, { 0.000001, 10000.0 }, { 0.00000001, 0.0001 } };
-		double[][] factoresConversionAngulos = { { Math.PI / 180.0 }, { 180.0 / Math.PI } };
+		String[] opciones = {"Calcular área", "Calcular Perímetro", "Conversión de unidades"};
+		String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
+		String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
+		String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Cuadrado"}, {"Grados", "Radianes"}};
+		String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
+		String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"},
+						{"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
+		String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"},
+						{"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"Lado"}};
+		double[][] factoresConversionLongitudes = {{1000.0, 100000.0, 1000000.0}, {0.001, 100.0, 1000.0}, {0.00001, 0.01, 10.0}, {0.000001, 0.001, 0.1}};
+		double[][] factoresConversionArea = {{1000000.0, 100000000.0}, {0.000001, 10000.0}, {0.00000001, 0.0001}};
+		double[][] factoresConversionAngulos = {{Math.PI / 180.0}, {180.0 / Math.PI}};
 		double[] valores = new double[4];
 		double areas, perimetros, resultado, factor;
 		String[] unidadOrigen;
@@ -85,23 +84,23 @@ public class CalculadoraGeometricaArray {
 						}
 
 						areas = switch (fig) {
-							case 1 -> Math.pow(valores[0], 2);
-							case 2 -> valores[0] * valores[1];
-							case 3, 6 -> (valores[0] * valores[1]) / 2;
-							case 4 -> Math.PI * Math.pow(valores[0], 2);
-							case 5 -> ((valores[0] + valores[1]) / 2) * valores[2];
-							case 7 -> (valores[0] * Math.pow(valores[1], 2)) / (4 * Math.tan(Math.PI / valores[0]));
-							default -> (2 + 4 / Math.sqrt(2)) * Math.pow(valores[0], 2);
+							case 1 ->	Math.pow(valores[0], 2);
+							case 2 ->	valores[0] * valores[1];
+							case 3, 6 ->	(valores[0] * valores[1]) / 2;
+							case 4 ->	Math.PI * Math.pow(valores[0], 2);
+							case 5 ->	((valores[0] + valores[1]) / 2) * valores[2];
+							case 7 ->	(valores[0] * Math.pow(valores[1], 2)) / (4 * Math.tan(Math.PI / valores[0]));
+							default ->	(2 + 4 / Math.sqrt(2)) * Math.pow(valores[0], 2);
 						};
 
 						perimetros = switch (fig) {
-							case 1, 6 -> valores[0] * 4;
-							case 2 -> 2 * (valores[0] + valores[1]);
-							case 3 -> valores[0] + valores[1] + valores[2];
-							case 4 -> 2 * Math.PI * valores[0];
-							case 5 -> valores[0] + valores[1] + valores[2] + valores[3];
-							case 7 -> valores[0] * valores[1];
-							default -> valores[0] * 8;
+							case 1, 6 ->	valores[0] * 4;
+							case 2 ->	2 * (valores[0] + valores[1]);
+							case 3 ->	valores[0] + valores[1] + valores[2];
+							case 4 ->	2 * Math.PI * valores[0];
+							case 5 ->	valores[0] + valores[1] + valores[2] + valores[3];
+							case 7 ->	valores[0] * valores[1];
+							default ->	valores[0] * 8;
 						};
 						System.out.printf("El %s del %s es: %.2f%n", opc == 1 ? "área" : "perímetro", nombreFiguras[fig - 1], opc == 1 ? areas : perimetros);
 						return;
@@ -192,6 +191,10 @@ public class CalculadoraGeometricaArray {
 													System.out.printf("%d. %s (%s).%n", unidad++, unidadNombre, unidadSimbolo);
 												} else if (!nombreUnidades[opc - 2][contar].equals("Milímetro")) {
 													System.out.printf("%d. %s %s (%s).%n", unidad++, unidadNombre, nombreUnidades[opc - 1][0], unidadSimbolo);
+												}else{
+													for (String angulos: nombreUnidades[opc-1]){
+
+													}
 												}
 												indiceCambio++;
 											}
