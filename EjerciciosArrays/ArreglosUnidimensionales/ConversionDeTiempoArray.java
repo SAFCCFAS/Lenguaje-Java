@@ -9,7 +9,7 @@ public class ConversionDeTiempoArray {
 	public static void main(String[] args) {
 
 		String[] unidades = {"Segundo", "Minuto", "Hora", "Día", "Año"};
-		int contar;
+		int contar,unidad;
 		String eleccion;
 		boolean ingresoValido;
 
@@ -29,9 +29,9 @@ public class ConversionDeTiempoArray {
 				System.out.println("¡Gracias por usar el programa, hasta la próxima!");
 				break;
 			}
-			break;
+			unidad=Integer.parseInt(eleccion);
+			eleccion = unidades[unidad-1];
+			System.out.printf("Ha elegido convertir %s(s).%n", eleccion);
 		}
-
 	}
-
 }
