@@ -7,25 +7,24 @@ public class CalculadoraGeometricaArray {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		String[] opciones = { "Calcular área", "Calcular Perímetro", "Conversión de unidades" };
-		String[] nombreFiguras = { "Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono" };
-		String[] opcionConversiones = { "Longitud", "Área", "Ángulo" };
-		String[][] nombreUnidades = { { "Kilómetro", "Metro", "Centímetro", "Milímetro" }, { "Cuadrado" }, { "Grados", "Radianes" } };
-		String[][] simbUnidades = { { "km", "m", "cm", "mm" }, { "km²", "m²", "cm²" }, { "°", "Rad" } };
-		String[][] entradaArea = { { "lado" }, { "largo", "ancho" }, { "base", "altura" }, { "radio" }, { "base mayor", "base menor", "altura" },
-						{ "diagonal mayor", "diagonal menor" }, { "número de lados", "largo de cada lado" }, { "lado" } };
-		String[][] entradaPerimetro = { { "lado" }, { "largo", "ancho" }, { "lado 1", "lado 2", "lado 3" }, { "radio" },
-						{ "base mayor", "base menor", "lado derecho", "lado izquierdo" }, { "lado" }, { "Número de lados", "Largo de cada lado" }, { "lado" } };
-		double[][] factoresConversionLongitudes = { { 1000.0, 100000.0, 1000000.0 }, { 0.001, 100.0, 1000.0 }, { 0.00001, 0.01, 10.0 },
-						{ 0.000001, 0.001, 0.1 } };
-		double[][] factoresConversionArea = { { 1000000.0, 100000000.0 }, { 0.000001, 10000.0 }, { 0.00000001, 0.0001 } };
-		double[][] factoresConversionAngulos = { { Math.PI / 180.0 }, { 180.0 / Math.PI } };
-		String[][] cambioUnidades = null;
+		String[] opciones = {"Calcular área", "Calcular Perímetro", "Conversión de unidades"};
+		String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
+		String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
+		String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Cuadrado"}, {"Grados", "Radianes"}};
+		String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
+		String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"},
+						{"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
+		String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"},
+						{"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"lado"}};
+		double[][] factoresConversionLongitudes = {{1000.0, 100000.0, 1000000.0}, {0.001, 100.0, 1000.0}, {0.00001, 0.01, 10.0}, {0.000001, 0.001, 0.1}};
+		double[][] factoresConversionArea = {{1000000.0, 100000000.0}, {0.000001, 10000.0}, {0.00000001, 0.0001}};
+		double[][] factoresConversionAngulos = {{Math.PI / 180.0}, {180.0 / Math.PI}};
+		String[][] cambioUnidades;
 		double[] valores = new double[4];
 		double areas, perimetros, resultado, factor;
 		String[] solicitudes, unidadOrigen;
 		String eleccion, solicitud, valor, simboloOrigen, unidadNombre, unidadSimbolo, unidadDestino, simboloDestino, formato;
-		int opcion, figura, origen, unidadCambio, indiceCambio, destino, contar, unidad, origenIndice, destinoIndice;
+		int opcion, figura, origen, unidadCambio, indiceCambio, destino = 0, contar, unidad, origenIndice, destinoIndice;
 		boolean ingresoValido;
 
 		while (true) {
@@ -192,50 +191,58 @@ public class CalculadoraGeometricaArray {
 								break;
 							}
 
-							if (opcion <= 2)
+							if (opcion <= 2) {
 								System.out.println("Favor, elija unidad de destino:");
-							else {
-
-							}
-							unidadCambio = opcion == 1 ? nombreUnidades[opcion - 1].length : nombreUnidades[opcion - 2].length;
-							cambioUnidades = new String[unidadCambio - 1][2];
-							unidad = 1;
-							indiceCambio = 0;
-							for (contar = 0; contar < unidadCambio; contar++) {
-								if (contar != (origen - 1)) {
-									unidadNombre = opcion == 1 ? nombreUnidades[opcion - 1][contar] : nombreUnidades[opcion - 2][contar];
-									unidadSimbolo = contar < simbUnidades[opcion - 1].length ? simbUnidades[opcion - 1][contar] : "";
-									cambioUnidades[indiceCambio][0] = unidadNombre;
-									cambioUnidades[indiceCambio][1] = unidadSimbolo;
-									if (opcion == 1) {
-										System.out.printf("%d. %s (%s).%n", unidad++, unidadNombre, unidadSimbolo);
-									} else if (!unidadNombre.equals("Milímetro")) {
-										System.out.printf("%d. %s %s (%s).%n", unidad++, unidadNombre, nombreUnidades[opcion - 1][0], unidadSimbolo);
+								unidadCambio = opcion == 1 ? nombreUnidades[opcion - 1].length : nombreUnidades[opcion - 2].length;
+								cambioUnidades = new String[unidadCambio - 1][2];
+								unidad = 1;
+								indiceCambio = 0;
+								for (contar = 0; contar < unidadCambio; contar++) {
+									if (contar != (origen - 1)) {
+										unidadNombre = opcion == 1 ? nombreUnidades[opcion - 1][contar] : nombreUnidades[opcion - 2][contar];
+										unidadSimbolo = contar < simbUnidades[opcion - 1].length ? simbUnidades[opcion - 1][contar] : "";
+										cambioUnidades[indiceCambio][0] = unidadNombre;
+										cambioUnidades[indiceCambio][1] = unidadSimbolo;
+										if (opcion == 1) {
+											System.out.printf("%d. %s (%s).%n", unidad++, unidadNombre, unidadSimbolo);
+										} else if (!unidadNombre.equals("Milímetro")) {
+											System.out.printf("%d. %s %s (%s).%n", unidad++, unidadNombre, nombreUnidades[opcion - 1][0], unidadSimbolo);
+										}
+										indiceCambio++;
 									}
-									indiceCambio++;
 								}
+								eleccion = sc.nextLine().trim();
+								ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("\\d+");
+								if (!ingresoValido || !(Integer.parseInt(eleccion) >= 1 && Integer.parseInt(eleccion) <= unidad - 1)) {
+									System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", unidad - 1);
+									continue;
+								}
+								destino = Integer.parseInt(eleccion);
+								unidadDestino = cambioUnidades[destino - 1][0];
+								simboloDestino = cambioUnidades[destino - 1][1];
+								unidadDestino = opcion == 2 ? unidadDestino + " " + nombreUnidades[opcion - 1][0] : unidadDestino;
+								System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", unidadDestino, simboloDestino);
+							} else {
+								unidadDestino = origen == 1 ? nombreUnidades[opcion - 1][1] : nombreUnidades[opcion - 1][0];
+								simboloDestino = origen == 1 ? simbUnidades[opcion - 1][1] : simbUnidades[opcion - 1][0];
 							}
-							eleccion = sc.nextLine().trim();
-							ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("\\d+");
-							if (!ingresoValido || !(Integer.parseInt(eleccion) >= 1 && Integer.parseInt(eleccion) <= unidad - 1)) {
-								System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", unidad - 1);
-								continue;
-							}
-							destino = Integer.parseInt(eleccion);
-							unidadDestino = cambioUnidades[destino - 1][0];
-							simboloDestino = cambioUnidades[destino - 1][1];
-							unidadDestino = opcion == 2 ? unidadDestino + " " + nombreUnidades[opcion - 1][0] : unidadDestino;
-							System.out.printf("Usted ha seleccionado convertir a: %s (%s).%n", unidadDestino, simboloDestino);
+
 							origenIndice = origen - 1;
 							destinoIndice = destino - 1;
-							factor = opcion == 1 ? factoresConversionLongitudes[origenIndice][destinoIndice] : factoresConversionArea[origenIndice][destinoIndice];
+
+							factor = switch (opcion) {
+								case 1 -> factoresConversionLongitudes[origenIndice][destinoIndice];
+								case 2 -> factoresConversionArea[origenIndice][destinoIndice];
+								default -> factoresConversionAngulos[origenIndice][0];
+							};
+
 							resultado = valores[0] * factor;
 							System.out.printf("Convirtiendo %.2f de %s a %s...%n", valores[0], unidadOrigen[origen - 1], unidadDestino);
 							contar = (factor >= 1) ? 2 : 6;
 							formato = "%." + contar + "f";
-
 							System.out.printf("Conversión exitosa. %s en %s sería ", opcionConversiones[opcion - 1], unidadDestino);
 							System.out.printf(formato + " (%s).%n", resultado, simboloDestino);
+
 							return;
 						}
 					}
