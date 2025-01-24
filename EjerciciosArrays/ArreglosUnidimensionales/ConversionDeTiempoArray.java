@@ -8,12 +8,12 @@ public class ConversionDeTiempoArray {
 
 	public static void main(String[] args) {
 
-		String[] unidades = {"Segundo", "Minuto", "Hora", "Día", "Año"};
-		double[] segundos = {1 / 60.0, 1 / 3600.0, 86400.0, 31536000.0}; // Minutos, Horas, Días, Años
-		double[] minutos = {60.0, 1 / 60.0, 1 / 1440.0, 1 / 525600.0}; // Segundos, Horas, Días, Años
-		double[] horas = {3600.0, 60.0, 1 / 24.0, 1 / 8760.0}; // Segundos, Minutos, Días, Años
-		double[] dias = {86400.0, 1440.0, 24.0, 1 / 365.0}; // Segundos, Minutos, Horas, Años
-		double[] anos = {31536000.0, 525600.0, 8760.0, 365.0}; // Segundos, Minutos, Horas, Días
+		String[] unidades = { "Segundo", "Minuto", "Hora", "Día", "Año" };
+		double[] segundos = { 1 / 60.0, 1 / 3600.0, 1 / 86400.0, 1 / 31536000.0 };
+		double[] minutos = { 60.0, 1 / 60.0, 1 / 1440.0, 1 / 525600.0 };
+		double[] horas = { 3600.0, 60.0, 1 / 24.0, 1 / 8760.0 };
+		double[] dias = { 86400.0, 1440.0, 24.0, 1 / 365.0 };
+		double[] anos = { 31536000.0, 525600.0, 8760.0, 365.0 };
 		double[] valor = new double[1];
 		int contar, unidadOrigen, unidadDdestino, destinoIndice;
 		String eleccion, tiempo, nombreOrigen, nombreDestino, formato;
@@ -74,19 +74,20 @@ public class ConversionDeTiempoArray {
 			destinoIndice = unidadDdestino - 1;
 
 			factor = switch (unidadOrigen) {
-				case 1 -> segundos[destinoIndice];  // Segundos
-				case 2 -> minutos[destinoIndice];   // Minutos
-				case 3 -> horas[destinoIndice];     // Horas
-				case 4 -> dias[destinoIndice];      // Días
-				default -> anos[destinoIndice];      // Años
+				case 1 -> segundos[destinoIndice]; // Segundos
+				case 2 -> minutos[destinoIndice]; // Minutos
+				case 3 -> horas[destinoIndice]; // Horas
+				case 4 -> dias[destinoIndice]; // Días
+				default -> anos[destinoIndice]; // Años
 			};
 
 			resultado = valor[0] * factor;
 
-			contar = (factor <= 1) ? 2 : 6;
+			contar = (Math.abs(resultado) < 1) ? 5 : 1;
 			formato = "%." + contar + "f";
 
 			System.out.printf("%.1f %s(s) equivale a " + formato + " %s(s)\n", valor[0], nombreOrigen, resultado, nombreDestino);
+			return;
 		}
 	}
 }
