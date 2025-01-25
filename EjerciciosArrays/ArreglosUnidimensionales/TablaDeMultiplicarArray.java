@@ -4,7 +4,6 @@ import java.util.Scanner;
 
 public class TablaDeMultiplicarArray {
 	static Scanner sc = new Scanner(System.in);
-
 	public static void main(String[] args) {
 		String entrada;
 		int[] resultados = new int[12];
@@ -22,7 +21,7 @@ public class TablaDeMultiplicarArray {
 			valor = Integer.parseInt(entrada);
 
 			for (contar = 0; contar < resultados.length; contar++) {
-				resultados[contar] = valor * contar + 1;
+				resultados[contar] = valor * (contar + 1);
 				System.out.printf("%d x %d: %d\n", valor, contar + 1, resultados[contar]);
 			}
 
