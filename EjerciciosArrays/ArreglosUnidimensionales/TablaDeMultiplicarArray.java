@@ -6,13 +6,23 @@ public class TablaDeMultiplicarArray {
 	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		String entrada;
+		String entrada, mensajeBienvenida = " Bienvenido(a), favor ingrese número a mostrar tabla de operaciones ";
 		int[] resultados = new int[12];
 		int contar, valor;
 		boolean ingresoValido;
 
+
 		while (true) {
-			System.out.println("Bienvenido(a), favor ingrese número a mostrar tabla de operación");
+
+			for (contar=0;contar<mensajeBienvenida.length()+2;contar++){
+				System.out.print("*");
+			}
+			System.out.println();
+			System.out.printf("*%s*\n", mensajeBienvenida);
+			for (contar=0;contar<mensajeBienvenida.length()+2;contar++){
+				System.out.print("*");
+			}
+			System.out.println();
 			entrada = sc.nextLine().trim();
 			ingresoValido = !entrada.trim().isEmpty() && entrada.matches("\\d+");
 			if (!ingresoValido || Integer.parseInt(entrada) <= 0) {
