@@ -4,21 +4,22 @@ import java.util.Scanner;
 
 public class CalculadoraGeometricaArray {
 
-    static Scanner sc = new Scanner(System.in);
+	static Scanner sc = new Scanner(System.in);
 
 	public static void main(String[] args) {
-		String[] opciones = {"Calcular área", "Calcular Perímetro", "Conversión de unidades"};
-		String[] nombreFiguras = {"Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono"};
-		String[] opcionConversiones = {"Longitud", "Área", "Ángulo"};
-		String[][] nombreUnidades = {{"Kilómetro", "Metro", "Centímetro", "Milímetro"}, {"Cuadrado"}, {"Grados", "Radianes"}};
-		String[][] simbUnidades = {{"km", "m", "cm", "mm"}, {"km²", "m²", "cm²"}, {"°", "Rad"}};
-		String[][] entradaArea = {{"lado"}, {"largo", "ancho"}, {"base", "altura"}, {"radio"}, {"base mayor", "base menor", "altura"},
-						{"diagonal mayor", "diagonal menor"}, {"número de lados", "largo de cada lado"}, {"lado"}};
-		String[][] entradaPerimetro = {{"lado"}, {"largo", "ancho"}, {"lado 1", "lado 2", "lado 3"}, {"radio"},
-						{"base mayor", "base menor", "lado derecho", "lado izquierdo"}, {"lado"}, {"Número de lados", "Largo de cada lado"}, {"lado"}};
-		double[][] factoresConversionLongitudes = {{1000.0, 100000.0, 1000000.0}, {0.001, 100.0, 1000.0}, {0.00001, 0.01, 10.0}, {0.000001, 0.001, 0.1}};
-		double[][] factoresConversionArea = {{1000000.0, 100000000.0}, {0.000001, 10000.0}, {0.00000001, 0.0001}};
-		double[][] factoresConversionAngulos = {{Math.PI / 180.0}, {180.0 / Math.PI}};
+		String[] opciones = { "Calcular área", "Calcular Perímetro", "Conversión de unidades" };
+		String[] nombreFiguras = { "Cuadrado", "Rectángulo", "Triángulo", "Círculo", "Trapecio", "Rombo", "Polígono Regular", "Octágono" };
+		String[] opcionConversiones = { "Longitud", "Área", "Ángulo" };
+		String[][] nombreUnidades = { { "Kilómetro", "Metro", "Centímetro", "Milímetro" }, { "Cuadrado" }, { "Grados", "Radianes" } };
+		String[][] simbUnidades = { { "km", "m", "cm", "mm" }, { "km²", "m²", "cm²" }, { "°", "Rad" } };
+		String[][] entradaArea = { { "lado" }, { "largo", "ancho" }, { "base", "altura" }, { "radio" }, { "base mayor", "base menor", "altura" },
+				{ "diagonal mayor", "diagonal menor" }, { "número de lados", "largo de cada lado" }, { "lado" } };
+		String[][] entradaPerimetro = { { "lado" }, { "largo", "ancho" }, { "lado 1", "lado 2", "lado 3" }, { "radio" },
+				{ "base mayor", "base menor", "lado derecho", "lado izquierdo" }, { "lado" }, { "Número de lados", "Largo de cada lado" }, { "lado" } };
+		double[][] factoresConversionLongitudes = { { 1000.0, 100000.0, 1000000.0 }, { 0.001, 100.0, 1000.0 }, { 0.00001, 0.01, 10.0 },
+				{ 0.000001, 0.001, 0.1 } };
+		double[][] factoresConversionArea = { { 1000000.0, 100000000.0 }, { 0.000001, 10000.0 }, { 0.00000001, 0.0001 } };
+		double[][] factoresConversionAngulos = { { Math.PI / 180.0 }, { 180.0 / Math.PI } };
 		String[][] cambioUnidades;
 		double[] valores = new double[4];
 		double areas, perimetros, resultado, factor;
@@ -127,7 +128,8 @@ public class CalculadoraGeometricaArray {
 						eleccion = sc.nextLine().trim();
 						ingresoValido = !eleccion.trim().isEmpty() && eleccion.matches("[1-" + opcion + "]");
 						if (!ingresoValido) {
-							System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n", opcionConversiones.length + 1);
+							System.err.printf("Error: La opción ingresada no es válida. Por favor, elija una opción entre 1 y %d.%n",
+									opcionConversiones.length + 1);
 							continue;
 						} else if (Integer.parseInt(eleccion) == opcion) {
 							System.out.println("Regresando al menú anterior...");
