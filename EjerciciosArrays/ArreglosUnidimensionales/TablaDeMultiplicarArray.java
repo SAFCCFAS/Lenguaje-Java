@@ -30,7 +30,7 @@ public class TablaDeMultiplicarArray {
 			}
 			valor = Integer.parseInt(entrada);
 
-			System.out.println("Tabla de multiplicar del " + valor + ":");
+			System.out.println("Tabla de operaciones del " + valor + ":");
 
 			for (contar = 0; contar < resultados.length; contar++) {
 				resultados[contar] = valor * (contar + 1);
