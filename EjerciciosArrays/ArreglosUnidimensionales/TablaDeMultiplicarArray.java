@@ -11,15 +11,14 @@ public class TablaDeMultiplicarArray {
 		int contar, valor;
 		boolean ingresoValido;
 
-
 		while (true) {
 
-			for (contar=0;contar<mensajeBienvenida.length()+2;contar++){
+			for (contar = 0; contar < mensajeBienvenida.length() + 2; contar++) {
 				System.out.print("*");
 			}
 			System.out.println();
 			System.out.printf("*%s*\n", mensajeBienvenida);
-			for (contar=0;contar<mensajeBienvenida.length()+2;contar++){
+			for (contar = 0; contar < mensajeBienvenida.length() + 2; contar++) {
 				System.out.print("*");
 			}
 			System.out.println();
