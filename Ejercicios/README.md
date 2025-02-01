@@ -10,7 +10,7 @@ en un concepto específico y ayuda a practicar la programación en Java.
 
 - `SumarEnteros.java`: Programa básico que solicita al usuario que ingrese dos números y muestra su suma.
 - `CalculadoraBasica_v1.java` / `CalculadoraBasica_v2.java`: Calculadora con operaciones básicas (suma, resta, multiplicación, división).
-- `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como exponenciación y raíz cuadrada.
+- `CalculadoraAvanzada_v1.java` / `CalculadoraAvanzada_v2.java`: Calculadora avanzada que incluye más operaciones como potencia y raíz cuadrada.
 - `Calculadora Geométrica_v1.java` / `Calculadora Geométrica_v1.java`: Aplicación de consola que calcula el área y/o perímetro de figuras geométricas
   planas, incluyendo cuadrados, rectángulos, triángulos, círculos, trapecios, rombos, polígonos regulares y octágono.
 - `ConversionDeTemperatura.java`: Programa que permite al usuario convertir temperaturas entre Celsius (°C), Fahrenheit (°F) y Kelvin (K). El usuario
