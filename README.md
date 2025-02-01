@@ -5,7 +5,8 @@ Este repositorio es el resultado de mi viaje de aprendizaje en **Java** de forma
 utilizado en una amplia gama de aplicaciones, desde el desarrollo web hasta la creación de aplicaciones móviles y software empresarial.
 
 Decidí aprender Java debido a su popularidad en la industria y su sólida comunidad de soporte. Actualmente, me encuentro en las etapas iniciales
-de mi aprendizaje, explorando conceptos básicos y fundamentales. A lo largo de este proceso, he trabajado en diversos ejemplos y ejercicios prácticos que abarcan desde los conceptos más sencillos hasta aquellos que son esenciales para comprender el lenguaje.
+de mi aprendizaje, explorando conceptos básicos y fundamentales. A lo largo de este proceso, he trabajado en diversos ejemplos y ejercicios prácticos
+que abarcan desde los conceptos más sencillos hasta aquellos que son esenciales para comprender el lenguaje.
 
 Mi objetivo con este repositorio es crear un recurso que no solo me ayude a repasar lo aprendido, sino que también pueda ser útil para otros que
 estén interesados en comenzar su propia aventura con Java. Espero que estos ejemplos sean de ayuda y que sirvan como punto de partida para quienes
