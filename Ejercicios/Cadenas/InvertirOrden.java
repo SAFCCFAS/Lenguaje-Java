@@ -3,8 +3,9 @@ package Ejercicios.Cadenas;
 import java.util.Scanner;
 
 public class InvertirOrden {
+	static Scanner sc = new Scanner(System.in);
 	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
+	
 		String entrada, invertido = "";
 		int orden;
 
