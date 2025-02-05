@@ -37,6 +37,8 @@ en un concepto específico y ayuda a practicar la programación en Java.
 - `Factura.java`: Programa donde se imprime una factura básica de compra con la información solicitada.
 - `Fibonacci.java`: Programa que genera e imprime la sucesión de Fibonacci hasta el número de términos indicado por el usuario, validando que sea
   mayor a 0.
+- `CalculadoraIMC.java`: Programa que realiza calculo del indice de masa corporal (IMC), según los datos solicitados al usuario y su clasificación 
+  correspondiente.
 
 ## Instrucciones
 

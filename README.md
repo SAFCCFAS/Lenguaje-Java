@@ -120,6 +120,8 @@ La estructura está organizada en carpetas temáticas que agrupan los ejemplos s
 - `Factura.java`: Programa donde se imprime una factura básica de compra con la información solicitada.
 - `Fibonacci.java`: Programa que genera e imprime la sucesión de Fibonacci hasta el número de términos indicado por el usuario, validando que sea
   mayor a 0.
+- `CalculadoraIMC.java`: Programa que realiza calculo del indice de masa corporal (IMC), según los datos solicitados al usuario y su clasificación 
+  correspondiente.
 
 > 1. **Ejercicios_v1**: programas comentados para usuarios que recién ingresados al lenguaje facilitando la lectura.
 > 2. **Ejercicios_v2**: programas poco comentados para usuarios con conocimientos en la estructura del lenguaje.
