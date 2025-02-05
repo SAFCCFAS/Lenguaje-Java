@@ -43,6 +43,6 @@ public class CalculadoraIMC {
 		} else {
 			clasificacion = "Obesidad";
 		}
-		System.out.printf("Su IMC es %.2f y su clasificación actual es %s.", imc, clasificacion);
+		System.out.printf("Su IMC es %.2f y su clasificación actual es %s.\n", imc, clasificacion);
 	}
 }
