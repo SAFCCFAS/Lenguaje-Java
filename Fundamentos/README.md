@@ -23,8 +23,8 @@ esenciales.
 
 `HolaMundo.java`: Un programa simple que imprime `¡Hola, Mundo!` en la consola.
 
-- **Objetivo**: Familiarizarse con la estructura básica de un programa en Java, incluyendo el método `main` y la salida estándar con `System.out.
-println`.
+- **Objetivo**: Familiarizarse con la estructura básica de un programa en Java, incluyendo el método `main` y la salida estándar con
+  `System.out.println`.
 
 ### Tipos de Datos en Java
 
@@ -44,28 +44,28 @@ Los tipos de datos en Java se dividen en dos categorías:
    booleanos.
 2. **Tipos de Datos No Primitivos** (o Tipos de Referencia): Estos se refieren a objetos y pueden ser clases, interfaces o arreglos.
 
-|      **Tipo de Dato**       | **Tamaño(bits)**  |                            **Rango**                            |
-|:---------------------------:|:-----------------:|:---------------------------------------------------------------:|
-|        **Primitivo**        |         -         |                                -                                |
-|     **Números Enteros**     |         -         |                                -                                |
-|           `byte`            |         8         |                           -128 a 127                            |
-|           `short`           |        16         |                        -32,768 a 32,767                         |
-|            `int`            |        32         |                 -2,147,483,648 a 2,147,483,647                  |
-|           `long`            |        64         |                          ±9 Trillones                           |
-|    **Números Decimales**    |         -         |                                -                                |
-|           `float`           |        32         |               Aproximadamente ±3.40282347 × 10^38               |
-|          `double`           |        64         |          Aproximadamente ±1.79769313486231570 × 10^308          |
-|       **Caracteres**        |         -         |                                -                                |
-|           `char`            |        16         |                     `'\u0000'` a `'\uffff'`                     |
-|         **Lógico**          |         -         |                                -                                |
-|          `boolean`          |         1         |                        `true` o `false`                         |
-| **De Objecto o Referencia** |         -         |                                -                                |
-|          **Texto**          |         -         |                                -                                |
-|          `String`           |     variable      |        Usado para almacenar y manipular cadenas de texto        |
-|         **Arrays**          |     variable      |   Colecciones que almacenan múltiples valores del mismo tipo.   |
-|         **Clases**          |     variable      |     Plantillas para crear objetos con atributos y métodos.      |
-|       **Interfaces**        | Depende de la JVM |          No tiene rango, define métodos a implementar.          |                   
-|  **Enumeraciones** (enum)   | Depende de la JVM | Conjunto de constantes predefinidas que no se pueden modificar. |
+|      **Tipo de Dato**      | **Tamaño(bits)**  |                            **Rango**                            |
+|:--------------------------:|:-----------------:|:---------------------------------------------------------------:|
+|       **Primitivo**        |         -         |                                -                                |
+|    **Números Enteros**     |         -         |                                -                                |
+|           `byte`           |         8         |                           -128 a 127                            |
+|          `short`           |        16         |                        -32,768 a 32,767                         |
+|           `int`            |        32         |                 -2,147,483,648 a 2,147,483,647                  |
+|           `long`           |        64         |                          ±9 Trillones                           |
+|   **Números Decimales**    |         -         |                                -                                |
+|          `float`           |        32         |               Aproximadamente ±3.40282347 × 10^38               |
+|          `double`          |        64         |          Aproximadamente ±1.79769313486231570 × 10^308          |
+|       **Caracteres**       |         -         |                                -                                |
+|           `char`           |        16         |                     `'\u0000'` a `'\uffff'`                     |
+|         **Lógico**         |         -         |                                -                                |
+|         `boolean`          |         1         |                        `true` o `false`                         |
+| **De Objeto o Referencia** |         -         |                                -                                |
+|         **Texto**          |         -         |                                -                                |
+|          `String`          |     variable      |        Usado para almacenar y manipular cadenas de texto        |
+|         **Arrays**         |     variable      |   Colecciones que almacenan múltiples valores del mismo tipo.   |
+|         **Clases**         |     variable      |     Plantillas para crear objetos con atributos y métodos.      |
+|       **Interfaces**       | Depende de la JVM |          No tiene rango, define métodos a implementar.          |                   
+|  **Enumeraciones** (enum)  | Depende de la JVM | Conjunto de constantes predefinidas que no se pueden modificar. |
 
 ### Variables
 
@@ -100,7 +100,7 @@ mantener. A continuación, aquí te indican algunas reglas importantes que debes
 
 1. **Nombres Descriptivos**: Utiliza nombres que describan el propósito de la variable. Por ejemplo, `edad` es más claro que `a`.
 
-2. **Iniciar con una Letra**: Los nombres de las variables deben comenzar con una letra (a-z, A-Z) o un guion bajo ( _ ). No pueden comenzar con un
+2. **Iniciar con una Letra**: Los nombres de las variables deben comenzar con una letra (a-z, A-Z) o un guion bajo (_). No pueden comenzar con un
    número.
 
 3. **Sin Espacios**: No se permiten espacios en los nombres de las variables. Si necesitas separar palabras, puedes usar el estilo camelCase (por
@@ -114,8 +114,8 @@ mantener. A continuación, aquí te indican algunas reglas importantes que debes
 6. **Convenciones de Nomenclatura**: Aunque no es obligatorio, es recomendable seguir las convenciones de nomenclatura de Java, como usar camelCase
    para variables y PascalCase para clases.
 
-7. **Sin Caracteres Especiales**: Los nombres de las variables no deben contener caracteres especiales (como `@`, `#`, `-`, etc.) ni caracteres
-   fuera del idioma inglés. Esto asegura que el código sea más legible y compatible con los estándares del lenguaje.
+7. **Sin Caracteres Especiales**: Los nombres de las variables no deben contener caracteres especiales (como `@`, `#`, `-`, etc.) ni caracteres fuera
+   del idioma inglés. Esto asegura que el código sea más legible y compatible con los estándares del lenguaje.
 
 **Importancia de las Reglas para Nombrar Variables**
 
@@ -125,9 +125,9 @@ y descriptivos para tus variables también facilita el mantenimiento del código
 
 **Asignación de variables**
 
-La asignación es el proceso mediante el cual se le da un valor a una variable. En Java, esto se hace utilizando el operador de asignación `=`, que
-se usa para igualar la variable al valor deseado. Este proceso es fundamental porque permite que las variables almacenen datos que se pueden utilizar
-y manipular en el programa.
+La asignación es el proceso mediante el cual se le da un valor a una variable. En Java, esto se hace utilizando el operador de asignación `=`, que se
+usa para igualar la variable al valor deseado. Este proceso es fundamental porque permite que las variables almacenen datos que se pueden utilizar y
+manipular en el programa.
 
 **Sintaxis de Asignación**
 
@@ -176,8 +176,8 @@ int edad = 25; // Declaración y Asignación
     boolean estado; // Valor por defecto: false
     char letra; // Valor por defecto: '\u0000' (carácter nulo)
     ~~~
-   > Los valores por defecto son útiles para evitar errores al usar variables no inicializadas. Sin embargo, es buena práctica inicializar siempre
-   > las variables antes de usarlas.
+   > Los valores por defecto son útiles para evitar errores al usar variables no inicializadas. Sin embargo, es buena práctica inicializar siempre las
+   variables antes de usarlas.
 
 4. **Expresiones**: puedes asignar el resultado de expresiones a una variable. Una expresión puede incluir operadores aritméticos, lógicos o de
    comparación.
@@ -195,8 +195,8 @@ int edad = 25; // Declaración y Asignación
     int a, b, c; // Declaración de múltiples variables.
     a = b = c = 5; // Asignación de un mismo valor a múltiples variables.
     ~~~
-   > Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con el mismo valor, ahorrando espacio y
-   > mejorando la legibilidad.
+   > Esta forma de asignación es útil cuando necesitas inicializar varias variables al mismo tiempo con el mismo valor, ahorrando espacio y mejorando
+   la legibilidad.
 
 6. **Asincronía y Cambios**: el valor de una variable puede cambiar durante la ejecución del programa. Puedes reasignar un nuevo valor a la misma
    variable en cualquier momento, lo que permite la manipulación dinámica de datos.
@@ -205,8 +205,8 @@ int edad = 25; // Declaración y Asignación
     int edad = 25; // Inicialmente asignado.
     edad = 30; // Reasignación del valor de la variable.
     ~~~
-   > Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las variables en función de la lógica del
-   > programa y las interacciones del usuario.
+   > Esta flexibilidad es fundamental para la programación, ya que permite ajustar los valores de las variables en función de la lógica del programa y
+   las interacciones del usuario.
 
 7. **Uso de Operadores de Asignación Compuestos**: Java ofrece operadores de asignación compuestos que combinan una operación aritmética con la
    asignación. Esto puede hacer que el código sea más conciso y legible.
@@ -216,7 +216,7 @@ int edad = 25; // Declaración y Asignación
     total += 5; // Equivalente a total = total + 5; total ahora es 15.
     ~~~
    > Los operadores de asignación compuestos son útiles para simplificar expresiones en las que necesitas modificar el valor de una variable en
-   > función de su valor actual.
+   función de su valor actual.
 
 **Uso de Comillas en Java**
 
@@ -226,8 +226,8 @@ int edad = 25; // Declaración y Asignación
     ~~~
     String saludo = "¡Hola, Mundo!"; // 'saludo' es una variable de tipo String que contiene una cadena.
     ~~~
-  > El uso de comillas dobles es necesario para que el compilador reconozca que se está creando un objeto de tipo String. Sin las comillas dobles,
-  > el compilador no interpretaría correctamente la secuencia de caracteres como una cadena de texto.
+  > El uso de comillas es necesario para que el compilador reconozca que se está creando un objeto de tipo String. Sin las comillas dobles, el
+  compilador no interpretaría correctamente la secuencia de caracteres como una cadena de texto.
 
 - **Comillas simples** (`''`): Las comillas simples se utilizan para definir un solo carácter (char). Un char es un tipo de dato que representa un
   único carácter, como una letra, un número o un símbolo.
@@ -235,8 +235,8 @@ int edad = 25; // Declaración y Asignación
     ~~~
     char letra = 'A'; // 'letra' es una variable de tipo char que contiene un solo carácter.
     ~~~
-  > Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. Si se usan comillas dobles en lugar de simples,
-  > el compilador intentará interpretar la entrada como una cadena de texto, lo que generará un error de tipo.
+  > Las comillas simples son necesarias para indicar que se está trabajando con un carácter único. Si se usan comillas dobles en lugar de simples, el
+  compilador intentará interpretar la entrada como una cadena de texto, lo que generará un error de tipo.
 
 - **Números**: Los números en Java, ya sean enteros (int, long, etc.) o decimales (float, double), se representan directamente como valores numéricos
   sin comillas. Esto se debe a que son tipos de datos primitivos y no necesitan ser encapsulados para ser utilizados en cálculos o asignaciones.
@@ -246,7 +246,7 @@ int edad = 25; // Declaración y Asignación
     double pi = 3.14; // 'pi' es una variable de tipo double que contiene un valor decimal.
     ~~~
   > Al no usar comillas para los números, el compilador puede reconocer y operar con ellos directamente. Si se colocaran entre comillas, serían
-  > interpretados como cadenas de texto, lo que impediría realizar operaciones matemáticas.
+  interpretados como cadenas de texto, lo que impediría realizar operaciones matemáticas.
 
 **Resumen**
 
@@ -359,8 +359,8 @@ relevante durante la ejecución del programa.
 
 `Operadores.java:`Ejemplos prácticos del uso de operadores en Java.
 
-- **Objetivo**: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos, condicionales, bit a bit, y
-  de desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El código ilustra cómo realizar cálculos matemáticos,
+- **Objetivo**: Demostrar el uso de los principales operadores en Java, como los aritméticos, relacionales, lógicos, condicionales, bit a bit, y de
+  desplazamiento, así como operadores de incremento/decremento y asignación compuesta. El código ilustra cómo realizar cálculos matemáticos,
   comparaciones, y operaciones lógicas y bit a bit.
 
 Los operadores en Java son símbolos que indican que se debe realizar una operación específica entre uno o más operandos (valores, variables,
@@ -438,12 +438,12 @@ es posible comprender el concepto de regex sin profundizar en los detalles técn
 
 Las expresiones regulares están compuestas por:
 
-1. **Literales**: Caracteres que coinciden exactamente con sí mismos (por ejemplo, `a`, `b`, `1`, `@`).
+1. **Literales**: Caracteres que coinciden exactamente consigo mismos (por ejemplo, `a`, `b`, `1`, `@`).
 
 2. **Metacaracteres**: Caracteres especiales que tienen significados específicos:
 	- `.`: Coincide con cualquier carácter (excepto un salto de línea).
-	- `^`: Indica el inicio de una línea.
-	- `$`: Indica el final de una línea.
+	- `^`: Índica el inicio de una línea.
+	- `$`: Índica el final de una línea.
 	- `*`: Coincide con cero o más repeticiones del carácter anterior.
 	- `+`: Coincide con una o más repeticiones del carácter anterior.
 	- `?`: Coincide con cero o una repetición del carácter anterior.
@@ -630,7 +630,7 @@ tabla a continuación:
 
 `EntradaDeDatos.java`: Ejemplo de ingreso de datos al programa en Java mediante el uso de la clase `Scanner`.
 
-- **Objetivo**: Familiarizarse con el uso de la clase `Scanner` para recibir algún tipo de tipo de datos a utilizar dentro del programa.
+- **Objetivo**: Familiarizarse con el uso de la clase `Scanner` para recibir algún de tipo de dato a utilizar dentro del programa.
 
 En Java, la entrada de datos permite que los programas interactúen con los usuarios, obteniendo información desde el teclado u otras fuentes de
 entrada. Para lograrlo, se utiliza la clase `Scanner` del paquete `java.util`. Esta clase proporciona métodos convenientes para leer diferentes
@@ -638,7 +638,7 @@ tipos de datos como enteros, cadenas, números decimales, etc.
 
 **Uso de la clase `Scanner`**
 
-Para utilizar el `Scanner`, primero debes importarlo:
+Para utilizar `Scanner`, primero debes importarlo:
 
 ~~~
 import java.util.Scanner;
@@ -694,8 +694,8 @@ String texto = input.nextLine();  // Ahora puedes leer la línea completa
 
 **Cerrar el Scanner**
 
-Una vez que terminas de usar el `Scanner`, es una buena práctica cerrar el recurso para liberar los recursos del sistema. Esto se hace llamando al
-método `close()`:
+Una vez que terminas de usar `Scanner`, es una buena práctica cerrar `Scanner` para liberar los recursos del sistema. Esto se hace llamando al método
+`close()`:
 
 ~~~
 input.close();
@@ -717,7 +717,7 @@ tiene el índice 0, el segundo el índice 1, y así sucesivamente.
 
 **Declaración y creación de arreglos**
 
-Para declarar un arreglo en Java, se especifica el tipo de datos de los elementos que contendrá, seguido del nombre del arreglo y corchetes vacíos.
+Para declarar un arreglo en Java, sé específica el tipo de datos de los elementos que contendrá, seguido del nombre del arreglo y corchetes vacíos.
 Por ejemplo, para declarar un arreglo de enteros llamado "numeros", se usaría la siguiente sintaxis:
 
 ~~~
@@ -833,8 +833,8 @@ ArrayList<String> lista = new ArrayList<String>();
 **Resumen**
 
 Los arreglos son una parte fundamental de la programación en Java. Permiten almacenar y manipular colecciones de datos del mismo tipo de manera
-eficiente. La clase `Arrays` proporciona métodos de utilidad para trabajar con arreglos, y la clase `ArrayList` ofrece una alternativa dinámica a
-los arreglos con un tamaño fijo.
+eficiente. La clase `Arrays` proporciona métodos de utilidad para trabajar con arreglos, y la clase `ArrayList` ofrece una alternativa dinámica a los
+arreglos con un tamaño fijo.
 
 ## Recursos Adicionales
 
@@ -847,7 +847,7 @@ Aquí hay algunos cursos y canales de YouTube que pueden ayudarte a complementar
 - [Java Brains](https://www.youtube.com/user/koushks): Un canal con muchos tutoriales que cubren diversos aspectos de Java, desde lo básico hasta
   conceptos más avanzados.
 
-> Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te animo a que los explores y practiques los conceptos que
+> Estos recursos son complementarios a los ejemplos proporcionados en este repositorio. Te invito a que los explores y practiques los conceptos que
 > vayas aprendiendo para obtener una comprensión más sólida de Java.
 
 ## Referencias
