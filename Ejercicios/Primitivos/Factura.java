@@ -44,7 +44,7 @@ public class Factura {
             precio = Double.parseDouble(entrada);
         } while (precio <= 0);
 
-        subTotal = (double) cantidadProd * precio;
+        subTotal = cantidadProd * precio;
         totalIva = subTotal * iva / 100;
         totalConIva = subTotal + totalIva;
 

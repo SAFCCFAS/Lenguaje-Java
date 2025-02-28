@@ -52,7 +52,7 @@ public class CalculadoraAvanzada_v1 {
                             "\nOpciones válidas 1 al 8");
                     break;
             }
-        } while (control != false);
+        } while (control);
         System.out.println("Usted a elegido: " + nombreoperacion); // mostrar el nombre según el ingreso realizado
 
         if (operacion >= 1 && operacion <= 5) {

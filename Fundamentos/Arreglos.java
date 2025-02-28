@@ -1,7 +1,7 @@
 package Fundamentos;
 
-import java.util.Arrays;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Arreglos {
@@ -30,8 +30,8 @@ public class Arreglos {
         int[] numerosIniciados = {10, 20, 30, 40, 50};
         System.out.println("\nArreglo con valores predeterminados:");
         // Imprimir el arreglo
-        for (int i = 0; i < numerosIniciados.length; i++) {
-            System.out.print(numerosIniciados[i] + " ");
+        for (int element : numerosIniciados) {
+            System.out.print(element + " ");
         }
         System.out.println();
 
@@ -41,8 +41,8 @@ public class Arreglos {
 
         // Sección 4: Moverse a través de un arreglo
         System.out.println("\nMoverse sobre el arreglo 'numerosIniciados' con un ciclo for:");
-        for (int i = 0; i < numerosIniciados.length; i++) {
-            System.out.print(numerosIniciados[i]+"\t");
+        for (int element : numerosIniciados) {
+            System.out.print(element+"\t");
         }
 
         System.out.println("\nMoverse sobre el arreglo 'numerosIniciados' con un ciclo for mejorado:");
@@ -54,8 +54,8 @@ public class Arreglos {
         System.out.println("\nModificando el arreglo 'numerosIniciados' directamente en el main:");
         numerosIniciados[0] = 999;
         numerosIniciados[1] = 888;
-        for (int i = 0; i < numerosIniciados.length; i++) {
-            System.out.print(numerosIniciados[i] + " ");
+        for (int element : numerosIniciados) {
+            System.out.print(element + " ");
         }
         System.out.println();
 

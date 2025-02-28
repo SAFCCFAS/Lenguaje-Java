@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class SumarElementosArray {
 	static Scanner sc = new Scanner(System.in);
     public static void main(String[] args) {
-        
+
         int cantidad, i, suma = 0;
         int[] tam;
 
